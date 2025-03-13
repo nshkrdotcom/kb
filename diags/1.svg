@@ -1,0 +1,295 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f5f7fa"/>
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="1200" height="60" fill="#2d3748"/>
+  <text x="30" y="38" font-family="Arial" font-size="24" fill="white">ContextNexus</text>
+  <text x="200" y="38" font-family="Arial" font-size="16" fill="#a0aec0">Dynamic Knowledge Management System</text>
+  
+  <!-- View Options -->
+  <rect x="650" y="15" width="100" height="30" rx="15" fill="#4a5568"/>
+  <text x="700" y="35" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Knowledge</text>
+  
+  <rect x="760" y="15" width="100" height="30" rx="15" fill="#2d3748"/>
+  <text x="810" y="35" font-family="Arial" font-size="14" fill="#a0aec0" text-anchor="middle">Analytics</text>
+  
+  <rect x="870" y="15" width="100" height="30" rx="15" fill="#2d3748"/>
+  <text x="920" y="35" font-family="Arial" font-size="14" fill="#a0aec0" text-anchor="middle">Settings</text>
+  
+  <!-- User Menu -->
+  <circle cx="1150" cy="30" r="20" fill="#4fd1c5"/>
+  <text x="1150" y="35" font-family="Arial" font-size="14" fill="white" text-anchor="middle">VP</text>
+  
+  <!-- Main Split View -->
+  <!-- Left Panel - Knowledge Hierarchy -->
+  <rect x="0" y="60" width="350" height="740" fill="#e2e8f0"/>
+  
+  <!-- Hierarchy Header -->
+  <rect x="0" y="60" width="350" height="50" fill="#4a5568"/>
+  <text x="20" y="90" font-family="Arial" font-size="18" fill="white">Context Hierarchy</text>
+  
+  <!-- View Selector -->
+  <rect x="210" y="70" width="40" height="30" rx="5" fill="#718096"/>
+  <text x="230" y="90" font-family="Arial" font-size="14" fill="white" text-anchor="middle">H</text>
+  
+  <rect x="260" y="70" width="40" height="30" rx="5" fill="#4a5568"/>
+  <text x="280" y="90" font-family="Arial" font-size="14" fill="white" text-anchor="middle">G</text>
+  
+  <rect x="310" y="70" width="30" height="30" rx="5" fill="#4a5568"/>
+  <text x="325" y="90" font-family="Arial" font-size="14" fill="white" text-anchor="middle">M</text>
+  
+  <!-- Search & Filter -->
+  <rect x="20" y="125" width="310" height="35" rx="5" fill="white"/>
+  <text x="40" y="147" font-family="Arial" font-size="14" fill="#a0aec0">Search or filter context...</text>
+  
+  <!-- Hierarchy Tree -->
+  <!-- Domain 1 -->
+  <rect x="20" y="170" width="310" height="40" rx="5" fill="#4299e1"/>
+  <text x="45" y="195" font-family="Arial" font-size="16" fill="white">Project Alpha</text>
+  <text x="25" y="195" font-family="Arial" font-size="16" fill="white">▼</text>
+  <rect x="250" y="178" width="70" height="24" rx="12" fill="rgba(255,255,255,0.3)"/>
+  <text x="285" y="195" font-family="Arial" font-size="12" fill="white" text-anchor="middle">90% rel</text>
+  
+  <!-- Concept 1.1 -->
+  <rect x="40" y="220" width="290" height="35" rx="5" fill="#63b3ed"/>
+  <text x="65" y="243" font-family="Arial" font-size="14" fill="white">Requirements</text>
+  <text x="45" y="243" font-family="Arial" font-size="14" fill="white">▼</text>
+  <rect x="260" y="225" width="60" height="24" rx="12" fill="rgba(255,255,255,0.2)"/>
+  <text x="290" y="243" font-family="Arial" font-size="12" fill="white" text-anchor="middle">75%</text>
+  
+  <!-- Detail 1.1.1 -->
+  <rect x="60" y="265" width="270" height="30" rx="5" fill="#90cdf4"/>
+  <text x="80" y="285" font-family="Arial" font-size="12" fill="#2d3748">User Stories</text>
+  <text x="65" y="285" font-family="Arial" font-size="12" fill="#2d3748">▶</text>
+  <rect x="230" y="270" width="90" height="20" rx="10" fill="#4299e1"/>
+  <text x="275" y="285" font-family="Arial" font-size="10" fill="white" text-anchor="middle">In Context</text>
+  
+  <!-- Detail 1.1.2 -->
+  <rect x="60" y="305" width="270" height="30" rx="5" fill="#90cdf4"/>
+  <text x="80" y="325" font-family="Arial" font-size="12" fill="#2d3748">Technical Specs</text>
+  <text x="65" y="325" font-family="Arial" font-size="12" fill="#2d3748">▶</text>
+  <rect x="230" y="310" width="90" height="20" rx="10" fill="#4299e1"/>
+  <text x="275" y="325" font-family="Arial" font-size="10" fill="white" text-anchor="middle">In Context</text>
+  
+  <!-- Concept 1.2 -->
+  <rect x="40" y="345" width="290" height="35" rx="5" fill="#63b3ed"/>
+  <text x="65" y="368" font-family="Arial" font-size="14" fill="white">Architecture</text>
+  <text x="45" y="368" font-family="Arial" font-size="14" fill="white">▼</text>
+  <rect x="260" y="350" width="60" height="24" rx="12" fill="rgba(255,255,255,0.3)"/>
+  <text x="290" y="368" font-family="Arial" font-size="12" fill="white" text-anchor="middle">85%</text>
+  
+  <!-- Detail 1.2.1 -->
+  <rect x="60" y="390" width="270" height="30" rx="5" fill="#90cdf4"/>
+  <text x="80" y="410" font-family="Arial" font-size="12" fill="#2d3748">Database Schema</text>
+  <text x="65" y="410" font-family="Arial" font-size="12" fill="#2d3748">▼</text>
+  <circle cx="315" cy="405" r="8" fill="#f6ad55"/>
+  <text x="315" y="409" font-family="Arial" font-size="12" fill="white" text-anchor="middle">*</text>
+  
+  <!-- Detail 1.2.1.1 -->
+  <rect x="80" y="430" width="250" height="30" rx="5" fill="#bee3f8"/>
+  <text x="100" y="450" font-family="Arial" font-size="12" fill="#2d3748">User Tables</text>
+  <text x="85" y="450" font-family="Arial" font-size="12" fill="#2d3748">▶</text>
+  
+  <!-- Detail 1.2.1.2 -->
+  <rect x="80" y="470" width="250" height="30" rx="5" fill="#bee3f8"/>
+  <text x="100" y="490" font-family="Arial" font-size="12" fill="#2d3748">Content Models</text>
+  <text x="85" y="490" font-family="Arial" font-size="12" fill="#2d3748">▶</text>
+  
+  <!-- Detail 1.2.2 -->
+  <rect x="60" y="510" width="270" height="30" rx="5" fill="#90cdf4"/>
+  <text x="80" y="530" font-family="Arial" font-size="12" fill="#2d3748">API Design</text>
+  <text x="65" y="530" font-family="Arial" font-size="12" fill="#2d3748">▶</text>
+  <rect x="230" y="515" width="90" height="20" rx="10" fill="#4299e1"/>
+  <text x="275" y="530" font-family="Arial" font-size="10" fill="white" text-anchor="middle">In Context</text>
+  
+  <!-- Domain 2 -->
+  <rect x="20" y="550" width="310" height="40" rx="5" fill="#9f7aea"/>
+  <text x="45" y="575" font-family="Arial" font-size="16" fill="white">Research Notes</text>
+  <text x="25" y="575" font-family="Arial" font-size="16" fill="white">▶</text>
+  <rect x="250" y="558" width="70" height="24" rx="12" fill="rgba(255,255,255,0.2)"/>
+  <text x="285" y="575" font-family="Arial" font-size="12" fill="white" text-anchor="middle">40% rel</text>
+  
+  <!-- Context Control -->
+  <rect x="20" y="600" width="310" height="30" rx="5" fill="#4a5568"/>
+  <text x="30" y="620" font-family="Arial" font-size="14" fill="white">Active Filters:</text>
+  
+  <rect x="140" y="602" width="70" height="26" rx="13" fill="#4299e1"/>
+  <text x="175" y="620" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Technical</text>
+  
+  <rect x="220" y="602" width="100" height="26" rx="13" fill="#48bb78"/>
+  <text x="270" y="620" font-family="Arial" font-size="12" fill="white" text-anchor="middle">High Priority</text>
+  
+  <!-- Context Status -->
+  <rect x="20" y="640" width="310" height="60" rx="5" fill="#e2e8f0"/>
+  <text x="30" y="660" font-family="Arial" font-size="14" fill="#4a5568" font-weight="bold">Context Usage:</text>
+  <rect x="30" y="670" width="290" height="10" rx="5" fill="#cbd5e0"/>
+  <rect x="30" y="670" width="230" height="10" rx="5" fill="#4299e1"/>
+  <text x="30" y="690" font-family="Arial" font-size="12" fill="#4a5568">7,200/10,000 tokens (72%)</text>
+  <text x="280" y="690" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="end">18 nodes</text>
+  
+  <!-- Context Actions -->
+  <rect x="20" y="710" width="310" height="80" rx="5" fill="#f7fafc"/>
+  <text x="30" y="730" font-family="Arial" font-size="14" fill="#4a5568" font-weight="bold">Context Actions:</text>
+  
+  <rect x="30" y="740" width="145" height="35" rx="5" fill="#4299e1"/>
+  <text x="102" y="762" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Optimize Context</text>
+  
+  <rect x="185" y="740" width="135" height="35" rx="5" fill="#48bb78"/>
+  <text x="252" y="762" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Create Branch</text>
+  
+  <!-- Center Panel - Conversation -->
+  <rect x="350" y="60" width="500" height="740" fill="white"/>
+  
+  <!-- Conversation Header -->
+  <rect x="350" y="60" width="500" height="50" fill="#f7fafc"/>
+  <text x="370" y="90" font-family="Arial" font-size="18" fill="#2d3748">Main Thread: Project Alpha</text>
+  
+  <!-- Thread Options -->
+  <rect x="700" y="70" width="35" height="30" rx="5" fill="#e2e8f0"/>
+  <text x="717" y="90" font-family="Arial" font-size="18" fill="#4a5568" text-anchor="middle">+</text>
+  
+  <rect x="745" y="70" width="35" height="30" rx="5" fill="#e2e8f0"/>
+  <text x="762" y="90" font-family="Arial" font-size="18" fill="#4a5568" text-anchor="middle">⋮</text>
+  
+  <rect x="790" y="70" width="40" height="30" rx="5" fill="#e2e8f0"/>
+  <text x="810" y="90" font-family="Arial" font-size="14" fill="#4a5568" text-anchor="middle">1/3</text>
+  
+  <!-- Context Path -->
+  <rect x="370" y="120" width="460" height="30" rx="5" fill="#ebf8ff"/>
+  <text x="390" y="140" font-family="Arial" font-size="14" fill="#2d3748">Active Context: Project Alpha > Architecture > Database Schema</text>
+  
+  <!-- Messages Container -->
+  <rect x="370" y="160" width="460" height="480" rx="5" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Message 1 -->
+  <rect x="390" y="180" width="360" height="70" rx="10" fill="#f7fafc"/>
+  <circle cx="410" cy="200" r="15" fill="#4fd1c5"/>
+  <text x="435" y="200" font-family="Arial" font-size="14" font-weight="bold" fill="#2d3748">You</text>
+  <text x="435" y="225" font-family="Arial" font-size="14" fill="#4a5568">How should we optimize the database schema for scalability while maintaining query performance?</text>
+  <text x="730" y="235" font-family="Arial" font-size="12" fill="#a0aec0">10:15 AM</text>
+  
+  <!-- Message 2 -->
+  <rect x="390" y="260" width="420" height="190" rx="10" fill="#f0f9ff"/>
+  <circle cx="410" cy="280" r="15" fill="#3182ce"/>
+  <text x="435" y="280" font-family="Arial" font-size="14" font-weight="bold" fill="#2d3748">ContextNexus AI</text>
+  <text x="435" y="305" font-family="Arial" font-size="14" fill="#4a5568">Based on your schema design and requirements, I recommend a sharded approach with these optimizations:</text>
+  
+  <text x="435" y="335" font-family="Arial" font-size="14" fill="#4a5568">1. Partition the content tables by date range</text>
+  <text x="435" y="365" font-family="Arial" font-size="14" fill="#4a5568">2. Implement read replicas for heavy query loads</text>
+  <text x="435" y="395" font-family="Arial" font-size="14" fill="#4a5568">3. Use materialized views for reporting queries</text>
+  
+  <!-- Knowledge Reference -->
+  <rect x="435" y="415" width="180" height="25" rx="5" fill="#e6fffa"/>
+  <text x="450" y="432" font-family="Arial" font-size="12" fill="#2d3748">🔗 Content Models</text>
+  
+  <text x="790" y="435" font-family="Arial" font-size="12" fill="#a0aec0">10:16 AM</text>
+  
+  <!-- Message 3 -->
+  <rect x="390" y="460" width="360" height="70" rx="10" fill="#f7fafc"/>
+  <circle cx="410" cy="480" r="15" fill="#4fd1c5"/>
+  <text x="435" y="480" font-family="Arial" font-size="14" font-weight="bold" fill="#2d3748">You</text>
+  <text x="435" y="505" font-family="Arial" font-size="14" fill="#4a5568">How would that impact our versioning strategy for content objects?</text>
+  <text x="730" y="515" font-family="Arial" font-size="12" fill="#a0aec0">10:18 AM</text>
+  
+  <!-- Message 4 -->
+  <rect x="390" y="540" width="420" height="90" rx="10" fill="#f0f9ff"/>
+  <circle cx="410" cy="560" r="15" fill="#3182ce"/>
+  <text x="435" y="560" font-family="Arial" font-size="14" font-weight="bold" fill="#2d3748">ContextNexus AI</text>
+  <text x="435" y="585" font-family="Arial" font-size="14" fill="#4a5568">For versioning with this approach, I recommend implementing...</text>
+  <text x="435" y="615" font-family="Arial" font-size="14" fill="#4a5568">[Currently typing...]</text>
+  
+  <!-- Conversation Actions -->
+  <rect x="370" y="650" width="460" height="50" rx="5" fill="#f7fafc"/>
+  
+  <rect x="390" y="660" width="140" height="30" rx="5" fill="#4299e1"/>
+  <text x="460" y="680" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Branch Topic</text>
+  
+  <rect x="540" y="660" width="140" height="30" rx="5" fill="#48bb78"/>
+  <text x="610" y="680" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Save Insight</text>
+  
+  <!-- Input Container -->
+  <rect x="370" y="710" width="460" height="80" rx="10" fill="#f7fafc"/>
+  <rect x="390" y="725" width="420" height="50" rx="25" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="410" y="755" font-family="Arial" font-size="14" fill="#a0aec0">Type your message...</text>
+  <rect x="720" y="735" width="80" height="30" rx="15" fill="#4299e1"/>
+  <text x="760" y="755" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Send</text>
+  
+  <!-- Right Panel - Context Inspector -->
+  <rect x="850" y="60" width="350" height="740" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Inspector Header -->
+  <rect x="850" y="60" width="350" height="50" fill="#f7fafc"/>
+  <text x="880" y="90" font-family="Arial" font-size="18" fill="#2d3748">Context Inspector</text>
+  
+  <!-- Currently Inspecting -->
+  <rect x="870" y="120" width="310" height="80" rx="5" fill="#f7fafc"/>
+  <text x="890" y="140" font-family="Arial" font-size="16" fill="#2d3748" font-weight="bold">Database Schema</text>
+  <text x="890" y="165" font-family="Arial" font-size="14" fill="#4a5568">Path: Project Alpha > Architecture</text>
+  <text x="890" y="190" font-family="Arial" font-size="14" fill="#4a5568">Added: March 10, 2025 • Last modified: 6 hours ago</text>
+  
+  <!-- Item Status -->
+  <rect x="870" y="210" width="310" height="60" rx="5" fill="#ebf8ff"/>
+  <text x="890" y="230" font-family="Arial" font-size="14" fill="#2d3748" font-weight="bold">Status:</text>
+  <text x="950" y="230" font-family="Arial" font-size="14" fill="#4299e1">In current context</text>
+  <text x="890" y="255" font-family="Arial" font-size="14" fill="#2d3748">Relevance:</text>
+  <rect x="970" y="242" width="120" height="15" rx="7.5" fill="#e2e8f0"/>
+  <rect x="970" y="242" width="102" height="15" rx="7.5" fill="#4299e1"/>
+  <text x="1100" y="255" font-family="Arial" font-size="14" fill="#2d3748">85%</text>
+  
+  <!-- Item Tags -->
+  <rect x="870" y="280" width="310" height="80" rx="5" fill="#f7fafc"/>
+  <text x="890" y="300" font-family="Arial" font-size="14" fill="#2d3748" font-weight="bold">Tags:</text>
+  
+  <rect x="890" y="310" width="90" height="30" rx="15" fill="#4299e1"/>
+  <text x="935" y="330" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Technical</text>
+  
+  <rect x="990" y="310" width="70" height="30" rx="15" fill="#ed8936"/>
+  <text x="1025" y="330" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Core</text>
+  
+  <rect x="1070" y="310" width="100" height="30" rx="15" fill="#48bb78"/>
+  <text x="1120" y="330" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Database</text>
+  
+  <!-- Related Items -->
+  <rect x="870" y="370" width="310" height="150" rx="5" fill="#f7fafc"/>
+  <text x="890" y="390" font-family="Arial" font-size="14" fill="#2d3748" font-weight="bold">Related Knowledge:</text>
+  
+  <!-- Relation 1 -->
+  <rect x="890" y="405" width="290" height="35" rx="5" fill="#e6fffa"/>
+  <text x="910" y="428" font-family="Arial" font-size="14" fill="#2d3748">User Tables</text>
+  <rect x="1080" y="410" width="90" height="25" rx="12.5" fill="#e2e8f0"/>
+  <text x="1125" y="428" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="middle">Child Node</text>
+  
+  <!-- Relation 2 -->
+  <rect x="890" y="450" width="290" height="35" rx="5" fill="#e6fffa"/>
+  <text x="910" y="473" font-family="Arial" font-size="14" fill="#2d3748">Content Models</text>
+  <rect x="1080" y="455" width="90" height="25" rx="12.5" fill="#e2e8f0"/>
+  <text x="1125" y="473" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="middle">Child Node</text>
+  
+  <!-- Relation 3 -->
+  <rect x="890" y="495" width="290" height="35" rx="5" fill="#e6fffa"/>
+  <text x="910" y="518" font-family="Arial" font-size="14" fill="#2d3748">API Design</text>
+  <rect x="1080" y="500" width="90" height="25" rx="12.5" fill="#e2e8f0"/>
+  <text x="1125" y="518" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="middle">Related</text>
+  
+  <!-- Context Actions -->
+  <rect x="870" y="530" width="310" height="120" rx="5" fill="#f7fafc"/>
+  <text x="890" y="550" font-family="Arial" font-size="14" fill="#2d3748" font-weight="bold">Context Actions:</text>
+  
+  <rect x="890" y="565" width="145" height="35" rx="5" fill="#4299e1"/>
+  <text x="962" y="587" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Remove From Context</text>
+  
+  <rect x="1045" y="565" width="135" height="35" rx="5" fill="#48bb78"/>
+  <text x="1112" y="587" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Branch From Here</text>
+  
+  <rect x="890" y="610" width="290" height="35" rx="5" fill="#9f7aea"/>
+  <text x="1035" y="632" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Set This as Main Context</text>
+  
+  <!-- Branching Preview -->
+  <rect x="870" y="660" width="310" height="130" rx="5" fill="#fffaf0"/>
+  <text x="890" y="680" font-family="Arial" font-size="14" fill="#ed8936" font-weight="bold">Branch Preview:</text>
+  <text x="890" y="705" font-family="Arial" font-size="14" fill="#4a5568">Creating a branch from this node would:</text>
+  <text x="910" y="730" font-family="Arial" font-size="14" fill="#4a5568">• Include 5 related knowledge nodes</text>
+  <text x="910" y="755" font-family="Arial" font-size="14" fill="#4a5568">• Focus context on database architecture</text>
+  <text x="910" y="780" font-family="Arial" font-size="14" fill="#4a5568">• Exclude ~60% of current context</text>
+</svg>

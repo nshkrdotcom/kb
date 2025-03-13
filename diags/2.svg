@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840">
+  <!-- Background -->
+  <rect width="1200" height="840" fill="#f5f7fa"/>
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="1200" height="60" fill="#2d3748"/>
+  <text x="30" y="38" font-family="Arial" font-size="24" fill="white">ContextNexus</text>
+  <text x="200" y="38" font-family="Arial" font-size="16" fill="#a0aec0">Dynamic Knowledge Management System</text>
+  
+  <!-- View Options -->
+  <rect x="650" y="15" width="100" height="30" rx="15" fill="#4a5568"/>
+  <text x="700" y="35" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Knowledge</text>
+  
+  <rect x="760" y="15" width="100" height="30" rx="15" fill="#2d3748"/>
+  <text x="810" y="35" font-family="Arial" font-size="14" fill="#a0aec0" text-anchor="middle">Analytics</text>
+  
+  <rect x="870" y="15" width="100" height="30" rx="15" fill="#2d3748"/>
+  <text x="920" y="35" font-family="Arial" font-size="14" fill="#a0aec0" text-anchor="middle">Settings</text>
+  
+  <!-- User Menu -->
+  <circle cx="1150" cy="30" r="20" fill="#4fd1c5"/>
+  <text x="1150" y="35" font-family="Arial" font-size="14" fill="white" text-anchor="middle">VP</text>
+  
+  <!-- Main Split View (Changed to Focus on Branching) -->
+  <!-- Left Side - Knowledge Context Graph -->
+  <rect x="0" y="60" width="450" height="740" fill="#e2e8f0"/>
+  
+  <!-- Graph Header -->
+  <rect x="0" y="60" width="450" height="50" fill="#4a5568"/>
+  <text x="20" y="90" font-family="Arial" font-size="18" fill="white">Knowledge Context Graph</text>
+  
+  <!-- View Controls -->
+  <rect x="20" y="120" width="410" height="40" rx="5" fill="#4299e1"/>
+  
+  <rect x="30" y="125" width="30" height="30" rx="5" fill="#63b3ed"/>
+  <text x="45" y="145" font-family="Arial" font-size="16" fill="white" text-anchor="middle">−</text>
+  
+  <rect x="70" y="125" width="30" height="30" rx="5" fill="#63b3ed"/>
+  <text x="85" y="145" font-family="Arial" font-size="16" fill="white" text-anchor="middle">+</text>
+  
+  <rect x="110" y="125" width="60" height="30" rx="5" fill="#63b3ed"/>
+  <text x="140" y="145" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Fit</text>
+  
+  <rect x="180" y="125" width="80" height="30" rx="5" fill="#63b3ed"/>
+  <text x="220" y="145" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Main</text>
+  
+  <rect x="270" y="125" width="150" height="30" rx="5" fill="#63b3ed"/>
+  <text x="345" y="145" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Branch Preview</text>
+  
+  <!-- Knowledge Graph Visualization -->
+  <!-- The visualization shows branching structure from Main Context to a specialized context -->
+  <!-- Main Context Node -->
+  <circle cx="225" cy="220" r="40" fill="#4299e1"/>
+  <text x="225" y="220" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Main</text>
+  <text x="225" y="240" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Project Alpha</text>
+  
+  <!-- Main Context Components -->
+  <circle cx="125" cy="300" r="25" fill="#63b3ed"/>
+  <text x="125" y="305" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Req.</text>
+  <line x1="195" y1="250" x2="135" y2="285" stroke="#90cdf4" stroke-width="2"/>
+  
+  <circle cx="225" cy="320" r="30" fill="#63b3ed" stroke="#f6ad55" stroke-width="3"/>
+  <text x="225" y="325" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Arch.</text>
+  <line x1="225" y1="260" x2="225" y2="290" stroke="#90cdf4" stroke-width="3"/>
+  
+  <circle cx="325" cy="300" r="25" fill="#63b3ed"/>
+  <text x="325" y="305" font-family="Arial" font-size="12" fill="white" text-anchor="middle">UI</text>
+  <line x1="255" y1="250" x2="315" y2="285" stroke="#90cdf4" stroke-width="2"/>
+  
+  <!-- Architecture Sub-components -->
+  <circle cx="155" cy="400" r="22" fill="#90cdf4"/>
+  <text x="155" y="405" font-family="Arial" font-size="10" fill="#2d3748" text-anchor="middle">API</text>
+  <line x1="205" y1="340" x2="165" y2="385" stroke="#bee3f8" stroke-width="2"/>
+  
+  <circle cx="225" cy="420" r="25" fill="#90cdf4" stroke="#f6ad55" stroke-width="3"/>
+  <text x="225" y="425" font-family="Arial" font-size="10" fill="#2d3748" text-anchor="middle">DB</text>
+  <line x1="225" y1="350" x2="225" y2="395" stroke="#bee3f8" stroke-width="3"/>
+  
+  <circle cx="295" cy="400" r="22" fill="#90cdf4"/>
+  <text x="295" y="405" font-family="Arial" font-size="10" fill="#2d3748" text-anchor="middle">Auth</text>
+  <line x1="245" y1="340" x2="285" y2="385" stroke="#bee3f8" stroke-width="2"/>
+  
+  <!-- Database Sub-components -->
+  <circle cx="170" cy="490" r="18" fill="#bee3f8"/>
+  <text x="170" y="495" font-family="Arial" font-size="9" fill="#2d3748" text-anchor="middle">Users</text>
+  <line x1="210" y1="440" x2="180" y2="475" stroke="#e6fffa" stroke-width="2"/>
+  
+  <circle cx="225" cy="510" r="20" fill="#bee3f8" stroke="#48bb78" stroke-width="3"/>
+  <text x="225" y="515" font-family="Arial" font-size="9" fill="#2d3748" text-anchor="middle">Content</text>
+  <line x1="225" y1="445" x2="225" y2="490" stroke="#e6fffa" stroke-width="3"/>
+  
+  <circle cx="280" cy="490" r="18" fill="#bee3f8"/>
+  <text x="280" y="495" font-family="Arial" font-size="9" fill="#2d3748" text-anchor="middle">Auth</text>
+  <line x1="240" y1="440" x2="270" y2="475" stroke="#e6fffa" stroke-width="2"/>
+  
+  <!-- Branch Context -->
+  <circle cx="350" cy="450" r="35" fill="#ed8936" stroke="#2d3748" stroke-dasharray="5,5" stroke-width="2"/>
+  <text x="350" y="445" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Branch</text>
+  <text x="350" y="465" font-family="Arial" font-size="10" fill="white" text-anchor="middle">DB Schema</text>
+  
+  <!-- Branch Connection -->
+  <line x1="250" y1="420" x2="320" y2="440" stroke="#f6ad55" stroke-width="3" stroke-dasharray="5,3"/>
+  
+  <!-- Branch Components (Connected to Branch) -->
+  <circle cx="350" cy="530" r="20" fill="#f6ad55" stroke="#2d3748" stroke-dasharray="5,5" stroke-width="2"/>
+  <text x="350" y="535" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Content</text>
+  <line x1="350" y1="485" x2="350" y2="510" stroke="#fbd38d" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <circle cx="410" cy="500" r="18" fill="#f6ad55" stroke="#2d3748" stroke-dasharray="5,5" stroke-width="2"/>
+  <text x="410" y="505" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Scaling</text>
+  <line x1="380" y1="470" x2="400" y2="490" stroke="#fbd38d" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <circle cx="430" cy="560" r="18" fill="#f6ad55" stroke="#2d3748" stroke-dasharray="5,5" stroke-width="2"/>
+  <text x="430" y="565" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Version</text>
+  <line x1="370" y1="540" x2="420" y2="555" stroke="#fbd38d" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- Legend -->
+  <rect x="20" y="650" width="410" height="130" rx="5" fill="white"/>
+  <text x="40" y="675" font-family="Arial" font-size="14" fill="#2d3748" font-weight="bold">Graph Legend:</text>
+  
+  <circle cx="50" cy="700" r="15" fill="#4299e1"/>
+  <text x="80" y="705" font-family="Arial" font-size="14" fill="#2d3748">Main Context Node</text>
+  
+  <circle cx="50" cy="730" r="15" fill="#ed8936"/>
+  <text x="80" y="735" font-family="Arial" font-size="14" fill="#2d3748">Branch Context Node</text>
+  
+  <circle cx="220" cy="700" r="10" fill="#90cdf4" stroke="#f6ad55" stroke-width="2"/>
+  <text x="250" y="705" font-family="Arial" font-size="14" fill="#2d3748">Selected Node</text>
+  
+  <line x1="220" y1="730" x2="250" y2="730" stroke="#fbd38d" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="280" y="735" font-family="Arial" font-size="14" fill="#2d3748">Branch Connection</text>
+  
+  <!-- Right Side - Context Branch Creation -->
+  <rect x="450" y="60" width="750" height="740" fill="white"/>
+  
+  <!-- Branch Creation Header -->
+  <rect x="450" y="60" width="750" height="60" fill="#f7fafc"/>
+  <text x="480" y="95" font-family="Arial" font-size="20" fill="#2d3748" font-weight="bold">Create Context Branch</text>
+  <text x="480" y="115" font-family="Arial" font-size="14" fill="#4a5568">From: Database Schema in Project Alpha > Architecture</text>
+  
+  <!-- Main Form -->
+  <rect x="480" y="140" width="690" height="640" rx="5" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Branch Type Selection -->
+  <text x="520" y="170" font-family="Arial" font-size="16" fill="#2d3748" font-weight="bold">Branch Type:</text>
+  
+  <rect x="520" y="185" width="200" height="40" rx="5" fill="#feebc8"/>
+  <circle cx="540" cy="205" r="10" fill="#ed8936"/>
+  <text x="560" y="210" font-family="Arial" font-size="14" fill="#ed8936" font-weight="bold">Exploration Branch</text>
+  <text x="560" y="230" font-family="Arial" font-size="12" fill="#ed8936">Temporary context for focused inquiry</text>
+  
+  <rect x="740" y="185" width="200" height="40" rx="5" fill="#e2e8f0"/>
+  <circle cx="760" cy="205" r="10" fill="#a0aec0"/>
+  <text x="780" y="210" font-family="Arial" font-size="14" fill="#4a5568">Refinement Branch</text>
+  <text x="780" y="230" font-family="Arial" font-size="12" fill="#4a5568">Refine knowledge for reintegration</text>
+  
+  <rect x="520" y="235" width="200" height="40" rx="5" fill="#e2e8f0"/>
+  <circle cx="540" cy="255" r="10" fill="#a0aec0"/>
+  <text x="560" y="260" font-family="Arial" font-size="14" fill="#4a5568">Parallel Thread</text>
+  <text x="560" y="280" font-family="Arial" font-size="12" fill="#4a5568">Long-term separate conversation</text>
+  
+  <rect x="740" y="235" width="200" height="40" rx="5" fill="#e2e8f0"/>
+  <circle cx="760" cy="255" r="10" fill="#a0aec0"/>
+  <text x="780" y="260" font-family="Arial" font-size="14" fill="#4a5568">Specialized Context</text>
+  <text x="780" y="280" font-family="Arial" font-size="12" fill="#4a5568">Domain-specific knowledge focus</text>
+  
+  <!-- Branch Configuration -->
+  <text x="520" y="320" font-family="Arial" font-size="16" fill="#2d3748" font-weight="bold">Branch Configuration:</text>
+  
+  <!-- Branch Name -->
+  <text x="520" y="350" font-family="Arial" font-size="14" fill="#4a5568">Branch Name:</text>
+  <rect x="520" y="360" width="420" height="40" rx="5" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="540" y="385" font-family="Arial" font-size="14" fill="#2d3748">Database Schema Optimization</text>
+  
+  <!-- Knowledge Selection -->
+  <text x="520" y="420" font-family="Arial" font-size="14" fill="#4a5568">Include Related Knowledge:</text>
+  
+  <!-- Selected Knowledge Items -->
+  <rect x="520" y="440" width="420" height="40" rx="5" fill="#ebf8ff"/>
+  <rect x="530" y="450" width="20" height="20" rx="3" fill="#4299e1"/>
+  <text x="535" y="464" font-family="Arial" font-size="14" fill="white" font-weight="bold">✓</text>
+  <text x="560" y="465" font-family="Arial" font-size="14" fill="#2d3748">Database Schema (root node)</text>
+  <text x="850" y="465" font-family="Arial" font-size="14" fill="#4a5568">100%</text>
+  
+  <rect x="520" y="490" width="420" height="40" rx="5" fill="#ebf8ff"/>
+  <rect x="530" y="500" width="20" height="20" rx="3" fill="#4299e1"/>
+  <text x="535" y="514" font-family="Arial" font-size="14" fill="white" font-weight="bold">✓</text>
+  <text x="560" y="515" font-family="Arial" font-size="14" fill="#2d3748">Content Models</text>
+  <text x="850" y="515" font-family="Arial" font-size="14" fill="#4a5568">100%</text>
+  
+  <rect x="520" y="540" width="420" height="40" rx="5" fill="#ebf8ff"/>
+  <rect x="530" y="550" width="20" height="20" rx="3" fill="#4299e1"/>
+  <text x="535" y="564" font-family="Arial" font-size="14" fill="white" font-weight="bold">✓</text>
+  <text x="560" y="565" font-family="Arial" font-size="14" fill="#2d3748">User Tables</text>
+  <text x="850" y="565" font-family="Arial" font-size="14" fill="#4a5568">80%</text>
+  
+  <rect x="520" y="590" width="420" height="40" rx="5" fill="#f7fafc"/>
+  <rect x="530" y="600" width="20" height="20" rx="3" fill="white" stroke="#a0aec0" stroke-width="1"/>
+  <text x="560" y="615" font-family="Arial" font-size="14" fill="#2d3748">API Design</text>
+  <text x="850" y="615" font-family="Arial" font-size="14" fill="#4a5568">40%</text>
+  
+  <rect x="520" y="640" width="420" height="40" rx="5" fill="#f7fafc"/>
+  <rect x="530" y="650" width="20" height="20" rx="3" fill="white" stroke="#a0aec0" stroke-width="1"/>
+  <text x="560" y="665" font-family="Arial" font-size="14" fill="#2d3748">Authentication System</text>
+  <text x="850" y="665" font-family="Arial" font-size="14" fill="#4a5568">20%</text>
+  
+  <!-- Conversation History Options -->
+  <text x="520" y="700" font-family="Arial" font-size="14" fill="#4a5568">Include Conversation History:</text>
+  
+  <rect x="520" y="720" width="150" height="40" rx="5" fill="#ebf8ff"/>
+  <circle cx="540" cy="740" r="10" fill="#4299e1"/>
+  <text x="560" y="745" font-family="Arial" font-size="14" fill="#2d3748">Last 3 messages</text>
+  
+  <rect x="680" y="720" width="120" height="40" rx="5" fill="#f7fafc"/>
+  <circle cx="700" cy="740" r="10" fill="#e2e8f0"/>
+  <text x="720" y="745" font-family="Arial" font-size="14" fill="#4a5568">All history</text>
+  
+  <rect x="810" y="720" width="150" height="40" rx="5" fill="#f7fafc"/>
+  <circle cx="830" cy="740" r="10" fill="#e2e8f0"/>
+  <text x="850" y="745" font-family="Arial" font-size="14" fill="#4a5568">Selected messages</text>
+  
+  <!-- Context Summary Panel -->
+  <rect x="960" y="140" width="210" height="560" rx="5" fill="#feebc8"/>
+  <text x="980" y="170" font-family="Arial" font-size="16" fill="#ed8936" font-weight="bold">Branch Summary</text>
+  
+  <rect x="980" y="190" width="170" height="1" fill="#ed8936"/>
+  
+  <text x="980" y="220" font-family="Arial" font-size="14" fill="#2d3748" font-weight="bold">Knowledge Nodes:</text>
+  <text x="980" y="250" font-family="Arial" font-size="14" fill="#4a5568">3 primary nodes</text>
+  <text x="980" y="280" font-family="Arial" font-size="14" fill="#4a5568">5 related nodes</text>
+  
+  <text x="980" y="320" font-family="Arial" font-size="14" fill="#2d3748" font-weight="bold">Context Size:</text>
+  <rect x="980" y="335" width="170" height="10" rx="5" fill="#f6ad55"/>
+  <rect x="980" y="335" width="68" height="10" rx="5" fill="#ed8936"/>
+  <text x="980" y="360" font-family="Arial" font-size="14" fill="#4a5568">~2,800 tokens (40%)</text>
+  
+  <text x="980" y="400" font-family="Arial" font-size="14" fill="#2d3748" font-weight="bold">Focus Areas:</text>
+  <text x="1000" y="430" font-family="Arial" font-size="14" fill="#4a5568">• Database Schema</text>
+  <text x="1000" y="460" font-family="Arial" font-size="14" fill="#4a5568">• Content Modeling</text>
+  <text x="1000" y="490" font-family="Arial" font-size="14" fill="#4a5568">• Data Relationships</text>
+  
+  <text x="980" y="530" font-family="Arial" font-size="14" fill="#2d3748" font-weight="bold">Excluded Content:</text>
+  <text x="980" y="560" font-family="Arial" font-size="14" fill="#4a5568">UI Design (entire section)</text>
+  <text x="980" y="590" font-family="Arial" font-size="14" fill="#4a5568">Research Notes</text>
+  <text x="980" y="620" font-family="Arial" font-size="14" fill="#4a5568">Meeting Notes</text>
+  
+  <!-- Action Buttons -->
+  <rect x="520" y="780" width="190" height="50" rx="5" fill="#e2e8f0"/>
+  <text x="615" y="810" font-family="Arial" font-size="16" fill="#4a5568" text-anchor="middle">Cancel</text>
+  
+  <rect x="730" y="780" width="210" height="50" rx="5" fill="#ed8936"/>
+  <text x="835" y="810" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Create Branch Context</text>
+  
+  <rect x="960" y="780" width="210" height="50" rx="5" fill="#4299e1"/>
+  <text x="1065" y="810" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Preview in Graph</text>
+</svg>

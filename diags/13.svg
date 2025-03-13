@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#f8fafc"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="60" fill="#0f766e"/>
+  <text x="25" y="38" font-family="Arial" font-size="22" fill="white">CollabContext</text>
+  <text x="200" y="38" font-family="Arial" font-size="14" fill="#99f6e4">Collaborative Knowledge Workspace</text>
+  
+  <!-- Navigation -->
+  <rect x="580" y="15" width="100" height="30" rx="15" fill="#14b8a6"/>
+  <text x="630" y="35" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Team</text>
+  
+  <rect x="690" y="15" width="100" height="30" rx="15" fill="#0d9488" opacity="0.6"/>
+  <text x="740" y="35" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Private</text>
+  
+  <rect x="800" y="15" width="100" height="30" rx="15" fill="#0d9488" opacity="0.6"/>
+  <text x="850" y="35" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Analytics</text>
+  
+  <!-- User Avatars -->
+  <circle cx="920" cy="30" r="16" fill="#2dd4bf"/>
+  <text x="920" y="35" font-family="Arial" font-size="12" fill="#134e4a" text-anchor="middle">JS</text>
+  
+  <circle cx="950" cy="30" r="16" fill="#5eead4"/>
+  <text x="950" y="35" font-family="Arial" font-size="12" fill="#134e4a" text-anchor="middle">MK</text>
+  
+  <circle cx="980" cy="30" r="16" fill="#99f6e4"/>
+  <text x="980" y="35" font-family="Arial" font-size="12" fill="#134e4a" text-anchor="middle">+3</text>
+  
+  <!-- Main Content Area -->
+  <!-- Left Panel - Team Knowledge Graph -->
+  <rect x="20" y="80" width="320" height="600" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Knowledge Graph Header -->
+  <rect x="20" y="80" width="320" height="50" rx="10 10 0 0" fill="#f0fdfa"/>
+  <text x="40" y="110" font-family="Arial" font-size="16" fill="#0f766e" font-weight="bold">Project Knowledge Graph</text>
+  
+  <!-- Graph Controls -->
+  <rect x="240" y="92" width="30" height="25" rx="5" fill="#ccfbf1"/>
+  <text x="255" y="109" font-family="Arial" font-size="14" fill="#0f766e" text-anchor="middle">−</text>
+  
+  <rect x="275" y="92" width="30" height="25" rx="5" fill="#ccfbf1"/>
+  <text x="290" y="109" font-family="Arial" font-size="14" fill="#0f766e" text-anchor="middle">+</text>
+  
+  <!-- Knowledge Graph Visualization -->
+  <rect x="40" y="150" width="280" height="280" rx="8" fill="#f1f5f9"/>
+  
+  <!-- Main Project Node -->
+  <circle cx="180" cy="220" r="35" fill="#14b8a6"/>
+  <text x="180" y="220" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Product</text>
+  <text x="180" y="235" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Roadmap</text>
+  
+  <!-- Related Knowledge Nodes -->
+  <circle cx="100" cy="180" r="25" fill="#2dd4bf"/>
+  <text x="100" y="185" font-family="Arial" font-size="11" fill="white" text-anchor="middle">Market</text>
+  <line x1="120" y1="190" x2="150" y2="205" stroke="#5eead4" stroke-width="2"/>
+  
+  <circle cx="260" cy="180" r="25" fill="#2dd4bf"/>
+  <text x="260" y="185" font-family="Arial" font-size="11" fill="white" text-anchor="middle">Features</text>
+  <line x1="240" y1="190" x2="210" y2="205" stroke="#5eead4" stroke-width="2"/>
+  
+  <circle cx="120" cy="280" r="25" fill="#2dd4bf"/>
+  <text x="120" y="285" font-family="Arial" font-size="11" fill="white" text-anchor="middle">Timeline</text>
+  <line x1="140" y1="265" x2="160" y2="250" stroke="#5eead4" stroke-width="2"/>
+  
+  <circle cx="240" cy="280" r="25" fill="#2dd4bf"/>
+  <text x="240" y="285" font-family="Arial" font-size="11" fill="white" text-anchor="middle">Resources</text>
+  <line x1="220" y1="265" x2="200" y2="250" stroke="#5eead4" stroke-width="2"/>
+  
+  <!-- Second-level Nodes -->
+  <circle cx="80" cy="230" r="15" fill="#5eead4"/>
+  <text x="80" y="234" font-family="Arial" font-size="9" fill="#134e4a" text-anchor="middle">Q3</text>
+  <line x1="90" y1="220" x2="110" y2="195" stroke="#99f6e4" stroke-width="1"/>
+  
+  <circle cx="280" cy="230" r="15" fill="#5eead4"/>
+  <text x="280" y="234" font-family="Arial" font-size="9" fill="#134e4a" text-anchor="middle">API</text>
+  <line x1="270" y1="220" x2="255" y2="195" stroke="#99f6e4" stroke-width="1"/>
+  
+  <circle cx="180" cy="160" r="15" fill="#5eead4"/>
+  <text x="180" y="164" font-family="Arial" font-size="9" fill="#134e4a" text-anchor="middle">Goals</text>
+  <line x1="180" y1="175" x2="180" y2="185" stroke="#99f6e4" stroke-width="1"/>
+  
+  <circle cx="180" cy="300" r="15" fill="#5eead4"/>
+  <text x="180" y="304" font-family="Arial" font-size="9" fill="#134e4a" text-anchor="middle">Team</text>
+  <line x1="180" y1="285" x2="180" y2="255" stroke="#99f6e4" stroke-width="1"/>
+  
+  <!-- User Presence Indicators -->
+  <circle cx="190" cy="240" r="6" fill="#4f46e5" stroke="white" stroke-width="1.5"/>
+  <circle cx="260" cy="190" r="6" fill="#f43f5e" stroke="white" stroke-width="1.5"/>
+  <circle cx="120" cy="290" r="6" fill="#84cc16" stroke="white" stroke-width="1.5"/>
+  
+  <!-- Shared Context Templates -->
+  <rect x="40" y="450" width="280" height="210" rx="8" fill="#f1f5f9"/>
+  <text x="60" y="475" font-family="Arial" font-size="14" fill="#0f766e" font-weight="bold">Shared Context Templates</text>
+  
+  <!-- Template 1 -->
+  <rect x="60" y="490" width="240" height="40" rx="5" fill="white" stroke="#14b8a6" stroke-width="1"/>
+  <text x="80" y="515" font-family="Arial" font-size="12" fill="#134e4a" font-weight="bold">Feature Planning</text>
+  <text x="240" y="515" font-family="Arial" font-size="12" fill="#134e4a">Team</text>
+  
+  <!-- Template 2 -->
+  <rect x="60" y="540" width="240" height="40" rx="5" fill="white" stroke="#14b8a6" stroke-width="1"/>
+  <text x="80" y="565" font-family="Arial" font-size="12" fill="#134e4a" font-weight="bold">Competitor Analysis</text>
+  <text x="240" y="565" font-family="Arial" font-size="12" fill="#134e4a">Marketing</text>
+  
+  <!-- Template 3 -->
+  <rect x="60" y="590" width="240" height="40" rx="5" fill="white" stroke="#14b8a6" stroke-width="1"/>
+  <text x="80" y="615" font-family="Arial" font-size="12" fill="#134e4a" font-weight="bold">Sprint Planning</text>
+  <text x="240" y="615" font-family="Arial" font-size="12" fill="#134e4a">Dev Team</text>
+  
+  <!-- Center Panel - Active Collaboration -->
+  <rect x="360" y="80" width="380" height="600" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Collaboration Header -->
+  <rect x="360" y="80" width="380" height="50" rx="10 10 0 0" fill="#f0fdfa"/>
+  <text x="380" y="110" font-family="Arial" font-size="16" fill="#0f766e" font-weight="bold">Feature Planning Session</text>
+  
+  <!-- Branch Status -->
+  <rect x="590" y="95" width="130" height="20" rx="10" fill="#14b8a6"/>
+  <text x="655" y="110" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Main Branch</text>
+  
+  <!-- Conversation with Privacy Levels -->
+  <!-- Message 1 -->
+  <rect x="380" y="150" width="340" height="80" rx="8" fill="#f0fdfa"/>
+  <circle cx="400" cy="170" r="15" fill="#2dd4bf"/>
+  <text x="400" y="175" font-family="Arial" font-size="12" fill="white" text-anchor="middle">JS</text>
+  <text x="425" y="170" font-family="Arial" font-size="14" fill="#0f766e" font-weight="bold">Jane Smith</text>
+  <text x="510" y="170" font-family="Arial" font-size="12" fill="#0f766e">Product Manager</text>
+  
+  <rect x="650" y="165" width="50" height="20" rx="10" fill="#14b8a6"/>
+  <text x="675" y="180" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Team</text>
+  
+  <text x="425" y="195" font-family="Arial" font-size="13" fill="#334155">Let's discuss the API integration features for our Q3 roadmap. We need to prioritize the endpoints.</text>
+  
+  <!-- Message 2 with Private Comment -->
+  <rect x="380" y="250" width="340" height="100" rx="8" fill="#f0fdfa"/>
+  <circle cx="400" cy="270" r="15" fill="#5eead4"/>
+  <text x="400" y="275" font-family="Arial" font-size="12" fill="#134e4a" text-anchor="middle">MK</text>
+  <text x="425" y="270" font-family="Arial" font-size="14" fill="#0f766e" font-weight="bold">Mike Khan</text>
+  <text x="510" y="270" font-family="Arial" font-size="12" fill="#0f766e">Lead Developer</text>
+  
+  <rect x="650" y="265" width="50" height="20" rx="10" fill="#14b8a6"/>
+  <text x="675" y="280" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Team</text>
+  
+  <text x="425" y="295" font-family="Arial" font-size="13" fill="#334155">I think we should focus on the payment processing API first, followed by the user profile endpoints.</text>
+  
+  <!-- Private Note (only visible to specific roles) -->
+  <rect x="425" y="320" width="280" height="30" rx="5" fill="#fffbeb" stroke="#fbbf24" stroke-width="1"/>
+  <text x="445" y="340" font-family="Arial" font-size="12" fill="#92400e" font-style="italic">Private note: We'll need 2 additional developers for this timeline.</text>
+  
+  <rect x="650" y="325" width="50" height="20" rx="10" fill="#f59e0b"/>
+  <text x="675" y="340" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Mgmt</text>
+  
+  <!-- Message 3 -->
+  <rect x="380" y="370" width="340" height="100" rx="8" fill="#f0fdfa"/>
+  <circle cx="400" cy="390" r="15" fill="#99f6e4"/>
+  <text x="400" y="395" font-family="Arial" font-size="12" fill="#134e4a" text-anchor="middle">TJ</text>
+  <text x="425" y="390" font-family="Arial" font-size="14" fill="#0f766e" font-weight="bold">Taylor Johnson</text>
+  <text x="525" y="390" font-family="Arial" font-size="12" fill="#0f766e">UX Designer</text>
+  
+  <rect x="650" y="385" width="50" height="20" rx="10" fill="#14b8a6"/>
+  <text x="675" y="400" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Team</text>
+  
+  <text x="425" y="415" font-family="Arial" font-size="13" fill="#334155">From a user perspective, I think we should prioritize the profile endpoints first. I've created some mockups.</text>
+  
+  <rect x="425" y="435" width="280" height="30" rx="5" fill="#f1f5f9"/>
+  <text x="445" y="455" font-family="Arial" font-size="12" fill="#475569">» UX Mockups (View in design system)</text>
+  
+  <!-- Contextual Diff Section -->
+  <rect x="380" y="490" width="340" height="170" rx="8" fill="#f1f5f9"/>
+  <text x="400" y="515" font-family="Arial" font-size="14" fill="#0f766e" font-weight="bold">Feature Development Branch</text>
+  
+  <!-- Branch Visual -->
+  <line x1="420" y1="535" x2="680" y2="535" stroke="#cbd5e0" stroke-width="1"/>
+  <circle cx="420" cy="535" r="6" fill="#14b8a6"/>
+  <circle cx="480" cy="535" r="6" fill="#14b8a6"/>
+  <circle cx="540" cy="535" r="6" fill="#14b8a6"/>
+  <circle cx="600" cy="535" r="6" fill="#14b8a6"/>
+  <circle cx="680" cy="535" r="6" fill="#14b8a6"/>
+  
+  <line x1="540" y1="535" x2="540" y2="565" stroke="#cbd5e0" stroke-width="1"/>
+  <line x1="540" y1="565" x2="620" y2="565" stroke="#cbd5e0" stroke-width="1"/>
+  <circle cx="620" cy="565" r="6" fill="#f59e0b"/>
+  
+  <line x1="420" y1="535" x2="420" y2="595" stroke="#cbd5e0" stroke-width="1"/>
+  <line x1="420" y1="595" x2="500" y2="595" stroke="#cbd5e0" stroke-width="1"/>
+  <circle cx="500" cy="595" r="6" fill="#3b82f6"/>
+  
+  <text x="430" y="555" font-family="Arial" font-size="10" fill="#475569">Main context</text>
+  <text x="550" y="555" font-family="Arial" font-size="10" fill="#475569">Current</text>
+  <text x="630" y="565" font-family="Arial" font-size="10" fill="#92400e">Management view</text>
+  <text x="510" y="595" font-family="Arial" font-size="10" fill="#1e40af">Developer view</text>
+  
+  <text x="400" y="635" font-family="Arial" font-size="12" fill="#0f766e">Branch differences: +2 knowledge nodes, -1 node</text>
+  <rect x="580" y="625" width="120" height="25" rx="12.5" fill="#14b8a6"/>
+  <text x="640" y="642" font-family="Arial" font-size="12" fill="white" text-anchor="middle">View Changes</text>
+  
+  <!-- Right Panel - Context Privacy Controls -->
+  <rect x="760" y="80" width="220" height="600" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Privacy Controls Header -->
+  <rect x="760" y="80" width="220" height="50" rx="10 10 0 0" fill="#f0fdfa"/>
+  <text x="780" y="110" font-family="Arial" font-size="16" fill="#0f766e" font-weight="bold">Privacy Controls</text>
+  
+  <!-- Team & Roles -->
+  <rect x="780" y="150" width="180" height="160" rx="8" fill="#f1f5f9"/>
+  <text x="800" y="175" font-family="Arial" font-size="14" fill="#0f766e" font-weight="bold">Team Members</text>
+  
+  <!-- Team Member 1 -->
+  <rect x="800" y="190" width="140" height="25" rx="5" fill="white"/>
+  <circle cx="815" cy="202" r="8" fill="#2dd4bf"/>
+  <text x="815" y="206" font-family="Arial" font-size="8" fill="#134e4a" text-anchor="middle">JS</text>
+  <text x="835" y="206" font-family="Arial" font-size="12" fill="#334155">Jane Smith</text>
+  <rect x="900" y="195" width="30" height="15" rx="7.5" fill="#14b8a6"/>
+  <text x="915" y="206" font-family="Arial" font-size="8" fill="white" text-anchor="middle">PM</text>
+  
+  <!-- Team Member 2 -->
+  <rect x="800" y="225" width="140" height="25" rx="5" fill="white"/>
+  <circle cx="815" cy="237" r="8" fill="#5eead4"/>
+  <text x="815" y="241" font-family="Arial" font-size="8" fill="#134e4a" text-anchor="middle">MK</text>
+  <text x="835" y="241" font-family="Arial" font-size="12" fill="#334155">Mike Khan</text>
+  <rect x="900" y="230" width="30" height="15" rx="7.5" fill="#14b8a6"/>
+  <text x="915" y="241" font-family="Arial" font-size="8" fill="white" text-anchor="middle">DEV</text>
+  
+  <!-- Team Member 3 -->
+  <rect x="800" y="260" width="140" height="25" rx="5" fill="white"/>
+  <circle cx="815" cy="272" r="8" fill="#99f6e4"/>
+  <text x="815" y="276" font-family="Arial" font-size="8" fill="#134e4a" text-anchor="middle">TJ</text>
+  <text x="835" y="276" font-family="Arial" font-size="12" fill="#334155">Taylor Johnson</text>
+  <rect x="900" y="265" width="30" height="15" rx="7.5" fill="#14b8a6"/>
+  <text x="915" y="276" font-family="Arial" font-size="8" fill="white" text-anchor="middle">UX</text>
+  
+  <!-- Visibility Settings -->
+  <rect x="780" y="330" width="180" height="190" rx="8" fill="#f1f5f9"/>
+  <text x="800" y="355" font-family="Arial" font-size="14" fill="#0f766e" font-weight="bold">Context Visibility</text>
+  
+  <!-- Visibility Levels -->
+  <rect x="800" y="375" width="140" height="30" rx="5" fill="#14b8a6"/>
+  <text x="830" y="395" font-family="Arial" font-size="12" fill="white">Team-wide</text>
+  <text x="915" y="395" font-family="Arial" font-size="12" fill="white" text-anchor="end">✓</text>
+  
+  <rect x="800" y="415" width="140" height="30" rx="5" fill="#f59e0b"/>
+  <text x="830" y="435" font-family="Arial" font-size="12" fill="white">Management</text>
+  <text x="915" y="435" font-family="Arial" font-size="12" fill="white" text-anchor="end">✓</text>
+  
+  <rect x="800" y="455" width="140" height="30" rx="5" fill="#3b82f6"/>
+  <text x="830" y="475" font-family="Arial" font-size="12" fill="white">Development</text>
+  <text x="915" y="475" font-family="Arial" font-size="12" fill="white" text-anchor="end">✓</text>
+  
+  <rect x="800" y="495" width="140" height="30" rx="5" fill="#f1f5f9" stroke="#cbd5e0" stroke-width="1"/>
+  <text x="830" y="515" font-family="Arial" font-size="12" fill="#475569">Public</text>
+  <text x="915" y="515" font-family="Arial" font-size="12" fill="#475569" text-anchor="end">✗</text>
+  
+  <!-- Context Review Controls -->
+  <rect x="780" y="540" width="180" height="120" rx="8" fill="#f1f5f9"/>
+  <text x="800" y="565" font-family="Arial" font-size="14" fill="#0f766e" font-weight="bold">Review Controls</text>
+  
+  <rect x="800" y="585" width="140" height="30" rx="5" fill="#14b8a6"/>
+  <text x="870" y="605" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Request Review</text>
+  
+  <rect x="800" y="625" width="140" height="30" rx="5" fill="white" stroke="#14b8a6" stroke-width="1"/>
+  <text x="870" y="645" font-family="Arial" font-size="12" fill="#0f766e" text-anchor="middle">Merge Branch</text>
+</svg>

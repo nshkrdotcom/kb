@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="50" fill="#1e293b"/>
+  <text x="20" y="32" font-family="Arial" font-size="20" fill="white">ContextNexus</text>
+  
+  <!-- Mode Selector -->
+  <rect x="200" y="10" width="100" height="30" rx="15" fill="#1e293b"/>
+  <text x="250" y="30" font-family="Arial" font-size="14" fill="#94a3b8" text-anchor="middle">Select</text>
+  
+  <rect x="310" y="10" width="100" height="30" rx="15" fill="#334155"/>
+  <text x="360" y="30" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Organize</text>
+  
+  <rect x="420" y="10" width="100" height="30" rx="15" fill="#1e293b"/>
+  <text x="470" y="30" font-family="Arial" font-size="14" fill="#94a3b8" text-anchor="middle">Preview</text>
+  
+  <!-- Context Status -->
+  <rect x="800" y="10" width="200" height="30" rx="15" fill="#334155"/>
+  <rect x="810" y="20" width="120" height="10" rx="5" fill="#475569"/>
+  <rect x="810" y="20" width="96" height="10" rx="5" fill="#38bdf8"/>
+  <text x="940" y="30" font-family="Arial" font-size="12" fill="white">80% • 8,042 tokens</text>
+  
+  <rect x="1010" y="10" width="70" height="30" rx="15" fill="#0ea5e9"/>
+  <text x="1045" y="30" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Apply</text>
+  
+  <circle cx="1120" cy="25" r="15" fill="#38bdf8"/>
+  <text x="1120" y="30" font-family="Arial" font-size="14" fill="white" text-anchor="middle">VP</text>
+  
+  <!-- Main Organization Area -->
+  <rect x="0" y="50" width="1200" height="750" fill="#f1f5f9"/>
+  
+  <!-- Top Controls -->
+  <rect x="0" y="50" width="1200" height="60" fill="#e2e8f0"/>
+  
+  <!-- Control Buttons -->
+  <rect x="20" y="65" width="140" height="30" rx="15" fill="#0ea5e9"/>
+  <text x="90" y="85" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Auto-Organize</text>
+  
+  <rect x="170" y="65" width="140" height="30" rx="15" fill="#e2e8f0"/>
+  <text x="240" y="85" font-family="Arial" font-size="14" fill="#475569" text-anchor="middle">By Relevance</text>
+  
+  <rect x="320" y="65" width="120" height="30" rx="15" fill="#e2e8f0"/>
+  <text x="380" y="85" font-family="Arial" font-size="14" fill="#475569" text-anchor="middle">By Type</text>
+  
+  <rect x="450" y="65" width="120" height="30" rx="15" fill="#e2e8f0"/>
+  <text x="510" y="85" font-family="Arial" font-size="14" fill="#475569" text-anchor="middle">By Time</text>
+  
+  <!-- Search/Filter -->
+  <rect x="850" y="65" width="330" height="30" rx="15" fill="white"/>
+  <text x="870" y="85" font-family="Arial" font-size="14" fill="#94a3b8">Filter selections...</text>
+  
+  <!-- Main Organization Columns -->
+  <rect x="20" y="130" width="560" height="600" rx="10" fill="white"/>
+  <rect x="600" y="130" width="580" height="600" rx="10" fill="white"/>
+  
+  <!-- Left Column Header -->
+  <rect x="20" y="130" width="560" height="50" rx="10 10 0 0" fill="#dbeafe"/>
+  <text x="40" y="162" font-family="Arial" font-size="16" fill="#1e40af" font-weight="bold">Selected Content (Drag to Reorder)</text>
+  <text x="450" y="162" font-family="Arial" font-size="14" fill="#1e40af">7 items • 8,042 tokens</text>
+  
+  <!-- Right Column Header -->
+  <rect x="600" y="130" width="580" height="50" rx="10 10 0 0" fill="#dbeafe"/>
+  <text x="620" y="162" font-family="Arial" font-size="16" fill="#1e40af" font-weight="bold">Context Structure</text>
+  <text x="1030" y="162" font-family="Arial" font-size="14" fill="#1e40af">4 categories</text>
+  
+  <!-- Selected Content Items (Left Column) -->
+  <!-- Item 1 -->
+  <rect x="40" y="200" width="520" height="70" rx="5" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="225" font-family="Arial" font-size="14" font-weight="bold" fill="#334155">User Question (Initial)</text>
+  <text x="60" y="250" font-family="Arial" font-size="14" fill="#475569" class="truncated">I'm working on a machine learning project with a dataset of customer transactions...</text>
+  
+  <!-- Priority Handle -->
+  <rect x="40" y="200" width="10" height="70" rx="5 0 0 5" fill="#0ea5e9"/>
+  
+  <!-- Controls -->
+  <circle cx="500" cy="225" r="12" fill="#dbeafe"/>
+  <text x="500" y="229" font-family="Arial" font-size="14" fill="#0369a1" text-anchor="middle">↑</text>
+  
+  <circle cx="530" cy="225" r="12" fill="#dbeafe"/>
+  <text x="530" y="229" font-family="Arial" font-size="14" fill="#0369a1" text-anchor="middle">↓</text>
+  
+  <circle cx="530" cy="255" r="12" fill="#fecaca"/>
+  <text x="530" y="259" font-family="Arial" font-size="14" fill="#b91c1c" text-anchor="middle">✕</text>
+  
+  <!-- Item 2 -->
+  <rect x="40" y="280" width="520" height="70" rx="5" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="305" font-family="Arial" font-size="14" font-weight="bold" fill="#334155">AI Introduction</text>
+  <text x="60" y="330" font-family="Arial" font-size="14" fill="#475569" class="truncated">I'd be happy to help you design a preprocessing pipeline and model for churn prediction...</text>
+  
+  <!-- Priority Handle -->
+  <rect x="40" y="280" width="10" height="70" rx="5 0 0 5" fill="#0ea5e9"/>
+  
+  <!-- Controls -->
+  <circle cx="500" cy="305" r="12" fill="#dbeafe"/>
+  <text x="500" y="309" font-family="Arial" font-size="14" fill="#0369a1" text-anchor="middle">↑</text>
+  
+  <circle cx="530" cy="305" r="12" fill="#dbeafe"/>
+  <text x="530" y="309" font-family="Arial" font-size="14" fill="#0369a1" text-anchor="middle">↓</text>
+  
+  <circle cx="530" cy="335" r="12" fill="#fecaca"/>
+  <text x="530" y="339" font-family="Arial" font-size="14" fill="#b91c1c" text-anchor="middle">✕</text>
+  
+  <!-- Item 3 - High priority -->
+  <rect x="40" y="360" width="520" height="90" rx="5" fill="#f1f5f9" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="60" y="385" font-family="Arial" font-size="14" font-weight="bold" fill="#334155">Data Preprocessing Steps</text>
+  <text x="60" y="410" font-family="Arial" font-size="14" fill="#475569">- Handle missing values through imputation or removal</text>
+  <text x="60" y="435" font-family="Arial" font-size="14" fill="#475569">- Normalize numerical features (scaling to 0-1 range or standardizing)</text>
+  
+  <!-- Priority Handle -->
+  <rect x="40" y="360" width="10" height="90" rx="5 0 0 5" fill="#0ea5e9"/>
+  
+  <!-- Controls -->
+  <circle cx="500" cy="385" r="12" fill="#dbeafe"/>
+  <text x="500" y="389" font-family="Arial" font-size="14" fill="#0369a1" text-anchor="middle">↑</text>
+  
+  <circle cx="530" cy="385" r="12" fill="#dbeafe"/>
+  <text x="530" y="389" font-family="Arial" font-size="14" fill="#0369a1" text-anchor="middle">↓</text>
+  
+  <circle cx="530" cy="415" r="12" fill="#fecaca"/>
+  <text x="530" y="419" font-family="Arial" font-size="14" fill="#b91c1c" text-anchor="middle">✕</text>
+  
+  <!-- Relevance Indicator (sliding control appears on hover) -->
+  <rect x="420" y="385" width="70" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="420" y="385" width="56" height="8" rx="4" fill="#0ea5e9"/>
+  <circle cx="476" cy="389" r="8" fill="white" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="505" y="415" font-family="Arial" font-size="12" fill="#334155">80%</text>
+  
+  <!-- Item 4 -->
+  <rect x="40" y="460" width="520" height="70" rx="5" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="485" font-family="Arial" font-size="14" font-weight="bold" fill="#334155">Model Selection</text>
+  <text x="60" y="510" font-family="Arial" font-size="14" fill="#475569" class="truncated">For churn prediction, I recommend starting with gradient boosting algorithms like XGBoost...</text>
+  
+  <!-- Priority Handle -->
+  <rect x="40" y="460" width="10" height="70" rx="5 0 0 5" fill="#0ea5e9"/>
+  
+  <!-- Controls -->
+  <circle cx="500" cy="485" r="12" fill="#dbeafe"/>
+  <text x="500" y="489" font-family="Arial" font-size="14" fill="#0369a1" text-anchor="middle">↑</text>
+  
+  <circle cx="530" cy="485" r="12" fill="#dbeafe"/>
+  <text x="530" y="489" font-family="Arial" font-size="14" fill="#0369a1" text-anchor="middle">↓</text>
+  
+  <circle cx="530" cy="515" r="12" fill="#fecaca"/>
+  <text x="530" y="519" font-family="Arial" font-size="14" fill="#b91c1c" text-anchor="middle">✕</text>
+  
+  <!-- Item 5 - Being dragged -->
+  <rect x="40" y="610" width="520" height="90" rx="5" fill="white" stroke="#0ea5e9" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"/>
+  <text x="60" y="635" font-family="Arial" font-size="14" font-weight="bold" fill="#334155">Python Preprocessing Code</text>
+  <text x="60" y="660" font-family="Consolas, monospace" font-size="14" fill="#475569">import pandas as pd</text>
+  <text x="60" y="685" font-family="Consolas, monospace" font-size="14" fill="#475569">from sklearn.preprocessing import StandardScaler</text>
+  
+  <!-- Drag Handle -->
+  <rect x="40" y="610" width="520" height="20" rx="5 5 0 0" fill="#dbeafe"/>
+  <circle cx="60" cy="620" r="4" fill="#0ea5e9"/>
+  <circle cx="75" cy="620" r="4" fill="#0ea5e9"/>
+  <circle cx="90" cy="620" r="4" fill="#0ea5e9"/>
+  
+  <!-- Priority Handle -->
+  <rect x="40" y="610" width="10" height="90" rx="5 0 0 5" fill="#0ea5e9"/>
+  
+  <!-- Controls -->
+  <circle cx="500" cy="635" r="12" fill="#dbeafe"/>
+  <text x="500" y="639" font-family="Arial" font-size="14" fill="#0369a1" text-anchor="middle">↑</text>
+  
+  <circle cx="530" cy="635" r="12" fill="#dbeafe"/>
+  <text x="530" y="639" font-family="Arial" font-size="14" fill="#0369a1" text-anchor="middle">↓</text>
+  
+  <circle cx="530" cy="665" r="12" fill="#fecaca"/>
+  <text x="530" y="669" font-family="Arial" font-size="14" fill="#b91c1c" text-anchor="middle">✕</text>
+  
+  <!-- Context Structure (Right Column) -->
+  <!-- Category 1 -->
+  <rect x="620" y="200" width="540" height="100" rx="5" fill="#dbeafe"/>
+  <text x="640" y="225" font-family="Arial" font-size="16" fill="#0c4a6e" font-weight="bold">Problem Definition</text>
+  <text x="640" y="250" font-family="Arial" font-size="14" fill="#0369a1">Contains user's initial question and requirements</text>
+  <text x="640" y="275" font-family="Arial" font-size="14" fill="#0369a1">2 content blocks • 1,240 tokens</text>
+  
+  <!-- Category Control -->
+  <circle cx="1130" cy="225" r="15" fill="white"/>
+  <text x="1130" y="230" font-family="Arial" font-size="16" fill="#0c4a6e" text-anchor="middle">+</text>
+  
+  <!-- Category 2 -->
+  <rect x="620" y="310" width="540" height="100" rx="5" fill="#0ea5e9"/>
+  <text x="640" y="335" font-family="Arial" font-size="16" fill="white" font-weight="bold">Data Preprocessing</text>
+  <text x="640" y="360" font-family="Arial" font-size="14" fill="white">Data cleaning and preparation approach</text>
+  <text x="640" y="385" font-family="Arial" font-size="14" fill="white">2 content blocks • 2,850 tokens</text>
+  
+  <!-- Category Control -->
+  <circle cx="1130" cy="335" r="15" fill="white"/>
+  <text x="1130" y="340" font-family="Arial" font-size="16" fill="#0c4a6e" text-anchor="middle">−</text>
+  
+  <!-- Category Items (expanded) -->
+  <rect x="640" y="420" width="500" height="50" rx="5" fill="white" opacity="0.9"/>
+  <text x="660" y="450" font-family="Arial" font-size="14" fill="#0c4a6e">Data Preprocessing Steps</text>
+  <circle cx="1120" cy="450" r="10" fill="#bae6fd"/>
+  <text x="1120" y="454" font-family="Arial" font-size="14" fill="#0c4a6e" text-anchor="middle">↑</text>
+  
+  <rect x="640" y="480" width="500" height="50" rx="5" fill="white" opacity="0.9"/>
+  <text x="660" y="510" font-family="Arial" font-size="14" fill="#0c4a6e">Python Preprocessing Code</text>
+  <circle cx="1120" cy="510" r="10" fill="#bae6fd"/>
+  <text x="1120" y="514" font-family="Arial" font-size="14" fill="#0c4a6e" text-anchor="middle">↓</text>
+  
+  <!-- Category 3 -->
+  <rect x="620" y="550" width="540" height="100" rx="5" fill="#dbeafe"/>
+  <text x="640" y="575" font-family="Arial" font-size="16" fill="#0c4a6e" font-weight="bold">Model Selection</text>
+  <text x="640" y="600" font-family="Arial" font-size="14" fill="#0369a1">Algorithm recommendations and rationale</text>
+  <text x="640" y="625" font-family="Arial" font-size="14" fill="#0369a1">2 content blocks • 1,980 tokens</text>
+  
+  <!-- Category Control -->
+  <circle cx="1130" cy="575" r="15" fill="white"/>
+  <text x="1130" y="580" font-family="Arial" font-size="16" fill="#0c4a6e" text-anchor="middle">+</text>
+  
+  <!-- Bottom Controls Area -->
+  <rect x="0" y="740" width="1200" height="60" fill="#e2e8f0"/>
+  
+  <!-- Keyboard Shortcut Reminders -->
+  <text x="20" y="775" font-family="Arial" font-size="14" fill="#475569">Ctrl+↑/↓: Move item</text>
+  <text x="180" y="775" font-family="Arial" font-size="14" fill="#475569">Ctrl+G: Group items</text>
+  <text x="330" y="775" font-family="Arial" font-size="14" fill="#475569">Alt+D: Delete item</text>
+  <text x="480" y="775" font-family="Arial" font-size="14" fill="#475569">Ctrl+R: Adjust relevance</text>
+  
+  <!-- Save/Cancel Controls -->
+  <rect x="900" y="755" width="120" height="30" rx="15" fill="#e2e8f0"/>
+  <text x="960" y="775" font-family="Arial" font-size="14" fill="#475569" text-anchor="middle">Cancel</text>
+  
+  <rect x="1030" y="755" width="150" height="30" rx="15" fill="#0ea5e9"/>
+  <text x="1105" y="775" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Save Structure</text>
+</svg>

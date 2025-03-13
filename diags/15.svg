@@ -1,0 +1,332 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000">
+  <!-- Background and grid -->
+  <rect width="1400" height="1000" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="700" y="40" font-family="Arial" font-size="24" fill="#1e293b" font-weight="bold" text-anchor="middle">Comprehensive Context Management System Architecture</text>
+  
+  <!-- Phase timeline at the top -->
+  <rect x="150" y="60" width="1100" height="80" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <text x="700" y="80" font-family="Arial" font-size="18" fill="#334155" font-weight="bold" text-anchor="middle">Development Phases</text>
+  
+  <!-- Phase 1 -->
+  <rect x="180" y="90" width="240" height="40" rx="5" fill="#fbcfe8" stroke="#db2777" stroke-width="1"/>
+  <text x="300" y="115" font-family="Arial" font-size="14" fill="#831843" font-weight="bold" text-anchor="middle">Phase 1: Foundational Capabilities</text>
+  
+  <!-- Phase 2 -->
+  <rect x="440" y="90" width="240" height="40" rx="5" fill="#ddd6fe" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="560" y="115" font-family="Arial" font-size="14" fill="#5b21b6" font-weight="bold" text-anchor="middle">Phase 2: Enhanced Collaboration</text>
+  
+  <!-- Phase 3 -->
+  <rect x="700" y="90" width="240" height="40" rx="5" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="820" y="115" font-family="Arial" font-size="14" fill="#1e40af" font-weight="bold" text-anchor="middle">Phase 3: Adaptive and Multi-Modal</text>
+  
+  <!-- Phase 4 -->
+  <rect x="960" y="90" width="240" height="40" rx="5" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="1080" y="115" font-family="Arial" font-size="14" fill="#065f46" font-weight="bold" text-anchor="middle">Phase 4: Advanced Capabilities</text>
+  
+  <!-- Cognitive Context Architecture -->
+  <rect x="150" y="160" width="330" height="250" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="315" y="180" font-family="Arial" font-size="16" fill="#b91c1c" font-weight="bold" text-anchor="middle">Cognitive Context Architecture</text>
+  
+  <!-- Neural Memory Persistence -->
+  <rect x="170" y="200" width="140" height="40" rx="5" fill="#fee2e2" stroke="#b91c1c" stroke-width="1"/>
+  <text x="240" y="225" font-family="Arial" font-size="12" fill="#7f1d1d" text-anchor="middle">Neural Memory Persistence</text>
+  
+  <!-- Forgetting Curves -->
+  <rect x="170" y="250" width="140" height="40" rx="5" fill="#fee2e2" stroke="#b91c1c" stroke-width="1"/>
+  <text x="240" y="275" font-family="Arial" font-size="12" fill="#7f1d1d" text-anchor="middle">Forgetting Curves</text>
+  
+  <!-- Associative Retrieval -->
+  <rect x="170" y="300" width="140" height="40" rx="5" fill="#fee2e2" stroke="#b91c1c" stroke-width="1"/>
+  <text x="240" y="325" font-family="Arial" font-size="12" fill="#7f1d1d" text-anchor="middle">Associative Retrieval</text>
+  
+  <!-- Temporal Awareness -->
+  <rect x="170" y="350" width="140" height="40" rx="5" fill="#fee2e2" stroke="#b91c1c" stroke-width="1"/>
+  <text x="240" y="375" font-family="Arial" font-size="12" fill="#7f1d1d" text-anchor="middle">Temporal Awareness</text>
+  
+  <!-- Long-Term Context Node -->
+  <circle cx="365" cy="295" r="45" fill="#fca5a5" stroke="#b91c1c" stroke-width="2"/>
+  <text x="365" y="290" font-family="Arial" font-size="12" fill="#7f1d1d" text-anchor="middle">Long-Term</text>
+  <text x="365" y="305" font-family="Arial" font-size="12" fill="#7f1d1d" text-anchor="middle">Context</text>
+  
+  <!-- Connection lines -->
+  <line x1="310" y1="220" x2="330" y2="260" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="310" y1="270" x2="325" y2="280" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="310" y1="320" x2="325" y2="310" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="310" y1="370" x2="325" y2="330" stroke="#b91c1c" stroke-width="1.5"/>
+  
+  <!-- Adaptive Context Metabolism -->
+  <rect x="150" y="430" width="330" height="250" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="315" y="450" font-family="Arial" font-size="16" fill="#1d4ed8" font-weight="bold" text-anchor="middle">Adaptive Context Metabolism</text>
+  
+  <!-- Usage Patterns Tracking -->
+  <rect x="170" y="470" width="140" height="40" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="240" y="495" font-family="Arial" font-size="12" fill="#1e40af" text-anchor="middle">Usage Patterns Tracking</text>
+  
+  <!-- Content Half-Life Analysis -->
+  <rect x="170" y="520" width="140" height="40" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="240" y="545" font-family="Arial" font-size="12" fill="#1e40af" text-anchor="middle">Content Half-Life Analysis</text>
+  
+  <!-- Context Refactoring -->
+  <rect x="170" y="570" width="140" height="40" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="240" y="595" font-family="Arial" font-size="12" fill="#1e40af" text-anchor="middle">Context Refactoring</text>
+  
+  <!-- Attention-Weighted Compression -->
+  <rect x="170" y="620" width="140" height="40" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="240" y="645" font-family="Arial" font-size="12" fill="#1e40af" text-anchor="middle">Attention-Weighted Compression</text>
+  
+  <!-- Optimized Context -->
+  <circle cx="365" cy="565" r="45" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
+  <text x="365" y="560" font-family="Arial" font-size="12" fill="#1e40af" text-anchor="middle">Optimized</text>
+  <text x="365" y="575" font-family="Arial" font-size="12" fill="#1e40af" text-anchor="middle">Context</text>
+  
+  <!-- Connection lines -->
+  <line x1="310" y1="490" x2="330" y2="530" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="310" y1="540" x2="325" y2="550" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="310" y1="590" x2="325" y2="580" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="310" y1="640" x2="325" y2="600" stroke="#3b82f6" stroke-width="1.5"/>
+  
+  <!-- Predictive Context Assembly -->
+  <rect x="500" y="160" width="330" height="250" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="665" y="180" font-family="Arial" font-size="16" fill="#047857" font-weight="bold" text-anchor="middle">Symbiotic Context Agency</text>
+  
+  <!-- User Input Analysis -->
+  <rect x="520" y="200" width="140" height="40" rx="5" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="590" y="225" font-family="Arial" font-size="12" fill="#065f46" text-anchor="middle">User Input Analysis</text>
+  
+  <!-- Intent Prediction -->
+  <rect x="520" y="250" width="140" height="40" rx="5" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="590" y="275" font-family="Arial" font-size="12" fill="#065f46" text-anchor="middle">Intent Prediction</text>
+  
+  <!-- Proactive Suggestions -->
+  <rect x="520" y="300" width="140" height="40" rx="5" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="590" y="325" font-family="Arial" font-size="12" fill="#065f46" text-anchor="middle">Proactive Suggestions</text>
+  
+  <!-- Explanation Generation -->
+  <rect x="520" y="350" width="140" height="40" rx="5" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="590" y="375" font-family="Arial" font-size="12" fill="#065f46" text-anchor="middle">Explanation Generation</text>
+  
+  <!-- Adaptive Response Node -->
+  <circle cx="715" cy="295" r="45" fill="#6ee7b7" stroke="#10b981" stroke-width="2"/>
+  <text x="715" y="290" font-family="Arial" font-size="12" fill="#065f46" text-anchor="middle">Adaptive</text>
+  <text x="715" y="305" font-family="Arial" font-size="12" fill="#065f46" text-anchor="middle">Response</text>
+  
+  <!-- Connection lines -->
+  <line x1="660" y1="220" x2="680" y2="260" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="660" y1="270" x2="675" y2="280" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="660" y1="320" x2="675" y2="310" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="660" y1="370" x2="675" y2="330" stroke="#10b981" stroke-width="1.5"/>
+  
+  <!-- Multi-Modal Context Synthesis -->
+  <rect x="500" y="430" width="330" height="250" rx="10" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="665" y="450" font-family="Arial" font-size="16" fill="#7e22ce" font-weight="bold" text-anchor="middle">Multi-Modal Context Synthesis</text>
+  
+  <!-- Input Modalities -->
+  <rect x="520" y="470" width="290" height="30" rx="5" fill="#faf5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="665" y="490" font-family="Arial" font-size="12" fill="#7e22ce" font-weight="bold" text-anchor="middle">Input Modalities</text>
+  
+  <!-- Modality Types Row -->
+  <rect x="530" y="510" width="45" height="30" rx="5" fill="#e9d5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="552" y="530" font-family="Arial" font-size="10" fill="#7e22ce" text-anchor="middle">Text</text>
+  
+  <rect x="585" y="510" width="45" height="30" rx="5" fill="#e9d5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="607" y="530" font-family="Arial" font-size="10" fill="#7e22ce" text-anchor="middle">Images</text>
+  
+  <rect x="640" y="510" width="45" height="30" rx="5" fill="#e9d5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="662" y="530" font-family="Arial" font-size="10" fill="#7e22ce" text-anchor="middle">Code</text>
+  
+  <rect x="695" y="510" width="45" height="30" rx="5" fill="#e9d5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="717" y="530" font-family="Arial" font-size="10" fill="#7e22ce" text-anchor="middle">Data</text>
+  
+  <rect x="750" y="510" width="45" height="30" rx="5" fill="#e9d5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="772" y="530" font-family="Arial" font-size="10" fill="#7e22ce" text-anchor="middle">Media</text>
+  
+  <!-- Processing Components -->
+  <rect x="520" y="550" width="140" height="40" rx="5" fill="#e9d5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="590" y="575" font-family="Arial" font-size="12" fill="#7e22ce" text-anchor="middle">Cross-Modal Translation</text>
+  
+  <rect x="520" y="600" width="140" height="40" rx="5" fill="#e9d5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="590" y="625" font-family="Arial" font-size="12" fill="#7e22ce" text-anchor="middle">Unified Representation</text>
+  
+  <!-- Unified Context -->
+  <circle cx="715" cy="595" r="45" fill="#d8b4fe" stroke="#a855f7" stroke-width="2"/>
+  <text x="715" y="590" font-family="Arial" font-size="12" fill="#7e22ce" text-anchor="middle">Unified</text>
+  <text x="715" y="605" font-family="Arial" font-size="12" fill="#7e22ce" text-anchor="middle">Context</text>
+  
+  <!-- Connection lines -->
+  <!-- <line x1="665" y1="500" x2="665" y2="509" stroke="#a855f7" stroke-width="1.5"/>
+  <polyline points="552,540 552,550 570,570" stroke="#a855f7" stroke-width="1"/>
+  <polyline points="607,540 607,550 590,570" stroke="#a855f7" stroke-width="1"/>
+  <polyline points="662,540 662,550 630,570" stroke="#a855f7" stroke-width="1"/>
+  <polyline points="717,540 717,550 680,595" stroke="#a855f7" stroke-width="1"/>
+  <polyline points="772,540 772,550 715,555" stroke="#a855f7" stroke-width="1"/>
+  <line x1="660" y1="570" x2="680" y2="580" stroke="#a855f7" stroke-width="1.5"/>
+  <line x1="660" y1="620" x2="675" y2="610" stroke="#a855f7" stroke-width="1.5"/>
+   -->
+  <!-- Collaborative Context Architectures -->
+  <rect x="850" y="160" width="400" height="250" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="1050" y="180" font-family="Arial" font-size="16" fill="#c2410c" font-weight="bold" text-anchor="middle">Collaborative Context Architectures</text>
+  
+  <!-- State Diagram -->
+  <rect x="870" y="200" width="130" height="40" rx="5" fill="#ffedd5" stroke="#ea580c" stroke-width="1"/>
+  <text x="935" y="225" font-family="Arial" font-size="12" fill="#9a3412" text-anchor="middle">Private Context</text>
+  
+  <rect x="870" y="350" width="130" height="40" rx="5" fill="#ffedd5" stroke="#ea580c" stroke-width="1"/>
+  <text x="935" y="375" font-family="Arial" font-size="12" fill="#9a3412" text-anchor="middle">Conditional Access</text>
+  
+  <!-- Shared Context Subdivision -->
+  <rect x="1050" y="220" width="180" height="160" rx="5" fill="#fed7aa" stroke="#ea580c" stroke-width="1"/>
+  <text x="1140" y="240" font-family="Arial" font-size="12" fill="#9a3412" font-weight="bold" text-anchor="middle">Shared Context</text>
+  
+  <rect x="1070" y="260" width="140" height="30" rx="5" fill="#ffedd5" stroke="#ea580c" stroke-width="1"/>
+  <text x="1140" y="280" font-family="Arial" font-size="11" fill="#9a3412" text-anchor="middle">View Only</text>
+  
+  <rect x="1070" y="300" width="140" height="30" rx="5" fill="#ffedd5" stroke="#ea580c" stroke-width="1"/>
+  <text x="1140" y="320" font-family="Arial" font-size="11" fill="#9a3412" text-anchor="middle">Edit Access</text>
+  
+  <rect x="1070" y="340" width="140" height="30" rx="5" fill="#ffedd5" stroke="#ea580c" stroke-width="1"/>
+  <text x="1140" y="360" font-family="Arial" font-size="11" fill="#9a3412" text-anchor="middle">Branch Creation</text>
+  
+  Arrows
+  <path d="M1000 220 L1050 240" stroke="#ea580c" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1000 370 L1050 320" stroke="#ea580c" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M935 240 L935 350" stroke="#ea580c" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1140 290 L1140 300" stroke="#ea580c" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1140 330 L1140 340" stroke="#ea580c" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Counterfactual Context Exploration -->
+  <rect x="850" y="430" width="400" height="250" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="1050" y="450" font-family="Arial" font-size="16" fill="#3730a3" font-weight="bold" text-anchor="middle">Counterfactual Context Exploration</text>
+  
+  <!-- Assumption Isolation -->
+  <rect x="870" y="480" width="140" height="40" rx="5" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1"/>
+  <text x="940" y="505" font-family="Arial" font-size="12" fill="#3730a3" text-anchor="middle">Assumption Isolation</text>
+  
+  <!-- Parallel Context Threading -->
+  <rect x="870" y="530" width="140" height="40" rx="5" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1"/>
+  <text x="940" y="555" font-family="Arial" font-size="12" fill="#3730a3" text-anchor="middle">Parallel Context Threading</text>
+  
+  <!-- Insight Divergence Tracking -->
+  <rect x="870" y="580" width="140" height="40" rx="5" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1"/>
+  <text x="940" y="605" font-family="Arial" font-size="12" fill="#3730a3" text-anchor="middle">Insight Divergence Tracking</text>
+  
+  <!-- Reality Anchoring -->
+  <rect x="870" y="630" width="140" height="40" rx="5" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1"/>
+  <text x="940" y="655" font-family="Arial" font-size="12" fill="#3730a3" text-anchor="middle">Reality Anchoring</text>
+  
+  <!-- Alternative Contexts -->
+  <circle cx="1090" cy="500" r="30" fill="#c7d2fe" stroke="#4f46e5" stroke-width="2"/>
+  <text x="1090" y="505" font-family="Arial" font-size="10" fill="#3730a3" text-anchor="middle">Context A</text>
+  
+  <circle cx="1090" cy="580" r="30" fill="#c7d2fe" stroke="#4f46e5" stroke-width="2"/>
+  <text x="1090" y="585" font-family="Arial" font-size="10" fill="#3730a3" text-anchor="middle">Context B</text>
+  
+  <circle cx="1090" cy="640" r="30" fill="#c7d2fe" stroke="#4f46e5" stroke-width="2"/>
+  <text x="1090" y="645" font-family="Arial" font-size="10" fill="#3730a3" text-anchor="middle">Context C</text>
+  
+  <!-- Comparison Results -->
+  <circle cx="1190" cy="560" r="40" fill="#a5b4fc" stroke="#4f46e5" stroke-width="2"/>
+  <text x="1190" y="555" font-family="Arial" font-size="12" fill="#3730a3" text-anchor="middle">Results</text>
+  <text x="1190" y="570" font-family="Arial" font-size="12" fill="#3730a3" text-anchor="middle">Comparison</text>
+  
+  <!-- Connection lines -->
+  <line x1="1010" y1="500" x2="1060" y2="500" stroke="#4f46e5" stroke-width="1.5"/>
+  <line x1="1010" y1="550" x2="1060" y2="540" stroke="#4f46e5" stroke-width="1.5"/>
+  <line x1="1010" y1="600" x2="1060" y2="580" stroke="#4f46e5" stroke-width="1.5"/>
+  <line x1="1010" y1="650" x2="1060" y2="640" stroke="#4f46e5" stroke-width="1.5"/>
+  <line x1="1120" y1="500" x2="1160" y2="535" stroke="#4f46e5" stroke-width="1.5"/>
+  <line x1="1120" y1="580" x2="1150" y2="560" stroke="#4f46e5" stroke-width="1.5"/>
+  <line x1="1120" y1="640" x2="1160" y2="585" stroke="#4f46e5" stroke-width="1.5"/>
+  
+  <!-- Core System Integration -->
+  <rect x="500" y="700" width="400" height="130" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="700" y="725" font-family="Arial" font-size="16" fill="#854d0e" font-weight="bold" text-anchor="middle">Core System Integration</text>
+  
+  <!-- Key Integration Components -->
+  <rect x="520" y="740" width="160" height="40" rx="5" fill="#fef3c7" stroke="#ca8a04" stroke-width="1"/>
+  <text x="600" y="765" font-family="Arial" font-size="12" fill="#854d0e" text-anchor="middle">Context-Aware Prompting</text>
+  
+  <rect x="520" y="790" width="160" height="30" rx="5" fill="#fef3c7" stroke="#ca8a04" stroke-width="1"/>
+  <text x="600" y="810" font-family="Arial" font-size="12" fill="#854d0e" text-anchor="middle">Cross-Document Integration</text>
+  
+  <rect x="720" y="740" width="160" height="40" rx="5" fill="#fef3c7" stroke="#ca8a04" stroke-width="1"/>
+  <text x="800" y="765" font-family="Arial" font-size="12" fill="#854d0e" text-anchor="middle">User Profile Adaptation</text>
+  
+  <rect x="720" y="790" width="160" height="30" rx="5" fill="#fef3c7" stroke="#ca8a04" stroke-width="1"/>
+  <text x="800" y="810" font-family="Arial" font-size="12" fill="#854d0e" text-anchor="middle">Dynamic Playbooks</text>
+  
+  <!-- Integration Lines between major components -->
+  <!-- From Cognitive to Adaptive -->
+  <!-- <path d="M315 410 L315 430" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5"/> -->
+  
+  <!-- From Adaptive to Core Integration -->
+  <!-- <path d="M315 680 L315 765 L500 765" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5"/> -->
+  
+  <!-- From Symbiotic to Core Integration -->
+  <!-- <path d="M665 410 L665 700" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5"/> -->
+  
+  <!-- From Multi-Modal to Core Integration -->
+  <!-- <path d="M665 680 L665 700" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5"/> -->
+  
+  <!-- From Collaborative to Core Integration -->
+  <!-- <path d="M1050 410 L1050 765 L900 765" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5"/> -->
+  
+  <!-- From Counterfactual to Core Integration -->
+  <!-- <path d="M1050 680 L1050 765 L900 765" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5"/> -->
+  
+  <!-- Connecting Major Components Horizontally -->
+  <path d="M480 295 L500 295" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M830 295 L850 295" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M480 565 L500 565" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M830 565 L850 565" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Phase Connections to Components -->
+  <!-- <path d="M300 130 L300 160" stroke="#db2777" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M560 130 L1050 130 L1050 160" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M820 130 L820 150 L665 150 L665 160" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M820 130 L820 150 L315 150 L315 160" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M1080 130 L1080 150 L1050 150 L1050 430" stroke="#10b981" stroke-width="2" stroke-dasharray="5,5"/>
+   -->
+  <!-- Legend -->
+  <rect x="150" y="850" width="1100" height="100" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="700" y="870" font-family="Arial" font-size="16" fill="#334155" font-weight="bold" text-anchor="middle">Legend</text>
+  
+  <!-- Legend Items -->
+  <rect x="170" y="890" width="240" height="20" rx="5" fill="#fbcfe8" stroke="#db2777" stroke-width="1"/>
+  <text x="290" y="905" font-family="Arial" font-size="12" fill="#831843" text-anchor="middle">Phase 1: Foundational Capabilities</text>
+  
+  <rect x="430" y="890" width="240" height="20" rx="5" fill="#ddd6fe" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="550" y="905" font-family="Arial" font-size="12" fill="#5b21b6" text-anchor="middle">Phase 2: Enhanced Collaboration</text>
+  
+  <rect x="690" y="890" width="240" height="20" rx="5" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="810" y="905" font-family="Arial" font-size="12" fill="#1e40af" text-anchor="middle">Phase 3: Adaptive and Multi-Modal</text>
+  
+  <rect x="950" y="890" width="240" height="20" rx="5" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="1070" y="905" font-family="Arial" font-size="12" fill="#065f46" text-anchor="middle">Phase 4: Advanced Capabilities</text>
+  
+  <rect x="170" y="920" width="200" height="20" rx="5" fill="white" stroke="#64748b" stroke-width="1"/>
+  <text x="270" y="935" font-family="Arial" font-size="12" fill="#475569" text-anchor="middle">Component Integration</text>
+  
+  <rect x="390" y="920" width="200" height="20" rx="5" fill="white" stroke="#64748b" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="490" y="935" font-family="Arial" font-size="12" fill="#475569" text-anchor="middle">Cross-Component Connection</text>
+  
+  <circle cx="630" cy="930" r="15" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
+  <text x="700" y="935" font-family="Arial" font-size="12" fill="#475569">Processing Node</text>
+  
+  <rect x="750" y="920" width="120" height="20" rx="5" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1"/>
+  <text x="810" y="935" font-family="Arial" font-size="12" fill="#3730a3" text-anchor="middle">Component</text>
+  
+  <rect x="890" y="920" width="120" height="20" rx="5" fill="#fed7aa" stroke="#ea580c" stroke-width="1"/>
+  <text x="950" y="935" font-family="Arial" font-size="12" fill="#9a3412" text-anchor="middle">State</text>
+  
+  <rect x="1030" y="920" width="120" height="20" rx="5" fill="#fef3c7" stroke="#ca8a04" stroke-width="1"/>
+  <text x="1090" y="935" font-family="Arial" font-size="12" fill="#854d0e" text-anchor="middle">Core Feature</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>
