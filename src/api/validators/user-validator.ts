@@ -121,3 +121,44 @@
      'object.min': 'At least one field is required for update'
    })
  };
+
+
+
+
+
+//  // src/api/validators/user-validator.ts
+// import Joi from 'joi';
+// import { commonValidators } from './common-validators';
+
+// export const userValidators = {
+//   // Login request validation
+//   login: Joi.object({
+//     email: commonValidators.email,
+//     password: Joi.string().required()
+//   }),
+  
+//   // Registration request validation
+//   register: Joi.object({
+//     email: commonValidators.email,
+//     password: commonValidators.password,
+//     name: Joi.string().min(2).max(100).required()
+//   }),
+  
+//   // Update profile validation
+//   updateProfile: Joi.object({
+//     name: Joi.string().min(2).max(100),
+//     email: Joi.string().email(),
+//     settings: Joi.object().unknown(true)
+//   }).min(1),
+  
+//   // Password change validation
+//   changePassword: Joi.object({
+//     oldPassword: Joi.string().required(),
+//     newPassword: commonValidators.password
+//   }),
+  
+//   // Password reset request validation
+//   resetPassword: Joi.object({
+//     email: commonValidators.email
+//   })
+// };

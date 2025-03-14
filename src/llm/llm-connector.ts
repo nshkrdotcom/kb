@@ -136,3 +136,88 @@
      });
    }
  }
+
+
+
+//  // src/llm/connectors/llm-connector.ts
+// import { ApplicationError } from '../../utils/errors';
+
+// /**
+//  * Common options for LLM requests
+//  */
+// export interface LLMOptions {
+//   // Common options
+//   temperature?: number;
+//   maxTokens?: number;
+//   stopSequences?: string[];
+//   topP?: number;
+//   frequencyPenalty?: number;
+//   presencePenalty?: number;
+  
+//   // Conversation options
+//   systemPrompt?: string;
+//   conversationHistory?: ConversationMessage[];
+  
+//   // Model specific options
+//   modelSpecificOptions?: Record<string, any>;
+// }
+
+// /**
+//  * Model information
+//  */
+// export interface LLMModelInfo {
+//   id: string;
+//   provider: string;
+//   maxContextTokens: number;
+//   capabilities: string[]; // e.g., 'text', 'code', 'image-understanding'
+//   version?: string;
+//   description?: string;
+// }
+
+// /**
+//  * Conversation message types
+//  */
+// export interface ConversationMessage {
+//   role: 'system' | 'user' | 'assistant';
+//   content: string;
+// }
+
+// /**
+//  * Base interface for all LLM connectors
+//  */
+// export interface LLMConnector {
+//   /**
+//    * Send a prompt and get a response synchronously
+//    */
+//   sendPrompt(prompt: string, options?: LLMOptions): Promise<string>;
+  
+//   /**
+//    * Send a prompt and receive response chunks via callback
+//    */
+//   streamResponse(
+//     prompt: string, 
+//     onChunk: (chunk: string) => void, 
+//     options?: LLMOptions
+//   ): Promise<void>;
+  
+//   /**
+//    * Get information about the model
+//    */
+//   getModelInfo(): LLMModelInfo;
+// }
+
+// /**
+//  * Error thrown by LLM connectors
+//  */
+// export class LLMConnectorError extends ApplicationError {
+//   constructor(
+//     message: string,
+//     statusCode: number = 500,
+//     public provider?: string,
+//     public model?: string,
+//     originalError?: Error
+//   ) {
+//     super(message, statusCode, originalError);
+//     this.name = 'LLMConnectorError';
+//   }
+// }

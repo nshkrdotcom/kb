@@ -1,0 +1,19 @@
+// .eslintrc.json
+{
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:jsx-a11y/recommended",
+      "prettier"
+    ],
+    "plugins": ["react", "jsx-a11y", "@typescript-eslint", "prettier"],
+    "rules": {
+      "prettier/prettier": "error",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "react/react-in-jsx-scope": "off",
+      "jsx-a11y/click-events-have-key-events": "warn",
+      "import/no-anonymous-default-export": "off"
+    }
+  }

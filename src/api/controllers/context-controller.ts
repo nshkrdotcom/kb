@@ -294,3 +294,100 @@ export class ContextController {
     }
   }
 }
+
+
+// // src/api/controllers/context-controller.ts
+// import { Request, Response } from 'express';
+// import { ContextService } from '../../services/context-service';
+// import { asyncHandler } from '../middlewares/error-handler';
+// import { NotFoundError } from '../../utils/errors';
+
+// export class ContextController {
+//   constructor(private contextService: ContextService) {}
+  
+//   /**
+//    * Get all contexts for a project
+//    */
+//   getContextsForProject = asyncHandler(async (req: Request, res: Response) => {
+//     const { projectId } = req.params;
+//     const contexts = await this.contextService.getContextsForProject(projectId);
+//     res.json(contexts);
+//   });
+  
+//   /**
+//    * Get a context by ID
+//    */
+//   getContextById = asyncHandler(async (req: Request, res: Response) => {
+//     const { id } = req.params;
+//     const context = await this.contextService.getContextById(id);
+    
+//     if (!context) {
+//       throw new NotFoundError('Context');
+//     }
+    
+//     res.json(context);
+//   });
+  
+//   /**
+//    * Create a new context
+//    */
+//   createContext = asyncHandler(async (req: Request, res: Response) => {
+//     const context = await this.contextService.createContext(req.body);
+//     res.status(201).json(context);
+//   });
+  
+//   /**
+//    * Update a context
+//    */
+//   updateContext = asyncHandler(async (req: Request, res: Response) => {
+//     const { id } = req.params;
+//     const updatedContext = await this.contextService.updateContext(id, req.body);
+//     res.json(updatedContext);
+//   });
+  
+//   /**
+//    * Delete a context
+//    */
+//   deleteContext = asyncHandler(async (req: Request, res: Response) => {
+//     const { id } = req.params;
+//     await this.contextService.deleteContext(id);
+//     res.status(204).end();
+//   });
+  
+//   /**
+//    * Get content items for a context
+//    */
+//   getContextContent = asyncHandler(async (req: Request, res: Response) => {
+//     const { id } = req.params;
+//     const contentItems = await this.contextService.getContextContent(id);
+//     res.json(contentItems);
+//   });
+  
+//   /**
+//    * Add content to a context
+//    */
+//   addContentToContext = asyncHandler(async (req: Request, res: Response) => {
+//     const { id, contentId } = req.params;
+//     await this.contextService.addContentToContext(id, contentId, req.body.metadata);
+//     res.status(204).end();
+//   });
+  
+//   /**
+//    * Remove content from a context
+//    */
+//   removeContentFromContext = asyncHandler(async (req: Request, res: Response) => {
+//     const { id, contentId } = req.params;
+//     await this.contextService.removeContentFromContext(id, contentId);
+//     res.status(204).end();
+//   });
+  
+//   /**
+//    * Update content relevance in a context
+//    */
+//   updateContentRelevance = asyncHandler(async (req: Request, res: Response) => {
+//     const { id, contentId } = req.params;
+//     const { relevance } = req.body;
+//     await this.contextService.updateContentRelevance(id, contentId, relevance);
+//     res.status(204).end();
+//   });
+// }

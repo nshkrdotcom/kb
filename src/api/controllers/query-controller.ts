@@ -190,3 +190,124 @@
      }
    }
  }
+
+
+
+
+
+
+
+
+
+
+//  // src/api/controllers/query-controller.ts
+// import { Request, Response } from 'express';
+// import { QueryService, QueryOptions } from '../../services/query-service';
+// import { ApplicationError } from '../../utils/errors';
+// import logger from '../../utils/logger';
+
+// export class QueryController {
+//   constructor(private queryService: QueryService) {}
+  
+//   /**
+//    * Process a query
+//    */
+//   async processQuery(req: Request, res: Response): Promise<void> {
+//     try {
+//       const { query, contextId, options } = req.body;
+      
+//       // Validate input
+//       if (!query) {
+//         throw new ApplicationError('Query is required', 400);
+//       }
+      
+//       if (!contextId) {
+//         throw new ApplicationError('Context ID is required', 400);
+//       }
+      
+//       // Check if streaming is requested
+//       const queryOptions: QueryOptions = options || {};
+      
+//       if (queryOptions.stream) {
+//         // Set up streaming response
+//         res.setHeader('Content-Type', 'text/event-stream');
+//         res.setHeader('Cache-Control', 'no-cache');
+//         res.setHeader('Connection', 'keep-alive');
+        
+//         // Send a start event
+//         res.write(`data: ${JSON.stringify({ type: 'start' })}\n\n`);
+        
+//         // Process streaming query
+//         await this.queryService.streamQueryResponse(
+//           query,
+//           contextId,
+//           (chunk) => {
+//             res.write(`data: ${JSON.stringify({ type: 'chunk', content: chunk })}\n\n`);
+//           },
+//           queryOptions
+//         );
+        
+//         // Send an end event
+//         res.write(`data: ${JSON.stringify({ type: 'end' })}\n\n`);
+//         res.end();
+//       } else {
+//         // Process regular query
+//         const response = await this.queryService.processQuery(
+//           query,
+//           contextId,
+//           queryOptions
+//         );
+        
+//         res.json(response);
+//       }
+//     } catch (error: any) {
+//       this.handleError(error, res);
+//     }
+//   }
+  
+//   /**
+//    * Get available models
+//    */
+//   getAvailableModels(req: Request, res: Response): void {
+//     try {
+//       // This would typically come from the model registry
+//       // For now, we'll return a simple list
+//       res.json([
+//         {
+//           id: 'gpt-3.5-turbo',
+//           provider: 'openai',
+//           maxContextTokens: 4096,
+//           capabilities: ['text', 'code']
+//         },
+//         {
+//           id: 'gpt-4',
+//           provider: 'openai',
+//           maxContextTokens: 8192,
+//           capabilities: ['text', 'code', 'reasoning']
+//         }
+//       ]);
+//     } catch (error: any) {
+//       this.handleError(error, res);
+//     }
+//   }
+  
+//   /**
+//    * Error handler helper
+//    */
+//   private handleError(error: any, res: Response): void {
+//     if (error instanceof ApplicationError) {
+//       res.status(error.statusCode).json({
+//         error: error.message,
+//         statusCode: error.statusCode
+//       });
+//       return;
+//     }
+    
+//     logger.error('Query controller error', { error: error.message });
+    
+//     res.status(500).json({
+//       error: 'An unexpected error occurred',
+//       statusCode: 500
+//     });
+//   }
+// }

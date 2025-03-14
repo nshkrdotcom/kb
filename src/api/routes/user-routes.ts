@@ -89,3 +89,32 @@
  );
  
  export default router;
+
+
+
+
+
+//  // src/api/routes/user-routes.ts
+// import express from 'express';
+// import { UserController } from '../controllers/user-controller';
+// import { authMiddleware } from '../middlewares/auth';
+
+// const createUserRoutes = (userController: UserController) => {
+//   const router = express.Router();
+  
+//   // Public routes
+//   router.post('/register', userController.register.bind(userController));
+//   router.post('/login', userController.login.bind(userController));
+//   router.post('/refresh-token', userController.refreshToken.bind(userController));
+//   router.post('/reset-password', userController.resetPassword.bind(userController));
+  
+//   // Protected routes
+//   router.get('/profile', authMiddleware(), userController.getProfile.bind(userController));
+//   router.put('/profile', authMiddleware(), userController.updateProfile.bind(userController));
+//   router.post('/change-password', authMiddleware(), userController.changePassword.bind(userController));
+//   router.post('/logout', authMiddleware(), userController.logout.bind(userController));
+  
+//   return router;
+// };
+
+// export default createUserRoutes;

@@ -45,3 +45,27 @@
  );
  
  export default router;
+
+
+
+//  // src/api/routes/query-routes.ts
+// import express from 'express';
+// import { QueryController } from '../controllers/query-controller';
+// import { authMiddleware } from '../middlewares/auth';
+
+// const createQueryRoutes = (queryController: QueryController) => {
+//   const router = express.Router();
+  
+//   // All query routes require authentication
+//   router.use(authMiddleware());
+  
+//   // Process a query
+//   router.post('/', queryController.processQuery.bind(queryController));
+  
+//   // Get available models
+//   router.get('/models', queryController.getAvailableModels.bind(queryController));
+  
+//   return router;
+// };
+
+// export default createQueryRoutes;

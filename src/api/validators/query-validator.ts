@@ -95,3 +95,36 @@
        })
    })
  };
+
+
+
+//  // src/api/validators/query-validator.ts
+// import Joi from 'joi';
+// import { commonValidators } from './common-validators';
+
+// export const queryValidators = {
+//   // Query request validation
+//   query: Joi.object({
+//     query: Joi.string().min(1).required(),
+//     contextId: commonValidators.uuidParam,
+//     options: Joi.object({
+//       modelId: Joi.string(),
+//       temperature: Joi.number().min(0).max(1),
+//       maxTokens: Joi.number().integer().min(1).max(10000),
+//       includeMetadata: Joi.boolean(),
+//       stream: Joi.boolean()
+//     })
+//   }),
+  
+//   // Suggest content validation
+//   suggestContent: Joi.object({
+//     query: Joi.string().min(1).required(),
+//     options: Joi.object({
+//       maxItems: Joi.number().integer().min(1).max(50),
+//       maxTokens: Joi.number().integer().min(1),
+//       contentTypes: Joi.array().items(Joi.string().valid('text', 'code', 'image', 'list')),
+//       sortBy: Joi.string().valid('relevance', 'recency', 'title', 'type'),
+//       sortDirection: Joi.string().valid('asc', 'desc')
+//     })
+//   })
+// };

@@ -514,3 +514,288 @@ import {
       }
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   // src/services/context-service.ts
+// import { ContextRepository, ContentRepository } from '../repositories/interfaces';
+// import { Context, ContentItem } from '../types/core';
+// import logger from '../utils/logger';
+// import { 
+//   ApplicationError, 
+//   NotFoundError, 
+//   ValidationError 
+// } from '../utils/errors';
+
+// export class ContextService {
+//   constructor(
+//     private contextRepository: ContextRepository,
+//     private contentRepository: ContentRepository
+//   ) {}
+  
+//   /**
+//    * Get a context by ID
+//    */
+//   async getContextById(id: string): Promise<Context | null> {
+//     try {
+//       logger.debug('Getting context by ID', { id });
+//       return await this.contextRepository.findById(id);
+//     } catch (error: any) {
+//       logger.error('Error getting context by ID', { id, error: error.message });
+//       throw new ApplicationError('Failed to get context', 500, error);
+//     }
+//   }
+  
+//   /**
+//    * Create a new context
+//    */
+//   async createContext(data: Partial<Context>): Promise<Context> {
+//     try {
+//       logger.info('Creating new context', { data });
+      
+//       if (!data.title) {
+//         throw new ValidationError('Context title is required');
+//       }
+      
+//       if (!data.projectId) {
+//         throw new ValidationError('Project ID is required');
+//       }
+      
+//       const context = await this.contextRepository.create(data as Context);
+      
+//       logger.info('Context created successfully', { id: context.id });
+//       return context;
+//     } catch (error: any) {
+//       if (error instanceof ApplicationError) {
+//         throw error;
+//       }
+      
+//       logger.error('Error creating context', { error: error.message });
+//       throw new ApplicationError('Failed to create context', 500, error);
+//     }
+//   }
+  
+//   /**
+//    * Update a context
+//    */
+//   async updateContext(id: string, data: Partial<Context>): Promise<Context> {
+//     try {
+//       logger.info('Updating context', { id, data });
+      
+//       // Check if context exists
+//       const existingContext = await this.contextRepository.findById(id);
+      
+//       if (!existingContext) {
+//         throw new NotFoundError('Context');
+//       }
+      
+//       // Update the context
+//       const updatedContext = await this.contextRepository.update(id, data);
+      
+//       logger.info('Context updated successfully', { id });
+//       return updatedContext;
+//     } catch (error: any) {
+//       if (error instanceof ApplicationError) {
+//         throw error;
+//       }
+      
+//       logger.error('Error updating context', { id, error: error.message });
+//       throw new ApplicationError('Failed to update context', 500, error);
+//     }
+//   }
+  
+//   /**
+//    * Delete a context
+//    */
+//   async deleteContext(id: string): Promise<void> {
+//     try {
+//       logger.info('Deleting context', { id });
+      
+//       // Check if context exists
+//       const existingContext = await this.contextRepository.findById(id);
+      
+//       if (!existingContext) {
+//         throw new NotFoundError('Context');
+//       }
+      
+//       // Delete the context
+//       await this.contextRepository.delete(id);
+      
+//       logger.info('Context deleted successfully', { id });
+//     } catch (error: any) {
+//       if (error instanceof ApplicationError) {
+//         throw error;
+//       }
+      
+//       logger.error('Error deleting context', { id, error: error.message });
+//       throw new ApplicationError('Failed to delete context', 500, error);
+//     }
+//   }
+  
+//   /**
+//    * Get content items for a context
+//    */
+//   async getContextContent(contextId: string): Promise<ContentItem[]> {
+//     try {
+//       logger.debug('Getting context content', { contextId });
+      
+//       // Check if context exists
+//       const existingContext = await this.contextRepository.findById(contextId);
+      
+//       if (!existingContext) {
+//         throw new NotFoundError('Context');
+//       }
+      
+//       // Get content items for the context
+//       const contentItems = await this.contextRepository.getContentItems(contextId);
+      
+//       return contentItems;
+//     } catch (error: any) {
+//       if (error instanceof ApplicationError) {
+//         throw error;
+//       }
+      
+//       logger.error('Error getting context content', { contextId, error: error.message });
+//       throw new ApplicationError('Failed to get context content', 500, error);
+//     }
+//   }
+  
+//   /**
+//    * Add content to a context
+//    */
+//   async addContentToContext(
+//     contextId: string, 
+//     contentId: string,
+//     metadata?: Record<string, any>
+//   ): Promise<void> {
+//     try {
+//       logger.info('Adding content to context', { contextId, contentId });
+      
+//       // Check if context exists
+//       const existingContext = await this.contextRepository.findById(contextId);
+      
+//       if (!existingContext) {
+//         throw new NotFoundError('Context');
+//       }
+      
+//       // Check if content exists
+//       const existingContent = await this.contentRepository.findById(contentId);
+      
+//       if (!existingContent) {
+//         throw new NotFoundError('Content');
+//       }
+      
+//       // Add content to context
+//       await this.contextRepository.addContentItem(contextId, contentId, metadata);
+      
+//       logger.info('Content added to context successfully', { contextId, contentId });
+//     } catch (error: any) {
+//       if (error instanceof ApplicationError) {
+//         throw error;
+//       }
+      
+//       logger.error('Error adding content to context', { 
+//         contextId, 
+//         contentId, 
+//         error: error.message 
+//       });
+      
+//       throw new ApplicationError('Failed to add content to context', 500, error);
+//     }
+//   }
+  
+//   /**
+//    * Remove content from a context
+//    */
+//   async removeContentFromContext(contextId: string, contentId: string): Promise<void> {
+//     try {
+//       logger.info('Removing content from context', { contextId, contentId });
+      
+//       // Check if context exists
+//       const existingContext = await this.contextRepository.findById(contextId);
+      
+//       if (!existingContext) {
+//         throw new NotFoundError('Context');
+//       }
+      
+//       // Remove content from context
+//       await this.contextRepository.removeContentItem(contextId, contentId);
+      
+//       logger.info('Content removed from context successfully', { contextId, contentId });
+//     } catch (error: any) {
+//       if (error instanceof ApplicationError) {
+//         throw error;
+//       }
+      
+//       logger.error('Error removing content from context', { 
+//         contextId, 
+//         contentId, 
+//         error: error.message 
+//       });
+      
+//       throw new ApplicationError('Failed to remove content from context', 500, error);
+//     }
+//   }
+  
+//   /**
+//    * Update content relevance in a context
+//    */
+//   async updateContentRelevance(
+//     contextId: string,
+//     contentId: string,
+//     relevance: number
+//   ): Promise<void> {
+//     try {
+//       logger.info('Updating content relevance', { contextId, contentId, relevance });
+      
+//       // Validate relevance value
+//       if (relevance < 0 || relevance > 1) {
+//         throw new ValidationError('Relevance must be between 0 and 1');
+//       }
+      
+//       // Check if context exists
+//       const existingContext = await this.contextRepository.findById(contextId);
+      
+//       if (!existingContext) {
+//         throw new NotFoundError('Context');
+//       }
+      
+//       // Check if content exists in context
+//       const contentItems = await this.contextRepository.getContentItems(contextId);
+//       const contentExists = contentItems.some(item => item.id === contentId);
+      
+//       if (!contentExists) {
+//         throw new NotFoundError('Content in context');
+//       }
+      
+//       // Update content relevance
+//       await this.contextRepository.updateContentMetadata(contextId, contentId, { relevance });
+      
+//       logger.info('Content relevance updated successfully', { contextId, contentId });
+//     } catch (error: any) {
+//       if (error instanceof ApplicationError) {
+//         throw error;
+//       }
+      
+//       logger.error('Error updating content relevance', { 
+//         contextId, 
+//         contentId, 
+//         relevance,
+//         error: error.message 
+//       });
+      
+//       throw new ApplicationError('Failed to update content relevance', 500, error);
+//     }
+//   }
+// }

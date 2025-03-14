@@ -126,3 +126,105 @@ router.get(
 );
 
 export default router;
+
+
+
+
+
+
+
+
+
+// // src/api/routes/context-routes.ts
+// import express from 'express';
+// import { ContextController } from '../controllers/context-controller';
+// import { validateRequest } from '../middlewares/validation';
+// import { contextValidators } from '../validators/context-validator';
+// import { commonValidators } from '../validators/common-validators';
+// import { authMiddleware } from '../middlewares/auth';
+
+// const createContextRoutes = (contextController: ContextController) => {
+//   const router = express.Router();
+  
+//   // Apply authentication middleware to all routes
+//   router.use(authMiddleware());
+  
+//   // Get contexts for a project
+//   router.get(
+//     '/project/:projectId', 
+//     validateRequest(Joi.object({ projectId: commonValidators.uuidParam })),
+//     contextController.getContextsForProject
+//   );
+  
+//   // Get a context by ID
+//   router.get(
+//     '/:id', 
+//     validateRequest(Joi.object({ id: commonValidators.uuidParam })),
+//     contextController.getContextById
+//   );
+  
+//   // Create a new context
+//   router.post(
+//     '/', 
+//     validateRequest(contextValidators.createContext),
+//     contextController.createContext
+//   );
+  
+//   // Update a context
+//   router.put(
+//     '/:id', 
+//     validateRequest(Joi.object({ id: commonValidators.uuidParam })),
+//     validateRequest(contextValidators.updateContext),
+//     contextController.updateContext
+//   );
+  
+//   // Delete a context
+//   router.delete(
+//     '/:id', 
+//     validateRequest(Joi.object({ id: commonValidators.uuidParam })),
+//     contextController.deleteContext
+//   );
+  
+//   // Get content items for a context
+//   router.get(
+//     '/:id/content', 
+//     validateRequest(Joi.object({ id: commonValidators.uuidParam })),
+//     contextController.getContextContent
+//   );
+  
+//   // Add content to a context
+//   router.post(
+//     '/:id/content/:contentId', 
+//     validateRequest(Joi.object({ 
+//       id: commonValidators.uuidParam,
+//       contentId: commonValidators.uuidParam,
+//       metadata: Joi.object().unknown(true)
+//     })),
+//     contextController.addContentToContext
+//   );
+  
+//   // Remove content from a context
+//   router.delete(
+//     '/:id/content/:contentId', 
+//     validateRequest(Joi.object({ 
+//       id: commonValidators.uuidParam,
+//       contentId: commonValidators.uuidParam
+//     })),
+//     contextController.removeContentFromContext
+//   );
+  
+//   // Update content relevance in a context
+//   router.put(
+//     '/:id/content/:contentId/relevance', 
+//     validateRequest(Joi.object({ 
+//       id: commonValidators.uuidParam,
+//       contentId: commonValidators.uuidParam
+//     })),
+//     validateRequest(contextValidators.updateRelevance),
+//     contextController.updateContentRelevance
+//   );
+  
+//   return router;
+// };
+
+// export default createContextRoutes;
