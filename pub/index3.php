@@ -435,6 +435,25 @@ const SpatialCanvas = ({ width, height }) => {
       }
     };
   }, [width, height]);
+
+  // Add to SpatialCanvas component
+  const initializeControls = () => {
+    if (nexusCoreRef.current && nexusCoreRef.current.controls) {
+      // Set initial camera angles based on current position
+      const core = nexusCoreRef.current.core;
+      const camera = nexusCoreRef.current.renderer.camera;
+      
+      // Reset angles when switching view modes
+      nexusCoreRef.current.controls.cameraAngleHorizontal = 0;
+      nexusCoreRef.current.controls.cameraAngleVertical = 0;
+      
+      // Update control sensitivity based on scale
+      nexusCoreRef.current.controls.panSensitivity = 1.0 * scale;
+      nexusCoreRef.current.controls.zoomSensitivity = 0.1 * scale;
+    }
+  }
+
+
   
   // Function to initialize the NexusCore after dependencies are loaded
   const initializeNexusCore = () => {
@@ -819,12 +838,12 @@ const SpatialCanvas = ({ width, height }) => {
 
         // Physics simulation parameters
         this.simulationActive = true;
-  this.simulationDamping = 0.9;  // Increase from 0.8 to 0.9 to maintain movement
-  this.gravitationalConstant = -40;  // Reduced from -50
-  this.springConstant = 0.08;  // Reduced from 0.1
-  this.repulsionConstant = 4000;  // Reduced from 5000
-  this.centeringForce = 0.02;  // Reduced from 0.03
-        
+        this.simulationDamping = 0.9;  // Increase from 0.8 to 0.9 to maintain movement
+        this.gravitationalConstant = -40;  // Reduced from -50
+        this.springConstant = 0.08;  // Reduced from 0.1
+        this.repulsionConstant = 4000;  // Reduced from 5000
+        this.centeringForce = 0.02;  // Reduced from 0.03
+              
         // Timestep for simulation
         this.timestep = 0.8;
         
@@ -845,43 +864,44 @@ const SpatialCanvas = ({ width, height }) => {
         this.d3Simulation = true;
       }
       
-updateDetailLevel(detailLevel) {
-  // Safely handle missing detailLevelThresholds
-  if (!this.detailLevelThresholds) {
-    this.detailLevelThresholds = [0.4, 0.7, 1.0, 1.3, 1.6];
-  }
+      updateDetailLevel(detailLevel) {
+        // Safely handle missing detailLevelThresholds
+        if (!this.detailLevelThresholds) {
+          this.detailLevelThresholds = [0.4, 0.7, 1.0, 1.3, 1.6];
+        }
 
-  // Adjust physics parameters based on detail level
-  switch (detailLevel) {
-    case 1: // Lowest detail
-      this.timestep = 2.0;
-      this.simulationDamping = 0.7;
-      break;
-    case 2:
-      this.timestep = 1.5;
-      this.simulationDamping = 0.75;
-      break;
-    case 3: // Medium detail (default)
-      this.timestep = 1.0;
-      this.simulationDamping = 0.8;
-      break;
-    case 4:
-      this.timestep = 0.8;
-      this.simulationDamping = 0.85;
-      break;
-    case 5: // Highest detail
-      this.timestep = 0.5;
-      this.simulationDamping = 0.9;
-      break;
-  }
-  
-  // Use D3 force simulation for higher detail levels
-  this.useD3Force = detailLevel >= 3;
-  
-  if (this.useD3Force && !this.d3Simulation) {
-    this._initD3Simulation();
-  }
-}   
+        // Adjust physics parameters based on detail level
+        switch (detailLevel) {
+          case 1: // Lowest detail
+            this.timestep = 2.0;
+            this.simulationDamping = 0.7;
+            break;
+          case 2:
+            this.timestep = 1.5;
+            this.simulationDamping = 0.75;
+            break;
+          case 3: // Medium detail (default)
+            this.timestep = 1.0;
+            this.simulationDamping = 0.8;
+            break;
+          case 4:
+            this.timestep = 0.8;
+            this.simulationDamping = 0.85;
+            break;
+          case 5: // Highest detail
+            this.timestep = 0.5;
+            this.simulationDamping = 0.9;
+            break;
+        }
+        
+        // Use D3 force simulation for higher detail levels
+        this.useD3Force = detailLevel >= 3;
+        
+        if (this.useD3Force && !this.d3Simulation) {
+          this._initD3Simulation();
+        }
+      }   
+
       updateLayout(bounds) {
         this.layoutBounds = bounds || this.layoutBounds;
         this.resetSimulation();
@@ -2039,35 +2059,339 @@ _initEdgeMaterials() {
       }
       
       _handleMouseMove(event) {
-        // Implementation details omitted for brevity
+        // Always update current mouse position
+        this.mousePosition.x = event.clientX;
+        this.mousePosition.y = event.clientY;
+        
+        // Only handle movement if currently dragging
+        if (!this.isDragging) return;
+        
+        // Calculate delta
+        const deltaX = event.clientX - this.lastMousePosition.x;
+        const deltaY = event.clientY - this.lastMousePosition.y;
+        
+        // Handle different navigation modes
+        switch (this.navMode) {
+          case 'pan':
+            // Pan the camera
+            this._handlePan(deltaX, deltaY);
+            break;
+            
+          case 'orbit':
+            // Orbit the camera
+            this._handleOrbit(deltaX, deltaY);
+            break;
+            
+          case 'group':
+            // Handle group selection
+            this._handleGroupSelection(deltaX, deltaY);
+            break;
+        }
+        
+        // Update last position
+        this.lastMousePosition.x = event.clientX;
+        this.lastMousePosition.y = event.clientY;
       }
-      
+
       _handleMouseLeave(event) {
-        // Implementation details omitted for brevity
+        // Reset dragging state when mouse leaves canvas
+        this.isDragging = false;
+        this.isRotating = false;
+        
+        // Reset cursor for pan mode
+        if (this.navMode === 'pan') {
+          this.canvas.style.cursor = 'grab';
+        }
       }
-      
+
       _handleWheel(event) {
-        // Implementation details omitted for brevity
+        event.preventDefault();
+        
+        // Determine zoom direction and amount
+        const zoomAmount = event.deltaY * 0.001 * this.zoomSensitivity;
+        
+        // Get current camera settings from core
+        const core = this.nexusCore.core;
+        if (!core) return;
+        
+        // Calculate new camera position
+        const cameraPos = core.cameraPosition;
+        const lookAtPoint = core.lookAtPoint;
+        
+        // Calculate direction vector from lookAt to camera
+        const dirX = cameraPos.x - lookAtPoint.x;
+        const dirY = cameraPos.y - lookAtPoint.y;
+        const dirZ = cameraPos.z - lookAtPoint.z;
+        
+        // Current distance
+        const distance = Math.sqrt(dirX*dirX + dirY*dirY + dirZ*dirZ);
+        
+        // Limit how close/far we can zoom
+        const newDistance = Math.max(100, Math.min(2000, distance * (1 + zoomAmount)));
+        const distanceRatio = newDistance / distance;
+        
+        // Update camera position
+        cameraPos.x = lookAtPoint.x + dirX * distanceRatio;
+        cameraPos.y = lookAtPoint.y + dirY * distanceRatio;
+        cameraPos.z = lookAtPoint.z + dirZ * distanceRatio;
+        
+        // Visual feedback for zoom
+        this._showZoomIndicator(zoomAmount < 0);
       }
+
       
+        
+      
+      _handlePan(deltaX, deltaY) {
+        // Get current camera settings
+        const core = this.nexusCore.core;
+        if (!core) return;
+        
+        // Calculate right and up vectors in camera's frame
+        const camera = this.nexusCore.renderer.camera;
+        const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion);
+        const right = new THREE.Vector3(1, 0, 0).applyQuaternion(camera.quaternion);
+        const up = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion);
+        
+        // Scale movements by sensitivity and camera distance
+        const lookAtToCam = new THREE.Vector3(
+          core.cameraPosition.x - core.lookAtPoint.x,
+          core.cameraPosition.y - core.lookAtPoint.y,
+          core.cameraPosition.z - core.lookAtPoint.z
+        );
+        const distance = lookAtToCam.length();
+        const moveScale = distance * 0.001 * this.panSensitivity;
+        
+        // Calculate movement vectors
+        const moveRight = right.multiplyScalar(-deltaX * moveScale);
+        const moveUp = up.multiplyScalar(deltaY * moveScale);
+        const moveVector = moveRight.add(moveUp);
+        
+        // Apply movement to both camera and lookAt point
+        core.cameraPosition.x += moveVector.x;
+        core.cameraPosition.y += moveVector.y;
+        core.cameraPosition.z += moveVector.z;
+        
+        core.lookAtPoint.x += moveVector.x;
+        core.lookAtPoint.y += moveVector.y;
+        core.lookAtPoint.z += moveVector.z;
+      }
+
+      _handleOrbit(deltaX, deltaY) {
+        // Get current camera settings
+        const core = this.nexusCore.core;
+        if (!core) return;
+        
+        // Calculate angles for horizontal and vertical rotation
+        this.cameraAngleHorizontal += deltaX * this.rotateSensitivity;
+        this.cameraAngleVertical += deltaY * this.rotateSensitivity;
+        
+        // Limit vertical angle to prevent flipping
+        this.cameraAngleVertical = Math.max(-Math.PI/2 + 0.1, Math.min(Math.PI/2 - 0.1, this.cameraAngleVertical));
+        
+        // Calculate camera position based on spherical coordinates
+        const lookAtPoint = core.lookAtPoint;
+        
+        // Get current distance
+        const currentPos = core.cameraPosition;
+        const dx = currentPos.x - lookAtPoint.x;
+        const dy = currentPos.y - lookAtPoint.y;
+        const dz = currentPos.z - lookAtPoint.z;
+        const distance = Math.sqrt(dx*dx + dy*dy + dz*dz);
+        
+        // Calculate new position
+        core.cameraPosition.x = lookAtPoint.x + distance * Math.sin(this.cameraAngleHorizontal) * Math.cos(this.cameraAngleVertical);
+        core.cameraPosition.y = lookAtPoint.y + distance * Math.sin(this.cameraAngleVertical);
+        core.cameraPosition.z = lookAtPoint.z + distance * Math.cos(this.cameraAngleHorizontal) * Math.cos(this.cameraAngleVertical);
+      }
+
+      // Visual feedback when zooming
+      _showZoomIndicator(zoomingIn) {
+        // Create a temporary zoom indicator
+        const indicator = document.createElement('div');
+        indicator.style.position = 'absolute';
+        indicator.style.left = '50%';
+        indicator.style.top = '50%';
+        indicator.style.transform = 'translate(-50%, -50%)';
+        indicator.style.width = '80px';
+        indicator.style.height = '80px';
+        indicator.style.borderRadius = '50%';
+        indicator.style.backgroundColor = 'rgba(0, 132, 255, 0.2)';
+        indicator.style.display = 'flex';
+        indicator.style.alignItems = 'center';
+        indicator.style.justifyContent = 'center';
+        indicator.style.pointerEvents = 'none';
+        indicator.style.transition = 'opacity 0.3s ease-out';
+        
+        // Add icon
+        const icon = document.createElement('div');
+        icon.innerHTML = zoomingIn ? 
+          '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0084ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>' :
+          '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0084ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>';
+        
+        indicator.appendChild(icon);
+        document.body.appendChild(indicator);
+        
+        // Remove after animation
+        setTimeout(() => {
+          indicator.style.opacity = '0';
+          setTimeout(() => document.body.removeChild(indicator), 300);
+        }, 300);
+      }
+
+      // Selection ripple effect
+      _createSelectionRipple(x, y) {
+        const ripple = document.createElement('div');
+        ripple.style.position = 'absolute';
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        ripple.style.width = '40px';
+        ripple.style.height = '40px';
+        ripple.style.borderRadius = '50%';
+        ripple.style.border = '2px solid #0084ff';
+        ripple.style.transform = 'translate(-50%, -50%) scale(0)';
+        ripple.style.opacity = '1';
+        ripple.style.pointerEvents = 'none';
+        ripple.style.transition = 'transform 0.4s ease-out, opacity 0.4s ease-out';
+        
+        document.body.appendChild(ripple);
+        
+        // Trigger animation
+        setTimeout(() => {
+          ripple.style.transform = 'translate(-50%, -50%) scale(1)';
+          ripple.style.opacity = '0';
+          
+          // Remove after animation
+          setTimeout(() => document.body.removeChild(ripple), 400);
+        }, 10);
+      }
+
+      // Properly handle touch events
       _handleTouchStart(event) {
-        // Implementation details omitted for brevity
+        event.preventDefault();
+        
+        if (event.touches.length === 1) {
+          // Single touch = pan or select
+          const touch = event.touches[0];
+          this.lastMousePosition.x = touch.clientX;
+          this.lastMousePosition.y = touch.clientY;
+          this.isDragging = true;
+          
+          if (this.navMode === 'select') {
+            this._selectNodeAtPosition(touch.clientX, touch.clientY);
+          }
+        } else if (event.touches.length === 2) {
+          // Two fingers = pinch to zoom
+          this.isPinching = true;
+          this.lastPinchDistance = Math.hypot(
+            event.touches[0].clientX - event.touches[1].clientX,
+            event.touches[0].clientY - event.touches[1].clientY
+          );
+        }
       }
-      
+
       _handleTouchMove(event) {
-        // Implementation details omitted for brevity
+        event.preventDefault();
+        
+        if (this.isDragging && event.touches.length === 1) {
+          // Handle single finger drag
+          const touch = event.touches[0];
+          const deltaX = touch.clientX - this.lastMousePosition.x;
+          const deltaY = touch.clientY - this.lastMousePosition.y;
+          
+          if (this.navMode === 'pan') {
+            this._handlePan(deltaX, deltaY);
+          } else if (this.navMode === 'orbit') {
+            this._handleOrbit(deltaX, deltaY);
+          }
+          
+          this.lastMousePosition.x = touch.clientX;
+          this.lastMousePosition.y = touch.clientY;
+        } else if (this.isPinching && event.touches.length === 2) {
+          // Handle pinch to zoom
+          const currentDistance = Math.hypot(
+            event.touches[0].clientX - event.touches[1].clientX,
+            event.touches[0].clientY - event.touches[1].clientY
+          );
+          
+          const pinchDelta = currentDistance - this.lastPinchDistance;
+          // Convert pinch to wheel delta (negative = zoom in)
+          const wheelDelta = -pinchDelta * 0.5;
+          
+          // Create synthetic wheel event
+          const pinchCenterX = (event.touches[0].clientX + event.touches[1].clientX) / 2;
+          const pinchCenterY = (event.touches[0].clientY + event.touches[1].clientY) / 2;
+          
+          const syntheticEvent = {
+            preventDefault: () => {},
+            clientX: pinchCenterX,
+            clientY: pinchCenterY,
+            deltaY: wheelDelta
+          };
+          
+          this._handleWheel(syntheticEvent);
+          
+          this.lastPinchDistance = currentDistance;
+        }
       }
-      
+
       _handleTouchEnd(event) {
-        // Implementation details omitted for brevity
+        event.preventDefault();
+        
+        this.isDragging = false;
+        this.isPinching = false;
       }
+ 
       
       _handleKeyDown(event) {
         // Implementation details omitted for brevity
       }
       
       _selectNodeAtPosition(x, y) {
-        // Implementation details omitted for brevity
+        // Convert screen coordinates to normalized device coordinates (NDC)
+        // Get canvas bounds
+        const rect = this.canvas.getBoundingClientRect();
+        
+        // Calculate normalized coordinates (-1 to 1)
+        const ndcX = ((x - rect.left) / rect.width) * 2 - 1;
+        const ndcY = -((y - rect.top) / rect.height) * 2 + 1;
+        
+        // Create a raycaster
+        const raycaster = new THREE.Raycaster();
+        raycaster.setFromCamera({ x: ndcX, y: ndcY }, this.nexusCore.renderer.camera);
+        
+        // Get all node objects for intersection testing
+        const nodeObjects = [];
+        this.nexusCore.graph.nodes.forEach(node => {
+          const nodeObj = this.nexusCore.renderer.nodeObjects.get(node.id);
+          if (nodeObj && nodeObj.outer) {
+            nodeObjects.push({ id: node.id, object: nodeObj.outer });
+          }
+        });
+        
+        // Filter scene objects to only include nodes
+        const targets = nodeObjects.map(item => item.object);
+        
+        // Check for intersections
+        const intersects = raycaster.intersectObjects(targets);
+        
+        if (intersects.length > 0) {
+          // Find the node ID that was intersected
+          const intersectedObject = intersects[0].object;
+          const nodeInfo = nodeObjects.find(node => node.object === intersectedObject);
+          
+          if (nodeInfo) {
+            // Select the node and signal the event
+            this.nexusCore.selectNode(nodeInfo.id);
+            
+            // Create a ripple effect at click position
+            this._createSelectionRipple(x, y);
+            
+            return nodeInfo.id;
+          }
+        }
+        
+        return null;
       }
       
       update() {
@@ -2441,6 +2765,14 @@ _addRandomForces() {
           window.nexusCoreRef.current.setScale(scale);
         }
       }, [scale]);
+
+      useEffect(() => {
+        if (window.nexusCoreRef && window.nexusCoreRef.current) {
+          initializeControls();
+        }
+      }, [scale, viewMode]);
+
+      
       
       // Find selected node
       const selectedNode = SAMPLE_NODES.find(node => node.id === selectedNodeId) || SAMPLE_NODES[0];
@@ -2753,6 +3085,14 @@ _addRandomForces() {
                     Huge
                   </button>
                 </div>
+              </div>
+
+              <div className="absolute right-5 top-16 bg-[#333] bg-opacity-70 rounded p-2 text-xs">
+                <div className="text-gray-300 mb-1">Mode: <span className="text-[#0084ff]">{navMode}</span></div>
+                <div className="text-gray-300 mb-1">Scale: <span className="text-[#0084ff]">{Math.round(scale * 100)}%</span></div>
+                {navMode === 'pan' && <div className="text-gray-400">Drag to pan</div>}
+                {navMode === 'orbit' && <div className="text-gray-400">Drag to orbit</div>}
+                {navMode === 'select' && <div className="text-gray-400">Click to select</div>}
               </div>
 
               {/* Context Building Controls */}
