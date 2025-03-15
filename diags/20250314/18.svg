@@ -1,0 +1,332 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Dark background to mimic pro DAW/video editors -->
+  <rect width="1200" height="800" fill="#1a1a1a"/>
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="1200" height="40" fill="#2d2d2d"/>
+  <text x="20" y="25" font-family="Arial" font-size="16" fill="#e0e0e0" font-weight="bold">ContextNexus Pro</text>
+  
+  <rect x="200" y="5" width="800" height="30" rx="5" fill="#3d3d3d"/>
+  <text x="215" y="25" font-family="Arial" font-size="14" fill="#e0e0e0">Project: Customer Behavior Analysis</text>
+  
+  <rect x="1100" y="5" width="80" height="30" rx="15" fill="#0084ff"/>
+  <text x="1140" y="25" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Export</text>
+  
+  <!-- Transport Controls (like DAW) -->
+  <rect x="0" y="40" width="1200" height="40" fill="#2d2d2d"/>
+  
+  <!-- Left Side Transport Controls -->
+  <circle cx="30" cy="60" r="15" fill="#3d3d3d" stroke="#555" stroke-width="1"/>
+  <text x="30" y="65" font-family="Arial" font-size="14" fill="#e0e0e0" text-anchor="middle">⏮</text>
+  
+  <circle cx="70" cy="60" r="15" fill="#3d3d3d" stroke="#555" stroke-width="1"/>
+  <text x="70" y="65" font-family="Arial" font-size="14" fill="#e0e0e0" text-anchor="middle">⏹</text>
+  
+  <circle cx="110" cy="60" r="15" fill="#3d3d3d" stroke="#555" stroke-width="1"/>
+  <text x="110" y="65" font-family="Arial" font-size="14" fill="#e0e0e0" text-anchor="middle">⏵</text>
+  
+  <circle cx="150" cy="60" r="15" fill="#3d3d3d" stroke="#555" stroke-width="1"/>
+  <text x="150" y="65" font-family="Arial" font-size="14" fill="#e0e0e0" text-anchor="middle">⏭</text>
+  
+  <!-- Timeline Position -->
+  <rect x="190" y="52" width="600" height="16" rx="8" fill="#3d3d3d"/>
+  <rect x="190" y="52" width="230" height="16" rx="8" fill="#0084ff"/>
+  <text x="500" y="65" font-family="Arial" font-size="12" fill="white" text-anchor="middle">38% Complete</text>
+  
+  <!-- Right Side Tools -->
+  <rect x="830" y="45" width="350" height="30" rx="5" fill="#3d3d3d"/>
+  <rect x="840" y="50" width="65" height="20" rx="3" fill="#0084ff"/>
+  <text x="872" y="65" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Select</text>
+  
+  <rect x="915" y="50" width="65" height="20" rx="3" fill="#333"/>
+  <text x="947" y="65" font-family="Arial" font-size="12" fill="#ccc" text-anchor="middle">Cut</text>
+  
+  <rect x="990" y="50" width="65" height="20" rx="3" fill="#333"/>
+  <text x="1022" y="65" font-family="Arial" font-size="12" fill="#ccc" text-anchor="middle">Split</text>
+  
+  <rect x="1065" y="50" width="65" height="20" rx="3" fill="#333"/>
+  <text x="1097" y="65" font-family="Arial" font-size="12" fill="#ccc" text-anchor="middle">Merge</text>
+  
+  <!-- Main Work Area -->
+  <!-- Left Panel - Track List (like channels in a DAW) -->
+  <rect x="0" y="80" width="200" height="720" fill="#2a2a2a"/>
+  
+  <!-- Track Headers -->
+  <rect x="0" y="80" width="200" height="40" fill="#333"/>
+  <text x="100" y="105" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold" text-anchor="middle">Tracks</text>
+  
+  <!-- Track List -->
+  <rect x="5" y="130" width="190" height="60" rx="4" fill="#3d3d3d"/>
+  <text x="15" y="150" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">User Input</text>
+  <text x="15" y="170" font-family="Arial" font-size="12" fill="#aaa">Questions, prompts, commands</text>
+  <rect x="170" y="140" width="15" height="15" fill="#0084ff"/>
+  <text x="177" y="152" font-family="Arial" font-size="12" fill="white" text-anchor="middle">V</text>
+  
+  <rect x="5" y="200" width="190" height="60" rx="4" fill="#3d3d3d"/>
+  <text x="15" y="220" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">AI Response</text>
+  <text x="15" y="240" font-family="Arial" font-size="12" fill="#aaa">Generated content, answers</text>
+  <rect x="170" y="210" width="15" height="15" fill="#0084ff"/>
+  <text x="177" y="222" font-family="Arial" font-size="12" fill="white" text-anchor="middle">V</text>
+  
+  <rect x="5" y="270" width="190" height="60" rx="4" fill="#3d3d3d"/>
+  <text x="15" y="290" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Code Blocks</text>
+  <text x="15" y="310" font-family="Arial" font-size="12" fill="#aaa">Snippets, examples, scripts</text>
+  <rect x="170" y="280" width="15" height="15" fill="#0084ff"/>
+  <text x="177" y="292" font-family="Arial" font-size="12" fill="white" text-anchor="middle">V</text>
+  
+  <rect x="5" y="340" width="190" height="60" rx="4" fill="#3d3d3d"/>
+  <text x="15" y="360" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Attachments</text>
+  <text x="15" y="380" font-family="Arial" font-size="12" fill="#aaa">Files, images, data</text>
+  <rect x="170" y="350" width="15" height="15" fill="#0084ff"/>
+  <text x="177" y="362" font-family="Arial" font-size="12" fill="white" text-anchor="middle">V</text>
+  
+  <!-- Lower Track List (Context Collections) -->
+  <rect x="0" y="430" width="200" height="40" fill="#333"/>
+  <text x="100" y="455" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold" text-anchor="middle">Context Collections</text>
+  
+  <rect x="5" y="480" width="190" height="40" rx="4" fill="#444"/>
+  <text x="15" y="505" font-family="Arial" font-size="14" fill="#e0e0e0">Customer Demographics</text>
+  <rect x="5" y="530" width="190" height="40" rx="4" fill="#444"/>
+  <text x="15" y="555" font-family="Arial" font-size="14" fill="#e0e0e0">Purchase History</text>
+  <rect x="5" y="580" width="190" height="40" rx="4" fill="#444"/>
+  <text x="15" y="605" font-family="Arial" font-size="14" fill="#e0e0e0">Product Features</text>
+  <rect x="5" y="630" width="190" height="40" rx="4" fill="#0066cc"/>
+  <text x="15" y="655" font-family="Arial" font-size="14" fill="#e0e0e0">Churn Analysis</text>
+  <rect x="5" y="680" width="190" height="40" rx="4" fill="#444"/>
+  <text x="15" y="705" font-family="Arial" font-size="14" fill="#e0e0e0">+ New Collection</text>
+  
+  <!-- Time Ruler (like DAW timeline) -->
+  <rect x="200" y="80" width="1000" height="30" fill="#333"/>
+  
+  <!-- Time Markers -->
+  <line x1="200" y1="95" x2="1200" y2="95" stroke="#555" stroke-width="1"/>
+  
+  <!-- Time Marks -->
+  <line x1="300" y1="85" x2="300" y2="105" stroke="#555" stroke-width="1"/>
+  <text x="300" y="75" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">10:15</text>
+  
+  <line x1="400" y1="85" x2="400" y2="105" stroke="#555" stroke-width="1"/>
+  <text x="400" y="75" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">10:20</text>
+  
+  <line x1="500" y1="85" x2="500" y2="105" stroke="#555" stroke-width="1"/>
+  <text x="500" y="75" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">10:25</text>
+  
+  <line x1="600" y1="85" x2="600" y2="105" stroke="#555" stroke-width="1"/>
+  <text x="600" y="75" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">10:30</text>
+  
+  <line x1="700" y1="85" x2="700" y2="105" stroke="#555" stroke-width="1"/>
+  <text x="700" y="75" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">10:35</text>
+  
+  <line x1="800" y1="85" x2="800" y2="105" stroke="#555" stroke-width="1"/>
+  <text x="800" y="75" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">10:40</text>
+  
+  <line x1="900" y1="85" x2="900" y2="105" stroke="#555" stroke-width="1"/>
+  <text x="900" y="75" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">10:45</text>
+  
+  <line x1="1000" y1="85" x2="1000" y2="105" stroke="#555" stroke-width="1"/>
+  <text x="1000" y="75" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">10:50</text>
+  
+  <line x1="1100" y1="85" x2="1100" y2="105" stroke="#555" stroke-width="1"/>
+  <text x="1100" y="75" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">10:55</text>
+  
+  <line x1="1200" y1="85" x2="1200" y2="105" stroke="#555" stroke-width="1"/>
+  <text x="1200" y="75" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">11:00</text>
+  
+  <!-- Timeline Area -->
+  <rect x="200" y="110" width="1000" height="420" fill="#1e1e1e"/>
+  
+  <!-- Current Position Marker -->
+  <line x1="420" y1="80" x2="420" y2="530" stroke="#0084ff" stroke-width="2"/>
+  <circle cx="420" cy="60" r="8" fill="#0084ff"/>
+  
+  <!-- User Input Track -->
+  <rect x="200" y="130" width="1000" height="60" fill="#2a2a2a"/>
+  
+  <!-- User Messages as Audio-like Clips -->
+  <rect x="220" y="140" width="100" height="40" rx="4" fill="#333" stroke="#555" stroke-width="1"/>
+  <text x="270" y="165" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Initial Query</text>
+  
+  <rect x="340" y="140" width="140" height="40" rx="4" fill="#333" stroke="#555" stroke-width="1"/>
+  <text x="410" y="165" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Customer Patterns?</text>
+  
+  <!-- Currently Selected Message (highlighted) -->
+  <rect x="500" y="140" width="160" height="40" rx="4" fill="#0066cc" stroke="#0084ff" stroke-width="2"/>
+  <text x="580" y="165" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Churn Indicators</text>
+  
+  <rect x="680" y="140" width="120" height="40" rx="4" fill="#333" stroke="#555" stroke-width="1"/>
+  <text x="740" y="165" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Follow-up</text>
+  
+  <rect x="820" y="140" width="160" height="40" rx="4" fill="#333" stroke="#555" stroke-width="1"/>
+  <text x="900" y="165" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Specific Questions</text>
+  
+  <!-- AI Response Track -->
+  <rect x="200" y="200" width="1000" height="60" fill="#2a2a2a"/>
+  
+  <!-- AI Messages as Clips -->
+  <rect x="220" y="210" width="160" height="40" rx="4" fill="#444" stroke="#666" stroke-width="1"/>
+  <rect x="220" y="210" width="160" height="10" fill="#555"/>
+  <text x="300" y="235" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Welcome Response</text>
+  
+  <rect x="400" y="210" width="220" height="40" rx="4" fill="#444" stroke="#666" stroke-width="1"/>
+  <rect x="400" y="210" width="220" height="10" fill="#555"/>
+  <text x="510" y="235" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Pattern Analysis</text>
+  
+  <!-- Block with segments (showing internal structure) -->
+  <rect x="640" y="210" width="260" height="40" rx="4" fill="#0066cc" stroke="#0084ff" stroke-width="2"/>
+  <rect x="640" y="210" width="260" height="10" fill="#0077dd"/>
+  
+  <!-- Segments within response (like audio waveforms) -->
+  <line x1="700" y1="210" x2="700" y2="250" stroke="#0099ff" stroke-width="1"/>
+  <line x1="760" y1="210" x2="760" y2="250" stroke="#0099ff" stroke-width="1"/>
+  <line x1="820" y1="210" x2="820" y2="250" stroke="#0099ff" stroke-width="1"/>
+  
+  <text x="670" y="235" font-family="Arial" font-size="11" fill="white">Introduction</text>
+  <text x="720" y="235" font-family="Arial" font-size="11" fill="white">Key Factors</text>
+  <text x="780" y="235" font-family="Arial" font-size="11" fill="white">Recommendations</text>
+  
+  <rect x="920" y="210" width="180" height="40" rx="4" fill="#444" stroke="#666" stroke-width="1"/>
+  <rect x="920" y="210" width="180" height="10" fill="#555"/>
+  <text x="1010" y="235" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Clarification</text>
+  
+  <!-- Code Blocks Track -->
+  <rect x="200" y="270" width="1000" height="60" fill="#2a2a2a"/>
+  
+  <!-- Code Block Clips -->
+  <rect x="400" y="280" width="190" height="40" rx="4" fill="#2d4a22" stroke="#3a6130" stroke-width="1"/>
+  <text x="430" y="305" font-family="Consolas, monospace" font-size="12" fill="#a5d6a7">import pandas...</text>
+  
+  <!-- Selected Code Block -->
+  <rect x="640" y="280" width="260" height="40" rx="4" fill="#0066cc" stroke="#0084ff" stroke-width="2"/>
+  <text x="670" y="305" font-family="Consolas, monospace" font-size="12" fill="white">def predict_churn(data):</text>
+  
+  <rect x="920" y="280" width="160" height="40" rx="4" fill="#2d4a22" stroke="#3a6130" stroke-width="1"/>
+  <text x="950" y="305" font-family="Consolas, monospace" font-size="12" fill="#a5d6a7">visualization.py</text>
+  
+  <!-- Attachments Track -->
+  <rect x="200" y="340" width="1000" height="60" fill="#2a2a2a"/>
+  
+  <!-- Attachment Clips -->
+  <rect x="350" y="350" width="100" height="40" rx="4" fill="#4a3c29" stroke="#5d4d35" stroke-width="1"/>
+  <text x="400" y="375" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">CSV Data</text>
+  
+  <rect x="620" y="350" width="100" height="40" rx="4" fill="#4a3c29" stroke="#5d4d35" stroke-width="1"/>
+  <text x="670" y="375" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Image.png</text>
+  
+  <rect x="740" y="350" width="100" height="40" rx="4" fill="#0066cc" stroke="#0084ff" stroke-width="2"/>
+  <text x="790" y="375" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Chart.svg</text>
+  
+  <!-- Timeline Grid Lines -->
+  <line x1="300" y1="110" x2="300" y2="530" stroke="#333" stroke-width="1"/>
+  <line x1="400" y1="110" x2="400" y2="530" stroke="#333" stroke-width="1"/>
+  <line x1="500" y1="110" x2="500" y2="530" stroke="#333" stroke-width="1"/>
+  <line x1="600" y1="110" x2="600" y2="530" stroke="#333" stroke-width="1"/>
+  <line x1="700" y1="110" x2="700" y2="530" stroke="#333" stroke-width="1"/>
+  <line x1="800" y1="110" x2="800" y2="530" stroke="#333" stroke-width="1"/>
+  <line x1="900" y1="110" x2="900" y2="530" stroke="#333" stroke-width="1"/>
+  <line x1="1000" y1="110" x2="1000" y2="530" stroke="#333" stroke-width="1"/>
+  <line x1="1100" y1="110" x2="1100" y2="530" stroke="#333" stroke-width="1"/>
+  
+  <!-- Context Composition Area (like mixer panel in DAW) -->
+  <rect x="200" y="530" width="1000" height="270" fill="#242424"/>
+  
+  <!-- Context Builder Header -->
+  <rect x="200" y="530" width="1000" height="40" fill="#333"/>
+  <text x="220" y="555" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Context Composition</text>
+  <text x="1150" y="555" font-family="Arial" font-size="14" fill="#0084ff" text-anchor="end">7,125 / 10,000 tokens</text>
+  
+  <!-- Tabs for Different Views -->
+  <rect x="400" y="535" width="80" height="30" rx="4" fill="#0066cc"/>
+  <text x="440" y="555" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Timeline</text>
+  
+  <rect x="490" y="535" width="80" height="30" rx="4" fill="#333"/>
+  <text x="530" y="555" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">Graph</text>
+  
+  <rect x="580" y="535" width="80" height="30" rx="4" fill="#333"/>
+  <text x="620" y="555" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">Blocks</text>
+  
+  <!-- Context Timeline View -->
+  <rect x="220" y="590" width="960" height="190" rx="4" fill="#1e1e1e"/>
+  
+  <!-- Contexts as Audio-Like Regions -->
+  <!-- Each "region" represents a selected context item -->
+  
+  <!-- Selected Context Regions -->
+  <rect x="240" y="610" width="160" height="30" rx="4" fill="#0066cc"/>
+  <text x="320" y="630" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Customer Demographics</text>
+  
+  <rect x="410" y="610" width="180" height="30" rx="4" fill="#0066cc"/>
+  <text x="500" y="630" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Purchase History (75%)</text>
+  
+  <!-- Context with Segments -->
+  <rect x="240" y="650" width="350" height="40" rx="4" fill="#0066cc"/>
+  <text x="270" y="675" font-family="Arial" font-size="12" fill="white">Churn Analysis Response</text>
+  
+  <!-- Segment selection markers -->
+  <rect x="330" y="650" width="2" height="40" fill="white"/>
+  <rect x="390" y="650" width="2" height="40" fill="white"/>
+  <rect x="450" y="650" width="2" height="40" fill="white"/>
+  <rect x="510" y="650" width="2" height="40" fill="white"/>
+  
+  <!-- Currently selected segment -->
+  <rect x="390" y="650" width="60" height="40" rx="0" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1"/>
+  <text x="420" y="690" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Segment 3</text>
+  
+  <rect x="240" y="700" width="200" height="30" rx="4" fill="#0066cc"/>
+  <text x="340" y="720" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Prediction Code</text>
+  
+  <rect x="450" y="700" width="140" height="30" rx="4" fill="#0066cc"/>
+  <text x="520" y="720" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Chart.svg</text>
+  
+  <!-- Token Distribution Graph -->
+  <rect x="620" y="605" width="540" height="165" rx="4" fill="#242424"/>
+  
+  <!-- Token Graph Title -->
+  <text x="640" y="625" font-family="Arial" font-size="12" fill="#e0e0e0">Token Distribution</text>
+  
+  <!-- Bar Chart of Token Usage -->
+  <rect x="640" y="635" width="500" height="125" fill="#1e1e1e" rx="2"/>
+  
+  <!-- X-Axis Labels -->
+  <text x="670" y="775" font-family="Arial" font-size="10" fill="#aaa">Demographics</text>
+  <text x="760" y="775" font-family="Arial" font-size="10" fill="#aaa">Purchase History</text>
+  <text x="850" y="775" font-family="Arial" font-size="10" fill="#aaa">Churn Analysis</text>
+  <text x="940" y="775" font-family="Arial" font-size="10" fill="#aaa">Code</text>
+  <text x="1030" y="775" font-family="Arial" font-size="10" fill="#aaa">Attachments</text>
+  <text x="1120" y="775" font-family="Arial" font-size="10" fill="#aaa">Available</text>
+  
+  <!-- Data Bars -->
+  <rect x="650" y="730" width="40" height="30" fill="#0066cc"/>
+  <rect x="740" y="710" width="40" height="50" fill="#0066cc"/>
+  <rect x="830" y="670" width="40" height="90" fill="#0066cc"/>
+  <rect x="920" y="720" width="40" height="40" fill="#0066cc"/>
+  <rect x="1010" y="740" width="40" height="20" fill="#0066cc"/>
+  <rect x="1100" y="650" width="40" height="110" fill="#333"/>
+  
+  <!-- Keyboard Shortcut Legend -->
+  <rect x="10" y="735" width="180" height="55" rx="4" fill="#333"/>
+  <text x="20" y="750" font-family="Arial" font-size="10" fill="#aaa">Shortcuts:</text>
+  <text x="20" y="765" font-family="Arial" font-size="10" fill="#aaa">Ctrl+S: Select Region</text>
+  <text x="20" y="780" font-family="Arial" font-size="10" fill="#aaa">Alt+C: Copy to Context</text>
+  <text x="100" y="765" font-family="Arial" font-size="10" fill="#aaa">Shift+→: Extend Select</text>
+  <text x="100" y="780" font-family="Arial" font-size="10" fill="#aaa">F2: Rename Selection</text>
+  
+  <!-- Selection Info Panel -->
+  <rect x="1000" y="110" width="200" height="190" rx="5" fill="#2d2d2d" opacity="0.9"/>
+  <text x="1020" y="130" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Selection Info</text>
+  
+  <text x="1020" y="155" font-family="Arial" font-size="11" fill="#aaa">Content:</text>
+  <text x="1020" y="170" font-family="Arial" font-size="11" fill="#e0e0e0">Churn prediction code</text>
+  
+  <text x="1020" y="195" font-family="Arial" font-size="11" fill="#aaa">Type:</text>
+  <text x="1020" y="210" font-family="Arial" font-size="11" fill="#e0e0e0">Python code</text>
+  
+  <text x="1020" y="235" font-family="Arial" font-size="11" fill="#aaa">Tokens:</text>
+  <text x="1020" y="250" font-family="Arial" font-size="11" fill="#e0e0e0">325 tokens</text>
+  
+  <text x="1020" y="275" font-family="Arial" font-size="11" fill="#aaa">Actions:</text>
+  <rect x="1070" y="265" width="60" height="20" rx="3" fill="#0084ff"/>
+  <text x="1100" y="280" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Add</text>
+  
+  <rect x="1135" y="265" width="60" height="20" rx="3" fill="#444"/>
+  <text x="1165" y="280" font-family="Arial" font-size="10" fill="#e0e0e0" text-anchor="middle">Skip</text>
+</svg>

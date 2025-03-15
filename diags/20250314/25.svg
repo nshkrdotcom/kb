@@ -1,0 +1,428 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Base Dark Background -->
+  <rect width="1200" height="800" fill="#0a0a12"/>
+  
+  <!-- Background Grid -->
+  <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#1a2040" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="800" fill="url(#smallGrid)"/>
+  
+  <!-- Gradients and Filters -->
+  <defs>
+    <linearGradient id="moduleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#202848" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#15162a" stop-opacity="1"/>
+    </linearGradient>
+    
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a17b0" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#15162a" stop-opacity="1"/>
+    </linearGradient>
+    
+    <linearGradient id="trackGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#202848" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#101028" stop-opacity="1"/>
+    </linearGradient>
+    
+    <linearGradient id="clipGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a17b0" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3432b8" stop-opacity="0.8"/>
+    </linearGradient>
+    
+    <linearGradient id="clipGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6054e6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9de9" stop-opacity="0.8"/>
+    </linearGradient>
+    
+    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a17b0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#08b2e3" stop-opacity="0.9"/>
+    </linearGradient>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Top Status Bar -->
+  <rect x="0" y="0" width="1200" height="40" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="20" y="25" font-family="Courier, monospace" font-size="14" fill="#72c8f0" font-weight="bold">NEXUS KNOWLEDGE INTERFACE</text>
+  <text x="1180" y="25" font-family="Courier, monospace" font-size="14" fill="#72c8f0" text-anchor="end">TOKENS: 8,450/12,000 | SYNC: 94.7% | MODE: MASTER</text>
+  
+  <!-- Mode Select Buttons -->
+  <rect x="350" y="5" width="500" height="30" rx="5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <rect x="355" y="7.5" width="95" height="25" rx="5" fill="#4a17b0" stroke="#6054e6" stroke-width="1"/>
+  <text x="402.5" y="24" font-family="Courier, monospace" font-size="12" fill="#ffffff" text-anchor="middle">ALL</text>
+  
+  <rect x="455" y="7.5" width="95" height="25" rx="5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="502.5" y="24" font-family="Courier, monospace" font-size="12" fill="#72c8f0" text-anchor="middle">TIMELINE</text>
+  
+  <rect x="555" y="7.5" width="95" height="25" rx="5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="602.5" y="24" font-family="Courier, monospace" font-size="12" fill="#72c8f0" text-anchor="middle">GRAPH</text>
+  
+  <rect x="655" y="7.5" width="95" height="25" rx="5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="702.5" y="24" font-family="Courier, monospace" font-size="12" fill="#72c8f0" text-anchor="middle">FLOW</text>
+  
+  <rect x="755" y="7.5" width="95" height="25" rx="5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="802.5" y="24" font-family="Courier, monospace" font-size="12" fill="#72c8f0" text-anchor="middle">SPATIAL</text>
+  
+  <!-- Main Left Panel - Control Surface -->
+  <rect x="10" y="50" width="280" height="740" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="2"/>
+  
+  <!-- MPC-Style Pad Grid (From MPC Interface) -->
+  <rect x="20" y="70" width="260" height="180" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="30" y="65" font-family="Courier, monospace" font-size="12" fill="#72c8f0" font-weight="bold">CONTEXT SELECTOR</text>
+  
+  <!-- 4x4 Grid -->
+  <rect x="30" y="80" width="55" height="55" rx="5" fill="#2a2a40" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="57.5" y="115" font-family="Courier, monospace" font-size="11" fill="#72c8f0" text-anchor="middle">CORE</text>
+  
+  <rect x="95" y="80" width="55" height="55" rx="5" fill="#4a17b0" stroke="#6054e6" stroke-width="2" filter="url(#glow)"/>
+  <text x="122.5" y="115" font-family="Courier, monospace" font-size="11" fill="#ffffff" text-anchor="middle">ARCH</text>
+  
+  <rect x="160" y="80" width="55" height="55" rx="5" fill="#2a2a40" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="187.5" y="115" font-family="Courier, monospace" font-size="11" fill="#72c8f0" text-anchor="middle">CODE</text>
+  
+  <rect x="225" y="80" width="55" height="55" rx="5" fill="#2a2a40" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="252.5" y="115" font-family="Courier, monospace" font-size="11" fill="#72c8f0" text-anchor="middle">TRACK</text>
+  
+  <rect x="30" y="145" width="55" height="55" rx="5" fill="#2a2a40" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="57.5" y="180" font-family="Courier, monospace" font-size="11" fill="#72c8f0" text-anchor="middle">DATA</text>
+  
+  <rect x="95" y="145" width="55" height="55" rx="5" fill="#2a2a40" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="122.5" y="180" font-family="Courier, monospace" font-size="11" fill="#72c8f0" text-anchor="middle">VISUAL</text>
+  
+  <rect x="160" y="145" width="55" height="55" rx="5" fill="#4a17b0" stroke="#6054e6" stroke-width="2" filter="url(#glow)"/>
+  <text x="187.5" y="180" font-family="Courier, monospace" font-size="11" fill="#ffffff" text-anchor="middle">IMPL</text>
+  
+  <rect x="225" y="145" width="55" height="55" rx="5" fill="#2a2a40" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="252.5" y="180" font-family="Courier, monospace" font-size="11" fill="#72c8f0" text-anchor="middle">REF</text>
+  
+  <!-- Node Navigator Module (From Knowledge Graph) -->
+  <rect x="20" y="270" width="260" height="240" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="30" y="265" font-family="Courier, monospace" font-size="12" fill="#72c8f0" font-weight="bold">NODE NAVIGATOR</text>
+  
+  <!-- Tree Structure -->
+  <text x="30" y="290" font-family="Courier, monospace" font-size="10" fill="#b6e3fa">● TRANSFORMERS</text>
+  <text x="45" y="310" font-family="Courier, monospace" font-size="10" fill="#6054e6">├─ ▶ ARCHITECTURE</text>
+  <text x="60" y="330" font-family="Courier, monospace" font-size="10" fill="#ffffff">│  ├─ ATTENTION</text>
+  <text x="60" y="350" font-family="Courier, monospace" font-size="10" fill="#72c8f0">│  ├─ ENCODER</text>
+  <text x="60" y="370" font-family="Courier, monospace" font-size="10" fill="#72c8f0">│  └─ DECODER</text>
+  <text x="45" y="390" font-family="Courier, monospace" font-size="10" fill="#6054e6">├─ ▶ IMPLEMENTATION</text>
+  <text x="60" y="410" font-family="Courier, monospace" font-size="10" fill="#ffffff">│  ├─ PYTORCH</text>
+  <text x="60" y="430" font-family="Courier, monospace" font-size="10" fill="#72c8f0">│  └─ TENSORFLOW</text>
+  <text x="45" y="450" font-family="Courier, monospace" font-size="10" fill="#72c8f0">├─ DATASETS</text>
+  <text x="45" y="470" font-family="Courier, monospace" font-size="10" fill="#72c8f0">└─ APPLICATIONS</text>
+  
+  <!-- Selection indicators -->
+  <rect x="60" y="328" width="150" height="14" rx="2" fill="#4a17b0" opacity="0.3"/>
+  <rect x="60" y="408" width="150" height="14" rx="2" fill="#4a17b0" opacity="0.3"/>
+  
+  <!-- Flow Control Module (From Flow Interface) -->
+  <rect x="20" y="530" width="260" height="250" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="30" y="525" font-family="Courier, monospace" font-size="12" fill="#72c8f0" font-weight="bold">FLOW CONTROLLER</text>
+  
+  <!-- Flow Nodes -->
+  <rect x="30" y="550" width="70" height="35" rx="5" fill="#15162a" stroke="#6054e6" stroke-width="1"/>
+  <text x="65" y="572" font-family="Courier, monospace" font-size="10" fill="#72c8f0" text-anchor="middle">SOURCE</text>
+  
+  <rect x="110" y="550" width="70" height="35" rx="5" fill="#4a17b0" stroke="#6054e6" stroke-width="2"/>
+  <text x="145" y="572" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle">FILTER</text>
+  
+  <rect x="190" y="550" width="70" height="35" rx="5" fill="#15162a" stroke="#6054e6" stroke-width="1"/>
+  <text x="225" y="572" font-family="Courier, monospace" font-size="10" fill="#72c8f0" text-anchor="middle">MERGE</text>
+  
+  <rect x="30" y="595" width="70" height="35" rx="5" fill="#15162a" stroke="#6054e6" stroke-width="1"/>
+  <text x="65" y="617" font-family="Courier, monospace" font-size="10" fill="#72c8f0" text-anchor="middle">TRANSFORM</text>
+  
+  <rect x="110" y="595" width="70" height="35" rx="5" fill="#4a17b0" stroke="#6054e6" stroke-width="2"/>
+  <text x="145" y="617" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle">OPTIMIZE</text>
+  
+  <rect x="190" y="595" width="70" height="35" rx="5" fill="#15162a" stroke="#6054e6" stroke-width="1"/>
+  <text x="225" y="617" font-family="Courier, monospace" font-size="10" fill="#72c8f0" text-anchor="middle">OUTPUT</text>
+  
+  <!-- Flow Preview -->
+  <rect x="30" y="640" width="230" height="130" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <!-- Flow Visualization -->
+  <circle cx="60" cy="680" r="15" fill="#4a17b0" opacity="0.8"/>
+  <text x="60" y="684" font-family="Courier, monospace" font-size="9" fill="#ffffff" text-anchor="middle">ARCH</text>
+  
+  <circle cx="120" cy="660" r="12" fill="#6054e6" opacity="0.8"/>
+  <text x="120" y="664" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="middle">FILTER</text>
+  
+  <circle cx="180" cy="680" r="15" fill="#6054e6" opacity="0.8"/>
+  <text x="180" y="684" font-family="Courier, monospace" font-size="9" fill="#ffffff" text-anchor="middle">IMPL</text>
+  
+  <circle cx="140" cy="720" r="12" fill="#6054e6" opacity="0.8"/>
+  <text x="140" y="724" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="middle">OPT</text>
+  
+  <circle cx="230" cy="700" r="12" fill="#08b2e3" opacity="0.8"/>
+  <text x="230" y="704" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="middle">OUT</text>
+  
+  <!-- Connection Lines -->
+  <line x1="75" y1="680" x2="108" y2="660" stroke="#6054e6" stroke-width="2" opacity="0.7"/>
+  <line x1="132" y1="660" x2="165" y2="680" stroke="#6054e6" stroke-width="2" opacity="0.7"/>
+  <line x1="180" y1="695" x2="140" y2="708" stroke="#6054e6" stroke-width="2" opacity="0.7"/>
+  <line x1="152" y1="720" x2="218" y2="700" stroke="#6054e6" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Main Central Panel - Timeline View (From DAW Interface) -->
+  <rect x="300" y="50" width="610" height="480" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="2"/>
+  <text x="320" y="75" font-family="Courier, monospace" font-size="12" fill="#72c8f0" font-weight="bold">TIMELINE EDITOR</text>
+  
+  <!-- Time Ruler -->
+  <rect x="310" y="85" width="590" height="25" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <!-- Time Markers -->
+  <line x1="350" y1="85" x2="350" y2="110" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="350" y="103" font-family="Courier, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">0</text>
+  
+  <line x1="450" y1="85" x2="450" y2="110" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="450" y="103" font-family="Courier, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">1000</text>
+  
+  <line x1="550" y1="85" x2="550" y2="110" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="550" y="103" font-family="Courier, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">2000</text>
+  
+  <line x1="650" y1="85" x2="650" y2="110" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="650" y="103" font-family="Courier, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">3000</text>
+  
+  <line x1="750" y1="85" x2="750" y2="110" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="750" y="103" font-family="Courier, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">4000</text>
+  
+  <line x1="850" y1="85" x2="850" y2="110" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="850" y="103" font-family="Courier, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">5000</text>
+  
+  <!-- Playhead -->
+  <line x1="480" y1="85" x2="480" y2="490" stroke="#08b2e3" stroke-width="2"/>
+  <polygon points="470,85 490,85 480,75" fill="#08b2e3"/>
+  
+  <!-- Tracks -->
+  <!-- Track 1: Architecture -->
+  <rect x="310" y="120" width="590" height="70" rx="5" fill="url(#trackGradient)" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="310" y="120" width="40" height="70" rx="5 0 0 5" fill="url(#headerGradient)"/>
+  <text x="330" y="160" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle" transform="rotate(-90 330 160)">ARCHITECTURE</text>
+  
+  <!-- Clip 1.1 -->
+  <rect x="360" y="130" width="150" height="50" rx="5" fill="url(#clipGradient)" stroke="#6054e6" stroke-width="1.5"/>
+  <text x="435" y="160" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle">TRANSFORMER</text>
+  
+  <!-- Clip 1.2 -->
+  <rect x="520" y="130" width="130" height="50" rx="5" fill="url(#clipGradient)" stroke="#6054e6" stroke-width="1.5"/>
+  <text x="585" y="160" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle">ATTENTION</text>
+  
+  <!-- Clip 1.3 -->
+  <rect x="660" y="130" width="140" height="50" rx="5" fill="url(#clipGradient)" stroke="#6054e6" stroke-width="1.5"/>
+  <text x="730" y="160" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle">ENCODER/DECODER</text>
+  
+  <!-- Track 2: Implementation -->
+  <rect x="310" y="200" width="590" height="70" rx="5" fill="url(#trackGradient)" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="310" y="200" width="40" height="70" rx="5 0 0 5" fill="url(#headerGradient)"/>
+  <text x="330" y="245" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle" transform="rotate(-90 330 245)">IMPLEMENTATION</text>
+  
+  <!-- Clip 2.1 -->
+  <rect x="380" y="210" width="180" height="50" rx="5" fill="url(#clipGradient2)" stroke="#6054e6" stroke-width="1.5"/>
+  <text x="470" y="240" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle">PYTORCH LAYERS</text>
+  
+  <!-- Clip 2.2 -->
+  <rect x="570" y="210" width="160" height="50" rx="5" fill="url(#clipGradient2)" stroke="#6054e6" stroke-width="1.5"/>
+  <text x="650" y="240" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle">TENSORFLOW API</text>
+  
+  <!-- Track 3: Code -->
+  <rect x="310" y="280" width="590" height="70" rx="5" fill="url(#trackGradient)" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="310" y="280" width="40" height="70" rx="5 0 0 5" fill="url(#headerGradient)"/>
+  <text x="330" y="320" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle" transform="rotate(-90 330 320)">CODE</text>
+  
+  <!-- Clip 3.1 -->
+  <rect x="410" y="290" width="280" height="50" rx="5" fill="#2a2a40" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="550" y="320" font-family="Courier, monospace" font-size="10" fill="#72c8f0" text-anchor="middle">ATTENTION IMPLEMENTATION</text>
+  
+  <!-- Track 4: Documentation -->
+  <rect x="310" y="360" width="590" height="70" rx="5" fill="url(#trackGradient)" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="310" y="360" width="40" height="70" rx="5 0 0 5" fill="url(#headerGradient)"/>
+  <text x="330" y="400" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle" transform="rotate(-90 330 400)">DOCS</text>
+  
+  <!-- Clip 4.1 -->
+  <rect x="360" y="370" width="200" height="50" rx="5" fill="#2a2a40" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="460" y="400" font-family="Courier, monospace" font-size="10" fill="#72c8f0" text-anchor="middle">PAPER REFERENCES</text>
+  
+  <!-- Clip 4.2 -->
+  <rect x="570" y="370" width="220" height="50" rx="5" fill="#2a2a40" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="680" y="400" font-family="Courier, monospace" font-size="10" fill="#72c8f0" text-anchor="middle">OFFICIAL DOCUMENTATION</text>
+  
+  <!-- Track 5: Applications -->
+  <rect x="310" y="440" width="590" height="70" rx="5" fill="url(#trackGradient)" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="310" y="440" width="40" height="70" rx="5 0 0 5" fill="url(#headerGradient)"/>
+  <text x="330" y="480" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="middle" transform="rotate(-90 330 480)">APPS</text>
+  
+  <!-- Clip 5.1 -->
+  <rect x="430" y="450" width="150" height="50" rx="5" fill="#2a2a40" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="505" y="480" font-family="Courier, monospace" font-size="10" fill="#72c8f0" text-anchor="middle">NLP EXAMPLES</text>
+  
+  <!-- Spatial View (From Spatial Canvas) -->
+  <rect x="300" y="540" width="610" height="240" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="2"/>
+  <text x="320" y="565" font-family="Courier, monospace" font-size="12" fill="#72c8f0" font-weight="bold">SPATIAL EXPLORER</text>
+  
+  <!-- Spatial Navigation Controls -->
+  <rect x="840" y="545" width="60" height="60" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  <line x1="855" y1="555" x2="885" y2="555" stroke="#6054e6" stroke-width="1.5"/>
+  <line x1="855" y1="575" x2="885" y2="575" stroke="#6054e6" stroke-width="1.5"/>
+  <line x1="855" y1="595" x2="885" y2="595" stroke="#6054e6" stroke-width="1.5"/>
+  <circle cx="870" cy="555" r="5" fill="#4a17b0"/>
+  <circle cx="860" cy="575" r="5" fill="#4a17b0"/>
+  <circle cx="880" cy="575" r="5" fill="#4a17b0"/>
+  <circle cx="870" cy="595" r="5" fill="#4a17b0"/>
+  
+  <!-- 3D Space -->
+  <rect x="310" y="580" width="520" height="190" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <!-- 3D Grid Lines -->
+  <line x1="350" y1="670" x2="790" y2="670" stroke="#1a2040" stroke-width="1"/>
+  <line x1="450" y1="630" x2="450" y2="750" stroke="#1a2040" stroke-width="1"/>
+  <line x1="550" y1="630" x2="550" y2="750" stroke="#1a2040" stroke-width="1"/>
+  <line x1="650" y1="630" x2="650" y2="750" stroke="#1a2040" stroke-width="1"/>
+  <line x1="750" y1="630" x2="750" y2="750" stroke="#1a2040" stroke-width="1"/>
+  
+  <!-- Spatial Nodes -->
+  <circle cx="570" cy="670" r="35" fill="url(#nodeGradient)" opacity="0.8" filter="url(#glow)"/>
+  <text x="570" y="675" font-family="Courier, monospace" font-size="12" fill="#ffffff" text-anchor="middle">ARCH</text>
+  
+  <circle cx="650" cy="620" r="25" fill="#6054e6" opacity="0.8"/>
+  <text x="650" y="625" font-family="Courier, monospace" font-size="9" fill="#ffffff" text-anchor="middle">ATTN</text>
+  
+  <circle cx="490" cy="630" r="25" fill="#6054e6" opacity="0.8"/>
+  <text x="490" y="635" font-family="Courier, monospace" font-size="9" fill="#ffffff" text-anchor="middle">ENC</text>
+  
+  <circle cx="480" cy="710" r="25" fill="#6054e6" opacity="0.8"/>
+  <text x="480" y="715" font-family="Courier, monospace" font-size="9" fill="#ffffff" text-anchor="middle">DEC</text>
+  
+  <circle cx="700" cy="680" r="30" fill="#08b2e3" opacity="0.8"/>
+  <text x="700" y="685" font-family="Courier, monospace" font-size="11" fill="#ffffff" text-anchor="middle">IMPL</text>
+  
+  <circle cx="750" cy="630" r="20" fill="#08b2e3" opacity="0.7"/>
+  <text x="750" y="635" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="middle">PT</text>
+  
+  <circle cx="750" cy="720" r="20" fill="#08b2e3" opacity="0.7"/>
+  <text x="750" y="725" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="middle">TF</text>
+  
+  <!-- Connection Lines -->
+  <line x1="570" y1="640" x2="650" y2="620" stroke="#6054e6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="570" y1="640" x2="490" y2="630" stroke="#6054e6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="570" y1="695" x2="480" y2="710" stroke="#6054e6" stroke-width="1.5" opacity="0.7"/>
+  <line x1="570" y1="670" x2="670" y2="680" stroke="#08b2e3" stroke-width="1.5" opacity="0.7"/>
+  <line x1="700" y1="655" x2="750" y2="645" stroke="#08b2e3" stroke-width="1.5" opacity="0.7"/>
+  <line x1="700" y1="705" x2="750" y2="705" stroke="#08b2e3" stroke-width="1.5" opacity="0.7"/>
+  
+  <!-- Right Panel - Modules -->
+  <rect x="920" y="50" width="270" height="365" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="2"/>
+  <text x="940" y="75" font-family="Courier, monospace" font-size="12" fill="#72c8f0" font-weight="bold">TOKEN ALLOCATION</text>
+  
+  <!-- Token Allocation Visualization -->
+  <rect x="930" y="85" width="250" height="170" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <!-- Component Allocations -->
+  <text x="940" y="105" font-family="Courier, monospace" font-size="10" fill="#72c8f0">ARCHITECTURE:</text>
+  <rect x="1040" y="95" width="130" height="15" rx="7.5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="1040" y="95" width="85" height="15" rx="7.5" fill="#4a17b0" opacity="0.7"/>
+  <text x="1135" y="105" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="end">2,125</text>
+  
+  <text x="940" y="130" font-family="Courier, monospace" font-size="10" fill="#72c8f0">IMPLEMENTATION:</text>
+  <rect x="1040" y="120" width="130" height="15" rx="7.5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="1040" y="120" width="70" height="15" rx="7.5" fill="#4a17b0" opacity="0.7"/>
+  <text x="1110" y="130" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="end">1,750</text>
+  
+  <text x="940" y="155" font-family="Courier, monospace" font-size="10" fill="#72c8f0">CODE SNIPPETS:</text>
+  <rect x="1040" y="145" width="130" height="15" rx="7.5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="1040" y="145" width="104" height="15" rx="7.5" fill="#4a17b0" opacity="0.7"/>
+  <text x="1144" y="155" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="end">2,600</text>
+  
+  <text x="940" y="180" font-family="Courier, monospace" font-size="10" fill="#72c8f0">DOCUMENTATION:</text>
+  <rect x="1040" y="170" width="130" height="15" rx="7.5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="1040" y="170" width="48" height="15" rx="7.5" fill="#4a17b0" opacity="0.7"/>
+  <text x="1088" y="180" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="end">1,200</text>
+  
+  <text x="940" y="205" font-family="Courier, monospace" font-size="10" fill="#72c8f0">APPLICATIONS:</text>
+  <rect x="1040" y="195" width="130" height="15" rx="7.5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="1040" y="195" width="31" height="15" rx="7.5" fill="#4a17b0" opacity="0.7"/>
+  <text x="1071" y="205" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="end">775</text>
+  
+  <text x="940" y="230" font-family="Courier, monospace" font-size="10" fill="#72c8f0">AVAILABLE:</text>
+  <rect x="1040" y="220" width="130" height="15" rx="7.5" fill="#15162a" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="1040" y="220" width="142" height="15" rx="7.5" fill="#08b2e3" opacity="0.6"/>
+  <text x="1182" y="230" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="end">3,550</text>
+  
+  <!-- Token Metrics -->
+  <rect x="930" y="265" width="250" height="60" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="940" y="285" font-family="Courier, monospace" font-size="10" fill="#72c8f0">TOTAL TOKENS:</text>
+  <text x="1155" y="285" font-family="Courier, monospace" font-size="10" fill="#ffffff" text-anchor="end">8,450 / 12,000</text>
+  
+  <text x="940" y="305" font-family="Courier, monospace" font-size="10" fill="#72c8f0">OPTIMIZATION RATIO:</text>
+  <text x="1155" y="305" font-family="Courier, monospace" font-size="10" fill="#08b2e3" text-anchor="end">73.4%</text>
+  
+  <text x="940" y="325" font-family="Courier, monospace" font-size="10" fill="#72c8f0">SEMANTIC DENSITY:</text>
+  <text x="1155" y="325" font-family="Courier, monospace" font-size="10" fill="#08b2e3" text-anchor="end">HIGH (0.94)</text>
+  
+  <!-- Context Coherence Module -->
+  <rect x="920" y="425" width="270" height="355" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="2"/>
+  <text x="940" y="450" font-family="Courier, monospace" font-size="12" fill="#72c8f0" font-weight="bold">CONTEXT COHERENCE</text>
+  
+  <!-- Knowledge Graph Visualization (From Knowledge Graph) -->
+  <rect x="930" y="460" width="250" height="205" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <!-- Graph Nodes -->
+  <!-- Central Node: Transformer -->
+  <circle cx="1055" cy="560" r="30" fill="#4a17b0" opacity="0.9"/>
+  <text x="1055" y="565" font-family="Courier, monospace" font-size="9" fill="#ffffff" text-anchor="middle">TRANSFORMER</text>
+  
+  <!-- Related Nodes -->
+  <circle cx="985" cy="520" r="20" fill="#6054e6" opacity="0.8"/>
+  <text x="985" y="525" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="middle">ATTENTION</text>
+  
+  <circle cx="1005" cy="610" r="20" fill="#6054e6" opacity="0.8"/>
+  <text x="1005" y="615" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="middle">ENCODER</text>
+  
+  <circle cx="1110" cy="610" r="20" fill="#6054e6" opacity="0.8"/>
+  <text x="1110" y="615" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="middle">DECODER</text>
+  
+  <circle cx="1125" cy="520" r="20" fill="#6054e6" opacity="0.8"/>
+  <text x="1125" y="525" font-family="Courier, monospace" font-size="8" fill="#ffffff" text-anchor="middle">LAYERS</text>
+  
+  <!-- Implementation Nodes -->
+  <circle cx="965" cy="640" r="15" fill="#08b2e3" opacity="0.8"/>
+  <text x="965" y="644" font-family="Courier, monospace" font-size="7" fill="#ffffff" text-anchor="middle">PYTORCH</text>
+  
+  <circle cx="1055" cy="650" r="15" fill="#08b2e3" opacity="0.8"/>
+  <text x="1055" y="654" font-family="Courier, monospace" font-size="7" fill="#ffffff" text-anchor="middle">TF</text>
+  
+  <circle cx="1145" cy="640" r="15" fill="#08b2e3" opacity="0.8"/>
+  <text x="1145" y="644" font-family="Courier, monospace" font-size="7" fill="#ffffff" text-anchor="middle">HUGGING</text>
+  
+  <!-- Connection Lines -->
+  <line x1="1055" y1="530" x2="985" y2="520" stroke="#6054e6" stroke-width="2" opacity="0.7"/>
+  <line x1="1055" y1="530" x2="1125" y2="520" stroke="#6054e6" stroke-width="2" opacity="0.7"/>
+  <line x1="1055" y1="590" x2="1005" y2="610" stroke="#6054e6" stroke-width="2" opacity="0.7"/>
+  <line x1="1055" y1="590" x2="1110" y2="610" stroke="#6054e6" stroke-width="2" opacity="0.7"/>
+  <line x1="1005" y1="630" x2="965" y2="640" stroke="#08b2e3" stroke-width="1.5" opacity="0.7"/>
+  <line x1="1055" y1="590" x2="1055" y2="635" stroke="#08b2e3" stroke-width="1.5" opacity="0.7"/>
+  <line x1="1110" y1="630" x2="1145" y2="640" stroke="#08b2e3" stroke-width="1.5" opacity="0.7"/>
+  
+  <!-- Coherence Metrics -->
+  <rect x="930" y="675" width="250" height="95" rx="5" fill="#101028" stroke="#3a4a6a" stroke-width="1"/>
+  <text x="940" y="695" font-family="Courier, monospace" font-size="10" fill="#72c8f0">COHERENCE SCORE:</text>
+  <text x="1155" y="695" font-family="Courier, monospace" font-size="10" fill="#08b2e3" text-anchor="end">94.7%</text>
+  
+  <text x="940" y="715" font-family="Courier, monospace" font-size="10" fill="#72c8f0">CONNECTIVITY:</text>
+  <text x="1155" y="715" font-family="Courier, monospace" font-size="10" fill="#08b2e3" text-anchor="end">HIGH (12 LINKS)</text>
+  
+  <text x="940" y="735" font-family="Courier, monospace" font-size="10" fill="#72c8f0">CONTEXTUAL HARMONY:</text>
+  <text x="1155" y="735" font-family="Courier, monospace" font-size="10" fill="#08b2e3" text-anchor="end">EXCELLENT</text>
+  
+  <text x="940" y="755" font-family="Courier, monospace" font-size="10" fill="#72c8f0">SEMANTIC OVERLAP:</text>
+  <text x="1155" y="755" font-family="Courier, monospace" font-size="10" fill="#08b2e3" text-anchor="end">OPTIMAL (86.2%)</text>
+  
+  <!-- Bottom Status Bar -->
+  <rect x="0" y="790" width="1200" height="10" fill="#101028"/>
+  <text x="600" y="785" font-family="Courier, monospace" font-size="10" fill="#72c8f0" text-anchor="middle">CTRL+SHIFT: FOCUS MODE • TAB: CYCLE VIEWS • SPACE: PLAY/PAUSE • ALT+DRAG: CONNECT NODES • ESC: RESET</text>
+</svg>

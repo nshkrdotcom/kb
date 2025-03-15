@@ -1,0 +1,381 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Main Background - Deep Space -->
+  <rect width="1200" height="800" fill="#0a0a12"/>
+  
+  <!-- Geometric Knowledge Terrain -->
+  <path d="M0,700 C150,680 250,750 400,650 C550,550 650,600 800,580 C950,560 1050,650 1200,620 L1200,800 L0,800 Z" fill="#0d1a33" opacity="0.7"/>
+  <path d="M0,720 C200,700 300,780 450,690 C600,600 700,650 850,630 C1000,610 1100,700 1200,670 L1200,800 L0,800 Z" fill="#102450" opacity="0.5"/>
+  <path d="M0,750 C250,735 350,800 500,730 C650,660 750,710 900,690 C1050,670 1150,760 1200,730 L1200,800 L0,800 Z" fill="#1a3a7d" opacity="0.3"/>
+  
+  <!-- Harmonic Waves (Knowledge Flows) -->
+  <path d="M0,500 C150,520 250,480 400,520 C550,560 650,520 800,540 C950,560 1050,530 1200,550" fill="none" stroke="#4a9de9" stroke-width="0.5" opacity="0.4"/>
+  <path d="M0,510 C150,530 250,490 400,530 C550,570 650,530 800,550 C950,570 1050,540 1200,560" fill="none" stroke="#4a9de9" stroke-width="0.5" opacity="0.3"/>
+  <path d="M0,490 C150,510 250,470 400,510 C550,550 650,510 800,530 C950,550 1050,520 1200,540" fill="none" stroke="#4a9de9" stroke-width="0.5" opacity="0.3"/>
+  
+  <path d="M0,380 C100,400 250,370 400,420 C550,450 700,390 900,420 C1050,440 1120,400 1200,420" fill="none" stroke="#72c8f0" stroke-width="0.8" opacity="0.4"/>
+  <path d="M0,370 C100,390 250,360 400,410 C550,440 700,380 900,410 C1050,430 1120,390 1200,410" fill="none" stroke="#72c8f0" stroke-width="0.8" opacity="0.3"/>
+  <path d="M0,390 C100,410 250,380 400,430 C550,460 700,400 900,430 C1050,450 1120,410 1200,430" fill="none" stroke="#72c8f0" stroke-width="0.8" opacity="0.3"/>
+  
+  <path d="M0,300 C120,280 200,310 350,280 C500,250 650,290 800,270 C950,250 1100,280 1200,260" fill="none" stroke="#b6e3fa" stroke-width="1" opacity="0.5"/>
+  <path d="M0,310 C120,290 200,320 350,290 C500,260 650,300 800,280 C950,260 1100,290 1200,270" fill="none" stroke="#b6e3fa" stroke-width="1" opacity="0.4"/>
+  <path d="M0,290 C120,270 200,300 350,270 C500,240 650,280 800,260 C950,240 1100,270 1200,250" fill="none" stroke="#b6e3fa" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Knowledge Vortex (Central Focus) -->
+  <ellipse cx="600" cy="360" rx="300" ry="150" fill="url(#vortexGradient)" opacity="0.2"/>
+  <ellipse cx="600" cy="360" rx="250" ry="125" fill="url(#vortexGradient)" opacity="0.3"/>
+  <ellipse cx="600" cy="360" rx="200" ry="100" fill="url(#vortexGradient)" opacity="0.4"/>
+  <ellipse cx="600" cy="360" rx="150" ry="75" fill="url(#vortexGradient)" opacity="0.5"/>
+  <ellipse cx="600" cy="360" rx="100" ry="50" fill="url(#vortexGradient)" opacity="0.7"/>
+  
+  <!-- Knowledge Harmonics (Waveforms) -->
+  <defs>
+    <linearGradient id="vortexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a17b0" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#6054e6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#08b2e3" stop-opacity="0.8"/>
+    </linearGradient>
+    
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#c0e8ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4a9de9" stop-opacity="0"/>
+    </radialGradient>
+    
+    <linearGradient id="moduleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#202848" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0a0a12" stop-opacity="1"/>
+    </linearGradient>
+    
+    <linearGradient id="keyboardGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a40" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#101028" stop-opacity="1"/>
+    </linearGradient>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Synthesizer Interface (Bottom Panel) -->
+  <rect x="50" y="640" width="1100" height="140" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <!-- Knowledge Keyboard -->
+  <rect x="100" y="660" width="800" height="100" rx="5" fill="url(#keyboardGradient)" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <!-- White Keys -->
+  <rect x="100" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="140" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="180" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="220" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="260" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="300" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="340" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="380" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="420" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="460" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="500" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="540" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="580" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="620" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="660" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="700" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="740" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="780" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="820" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  <rect x="860" y="660" width="40" height="100" fill="#dadadf" stroke="#202040" stroke-width="0.5" rx="3"/>
+  
+  <!-- Black Keys (Context Modifiers) -->
+  <rect x="130" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="170" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="250" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="290" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="330" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="410" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="450" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="530" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="570" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="610" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="690" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="730" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="810" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  <rect x="850" y="660" width="20" height="60" fill="#202030" stroke="#101020" stroke-width="0.5" rx="2"/>
+  
+  <!-- Key Labels -->
+  <text x="120" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">CORE</text>
+  <text x="160" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">FACTS</text>
+  <text x="200" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">CODE</text>
+  <text x="240" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">DATA</text>
+  <text x="280" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">PROC</text>
+  <text x="320" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">ARCH</text>
+  <text x="360" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">CONC</text>
+  <text x="400" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">FLOW</text>
+  <text x="440" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">LINK</text>
+  <text x="480" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">HIST</text>
+  <text x="520" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">IMPL</text>
+  <text x="560" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">CITE</text>
+  <text x="600" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">META</text>
+  <text x="640" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">ALT</text>
+  <text x="680" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">NOTE</text>
+  <text x="720" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">SUMM</text>
+  <text x="760" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">REAS</text>
+  <text x="800" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">VISU</text>
+  <text x="840" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">JOIN</text>
+  <text x="880" y="740" font-family="Monaco, monospace" font-size="10" fill="#3a4a6a" text-anchor="middle">EXEC</text>
+  
+  <!-- Modal Key Labels -->
+  <text x="140" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">MERGE</text>
+  <text x="180" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">FILTER</text>
+  <text x="260" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">BLEND</text>
+  <text x="300" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">SPLIT</text>
+  <text x="340" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">FOCUS</text>
+  <text x="420" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">GROUP</text>
+  <text x="460" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">LAYER</text>
+  <text x="540" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">SPACE</text>
+  <text x="580" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">ZOOM</text>
+  <text x="620" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">SHIFT</text>
+  <text x="700" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">DEPTH</text>
+  <text x="740" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">ORBIT</text>
+  <text x="820" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">SYNC</text>
+  <text x="860" y="695" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">BIND</text>
+  
+  <!-- Knowledge Control Modules -->
+  <rect x="920" y="660" width="210" height="100" rx="5" fill="#0f1a33" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <!-- Resonance Modulators -->
+  <circle cx="950" cy="680" r="20" fill="#0a1025" stroke="#4a9de9" stroke-width="1.5"/>
+  <circle cx="950" cy="680" r="10" fill="#4a9de9" opacity="0.5"/>
+  <text x="950" cy="710" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">RESONANCE</text>
+  
+  <circle cx="1000" cy="680" r="20" fill="#0a1025" stroke="#4a9de9" stroke-width="1.5"/>
+  <circle cx="1000" cy="680" r="7" fill="#4a9de9" opacity="0.5"/>
+  <text x="1000" cy="710" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">COHERENCE</text>
+  
+  <circle cx="1050" cy="680" r="20" fill="#0a1025" stroke="#4a9de9" stroke-width="1.5"/>
+  <circle cx="1050" cy="680" r="14" fill="#4a9de9" opacity="0.5"/>
+  <text x="1050" cy="710" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">HARMONY</text>
+  
+  <circle cx="1100" cy="680" r="20" fill="#0a1025" stroke="#4a9de9" stroke-width="1.5"/>
+  <circle cx="1100" cy="680" r="5" fill="#4a9de9" opacity="0.5"/>
+  <text x="1100" cy="710" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">ENTROPY</text>
+  
+  <!-- Sliders -->
+  <rect x="940" y="730" width="170" height="15" rx="7.5" fill="#0a1025" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="940" y="730" width="120" height="15" rx="7.5" fill="#0a1025" stroke="#4a9de9" stroke-width="1"/>
+  <circle cx="1060" cy="737.5" r="10" fill="#08b2e3" filter="url(#glow)"/>
+  <text x="1030" cy="757" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">DIMENSIONAL PHASE</text>
+  
+  <!-- Main Data Flow Visualization -->
+  <!-- Context Nodes - Knowledge Harmonics -->
+  <circle cx="400" cy="280" r="15" fill="#6054e6" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="440" cy="320" r="12" fill="#4a17b0" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="470" cy="270" r="10" fill="#08b2e3" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="520" cy="300" r="18" fill="#3432b8" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="560" cy="260" r="14" fill="#4a17b0" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="600" cy="290" r="20" fill="#6054e6" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="640" cy="330" r="16" fill="#08b2e3" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="680" cy="270" r="12" fill="#4a17b0" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="720" cy="310" r="17" fill="#6054e6" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="760" cy="280" r="11" fill="#08b2e3" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="800" cy="320" r="14" fill="#3432b8" opacity="0.7" filter="url(#glow)"/>
+  
+  <!-- Harmonic Field Lines (Knowledge Coherence) -->
+  <path d="M400,280 C450,260 480,320 520,300" fill="none" stroke="#6054e6" stroke-width="1.5" opacity="0.5"/>
+  <path d="M520,300 C550,290 570,250 600,290" fill="none" stroke="#6054e6" stroke-width="1.5" opacity="0.5"/>
+  <path d="M600,290 C630,310 660,320 680,270" fill="none" stroke="#6054e6" stroke-width="1.5" opacity="0.5"/>
+  <path d="M680,270 C700,290 730,300 760,280" fill="none" stroke="#6054e6" stroke-width="1.5" opacity="0.5"/>
+  <path d="M760,280 C780,300 790,310 800,320" fill="none" stroke="#6054e6" stroke-width="1.5" opacity="0.5"/>
+  
+  <path d="M440,320 C455,300 465,290 470,270" fill="none" stroke="#08b2e3" stroke-width="1.5" opacity="0.4"/>
+  <path d="M470,270 C500,280 530,270 560,260" fill="none" stroke="#08b2e3" stroke-width="1.5" opacity="0.4"/>
+  <path d="M560,260 C590,270 620,300 640,330" fill="none" stroke="#08b2e3" stroke-width="1.5" opacity="0.4"/>
+  <path d="M640,330 C660,310 690,290 720,310" fill="none" stroke="#08b2e3" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Active Knowledge Stream -->
+  <path d="M520,300 C570,320 600,290 640,330 C680,370 720,310 800,320" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8" filter="url(#glow)"/>
+  
+  <!-- Data Points -->
+  <circle cx="520" cy="300" r="6" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="540" cy="310" r="3" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="560" cy="315" r="2" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="580" cy="310" r="3" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="600" cy="300" r="4" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="620" cy="315" r="3" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="640" cy="330" r="5" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="660" cy="345" r="2" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="680" cy="355" r="3" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="700" cy="345" r="2" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="720" cy="310" r="5" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="740" cy="315" r="2" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="760" cy="315" r="3" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="780" cy="318" r="2" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="800" cy="320" r="6" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  
+  <!-- Field Intensity Visualization -->
+  <path d="M300,250 Q450,150 600,200 Q750,250 900,180" fill="none" stroke="#6054e6" stroke-width="1" opacity="0.3"/>
+  <path d="M300,260 Q450,160 600,210 Q750,260 900,190" fill="none" stroke="#6054e6" stroke-width="1" opacity="0.3"/>
+  <path d="M300,240 Q450,140 600,190 Q750,240 900,170" fill="none" stroke="#6054e6" stroke-width="1" opacity="0.3"/>
+  
+  <path d="M300,320 Q450,400 600,350 Q750,300 900,380" fill="none" stroke="#08b2e3" stroke-width="1" opacity="0.3"/>
+  <path d="M300,330 Q450,410 600,360 Q750,310 900,390" fill="none" stroke="#08b2e3" stroke-width="1" opacity="0.3"/>
+  <path d="M300,310 Q450,390 600,340 Q750,290 900,370" fill="none" stroke="#08b2e3" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Knowledge Flow Indicators -->
+  <path d="M540,310 L550,305 L560,315 L540,310" fill="#ffffff" opacity="0.7"/>
+  <path d="M650,325 L660,320 L670,330 L650,325" fill="#ffffff" opacity="0.7"/>
+  <path d="M740,315 L750,310 L760,320 L740,315" fill="#ffffff" opacity="0.7"/>
+  
+  <!-- Gesture Traces -->
+  <path d="M700,400 C710,380 720,375 730,390 C740,405 750,410 760,400" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-dasharray="2,2"/>
+  
+  <!-- Reference Plane -->
+  <rect x="300" y="460" width="600" height="1" fill="#3a4a6a" opacity="0.5"/>
+  <rect x="300" y="465" width="600" height="1" fill="#3a4a6a" opacity="0.4"/>
+  <rect x="300" y="470" width="600" height="1" fill="#3a4a6a" opacity="0.3"/>
+  <rect x="300" y="475" width="600" height="1" fill="#3a4a6a" opacity="0.2"/>
+  <rect x="300" y="480" width="600" height="1" fill="#3a4a6a" opacity="0.1"/>
+  
+  <!-- Current Active Node Information -->
+  <rect x="50" y="70" width="300" height="140" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="1" opacity="0.9"/>
+  <text x="70" y="95" font-family="Monaco, monospace" font-size="12" fill="#72c8f0" font-weight="bold">KNOWLEDGE HARMONIC: TRANSFORMER MODEL</text>
+  <text x="70" y="115" font-family="Monaco, monospace" font-size="10" fill="#b6e3fa">Type: CORE ARCHITECTURAL CONCEPT</text>
+  <text x="70" y="135" font-family="Monaco, monospace" font-size="10" fill="#b6e3fa">Tokens: 2,340 / 18,000 (13.0%)</text>
+  <text x="70" y="155" font-family="Monaco, monospace" font-size="10" fill="#b6e3fa">Coherence: 94.3% | Resonance: 89.7%</text>
+  <text x="70" y="175" font-family="Monaco, monospace" font-size="10" fill="#b6e3fa">Connected Nodes: 16 | Active Stream: 7</text>
+  <text x="70" y="195" font-family="Monaco, monospace" font-size="10" fill="#b6e3fa">Mode: HARMONIC TRAVERSAL | Depth: L4</text>
+  
+  <!-- Context Analysis Panel -->
+  <rect x="50" y="230" width="300" height="180" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="1" opacity="0.8"/>
+  <text x="70" y="255" font-family="Monaco, monospace" font-size="12" fill="#72c8f0" font-weight="bold">HARMONIC ANALYSIS</text>
+  
+  <!-- Visual Patterns -->
+  <rect x="70" y="270" width="80" height="50" rx="5" fill="#0a0a12" stroke="#3a4a6a" stroke-width="1"/>
+  <path d="M80,300 Q95,280 110,300 Q125,320 140,300" fill="none" stroke="#6054e6" stroke-width="1.5"/>
+  <text x="110" y="330" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">ARCHITECTURE</text>
+  
+  <rect x="160" y="270" width="80" height="50" rx="5" fill="#0a0a12" stroke="#3a4a6a" stroke-width="1"/>
+  <path d="M170,300 Q185,290 200,295 Q215,300 230,290" fill="none" stroke="#08b2e3" stroke-width="1.5"/>
+  <text x="200" y="330" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">IMPLEMENTATION</text>
+  
+  <rect x="250" y="270" width="80" height="50" rx="5" fill="#0a0a12" stroke="#3a4a6a" stroke-width="1"/>
+  <path d="M260,300 Q275,310 290,295 Q305,280 320,300" fill="none" stroke="#4a17b0" stroke-width="1.5"/>
+  <text x="290" y="330" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">USE CASES</text>
+  
+  <!-- Feature Harmonics -->
+  <rect x="70" y="340" width="260" height="60" rx="5" fill="#0a0a12" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="80" y="350" width="240" height="40" rx="3" fill="none" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <rect x="80" y="370" width="190" height="4" rx="2" fill="#4a17b0" opacity="0.7"/>
+  <rect x="80" y="380" width="120" height="4" rx="2" fill="#6054e6" opacity="0.7"/>
+  <rect x="80" y="360" width="160" height="4" rx="2" fill="#08b2e3" opacity="0.7"/>
+  
+  <text x="200" y="410" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">CONTEXTUAL EMBEDDING SIGNATURE</text>
+  
+  <!-- Token Stream Monitor -->
+  <rect x="850" y="70" width="300" height="140" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="1" opacity="0.9"/>
+  <text x="870" y="95" font-family="Monaco, monospace" font-size="12" fill="#72c8f0" font-weight="bold">TOKEN FLOW MONITOR</text>
+  
+  <rect x="870" y="105" width="260" height="25" rx="5" fill="#0a0a12" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="870" y="105" width="195" height="25" rx="5" fill="#0a0a12" stroke="#6054e6" stroke-width="1.5"/>
+  <text x="1000" y="122" font-family="Monaco, monospace" font-size="10" fill="#6054e6" text-anchor="middle">10,500 / 14,000</text>
+  
+  <text x="870" y="145" font-family="Monaco, monospace" font-size="10" fill="#b6e3fa">Active Streams: 3 | Compression: 62.4%</text>
+  <text x="870" y="165" font-family="Monaco, monospace" font-size="10" fill="#b6e3fa">Core:40% | Impl:35% | Data:25%</text>
+  <text x="870" y="185" font-family="Monaco, monospace" font-size="10" fill="#b6e3fa">Flow Type: SEQUENCE-DRIVEN | Mode: SYNTH</text>
+  <text x="870" y="205" font-family="Monaco, monospace" font-size="10" fill="#b6e3fa">Cycle: 4 | Phase: RESONANCE SCAN</text>
+  
+  <!-- Navigation Controls -->
+  <rect x="850" y="230" width="300" height="180" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="1" opacity="0.8"/>
+  <text x="870" y="255" font-family="Monaco, monospace" font-size="12" fill="#72c8f0" font-weight="bold">DIMENSIONAL NAVIGATOR</text>
+  
+  <!-- Navigation Controls -->
+  <rect x="870" y="270" width="260" height="130" rx="5" fill="#0a0a12" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <!-- D-Pad Navigation -->
+  <circle cx="930" cy="335" r="40" fill="#0a1025" stroke="#3a4a6a" stroke-width="1"/>
+  <path d="M930,300 L940,320 L920,320 Z" fill="#4a9de9"/>
+  <path d="M930,370 L940,350 L920,350 Z" fill="#4a9de9"/>
+  <path d="M895,335 L915,345 L915,325 Z" fill="#4a9de9"/>
+  <path d="M965,335 L945,345 L945,325 Z" fill="#4a9de9"/>
+  <circle cx="930" cy="335" r="12" fill="#0a1025" stroke="#4a9de9" stroke-width="1"/>
+  
+  <!-- Axis Controls -->
+  <text x="1010" y="290" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">DIMENSIONAL AXIS</text>
+  <rect x="970" y="300" width="80" height="15" rx="7.5" fill="#0a1025" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="970" y="300" width="60" height="15" rx="7.5" fill="#0a1025" stroke="#4a9de9" stroke-width="1"/>
+  <circle cx="1030" cy="307.5" r="7" fill="#08b2e3" filter="url(#glow)"/>
+  <text x="1010" y="325" font-family="Monaco, monospace" font-size="8" fill="#b6e3fa" text-anchor="middle">TEMPORAL</text>
+  
+  <rect x="970" y="335" width="80" height="15" rx="7.5" fill="#0a1025" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="970" y="335" width="30" height="15" rx="7.5" fill="#0a1025" stroke="#4a9de9" stroke-width="1"/>
+  <circle cx="1000" cy="342.5" r="7" fill="#08b2e3" filter="url(#glow)"/>
+  <text x="1010" y="360" font-family="Monaco, monospace" font-size="8" fill="#b6e3fa" text-anchor="middle">CONCEPTUAL</text>
+  
+  <rect x="970" y="370" width="80" height="15" rx="7.5" fill="#0a1025" stroke="#3a4a6a" stroke-width="1"/>
+  <rect x="970" y="370" width="50" height="15" rx="7.5" fill="#0a1025" stroke="#4a9de9" stroke-width="1"/>
+  <circle cx="1020" cy="377.5" r="7" fill="#08b2e3" filter="url(#glow)"/>
+  <text x="1010" y="395" font-family="Monaco, monospace" font-size="8" fill="#b6e3fa" text-anchor="middle">SEMANTIC</text>
+  
+  <!-- Mode Select -->
+  <rect x="1070" y="300" width="50" height="50" rx="5" fill="#0a1025" stroke="#3a4a6a" stroke-width="1"/>
+  <circle cx="1095" cy="325" r="15" fill="#0a1025" stroke="#4a9de9" stroke-width="1.5"/>
+  <text x="1095" y="329" font-family="Monaco, monospace" font-size="10" fill="#4a9de9" text-anchor="middle">3D</text>
+  <text x="1095" y="360" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">PHASE MODE</text>
+  
+  <!-- Gesture Path -->
+  <path d="M600,500 C650,480 680,510 700,490 C720,470 750,490 780,470" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5" stroke-dasharray="5,3"/>
+  <path d="M690,495 L700,490 L695,480" fill="#ffffff" opacity="0.5"/>
+  
+  <!-- Active Control Points -->
+  <circle cx="600" cy="500" r="4" fill="#ffffff" opacity="0.8"/>
+  <circle cx="700" cy="490" r="4" fill="#ffffff" opacity="0.8"/>
+  <circle cx="780" cy="470" r="4" fill="#ffffff" opacity="0.8"/>
+  
+  <!-- Harmonic Selection Interface -->
+  <rect x="390" y="430" width="420" height="120" rx="10" fill="url(#moduleGradient)" stroke="#3a4a6a" stroke-width="1" opacity="0.9"/>
+  <text x="410" y="450" font-family="Monaco, monospace" font-size="12" fill="#72c8f0" font-weight="bold">CONTEXT HARMONICS</text>
+  
+  <!-- Context Waveforms -->
+  <rect x="410" y="460" width="380" height="80" rx="5" fill="#0a0a12" stroke="#3a4a6a" stroke-width="1"/>
+  
+  <!-- Waveform 1 - Architecture -->
+  <path d="M420,520 C430,510 440,480 450,485 C460,490 470,520 480,515 C490,510 500,470 510,475 C520,480 530,510 540,505 C550,500 560,480 570,485 C580,490 590,510 600,505" fill="none" stroke="#6054e6" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Waveform 2 - Implementation -->
+  <path d="M420,500 C430,510 440,520 450,515 C460,510 470,490 480,495 C490,500 500,520 510,515 C520,510 530,490 540,495 C550,500 560,520 570,515 C580,510 590,490 600,495" fill="none" stroke="#08b2e3" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Waveform 3 - Data -->
+  <path d="M610,505 C620,510 630,480 640,485 C650,490 660,520 670,515 C680,510 690,470 700,475 C710,480 720,510 730,505 C740,500 750,480 760,485 C770,490 780,510 790,505" fill="none" stroke="#6054e6" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Waveform 4 - References -->
+  <path d="M610,495 C620,500 630,520 640,515 C650,510 660,490 670,495 C680,500 690,520 700,515 C710,510 720,490 730,495 C740,500 750,520 760,515 C770,510 780,490 790,495" fill="none" stroke="#08b2e3" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Selection Points -->
+  <circle cx="480" cy="515" r="5" fill="#ffffff" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="540" cy="505" r="5" fill="#ffffff" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="570" cy="485" r="5" fill="#ffffff" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="670" cy="515" r="5" fill="#ffffff" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="700" cy="475" r="5" fill="#ffffff" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="760" cy="485" r="5" fill="#ffffff" opacity="0.8" filter="url(#glow)"/>
+  
+  <!-- Status Indicators -->
+  <circle cx="30" cy="30" r="10" fill="#0a1025" stroke="#4a9de9" stroke-width="1.5"/>
+  <circle cx="30" cy="30" r="5" fill="#4a9de9" opacity="0.8"/>
+  
+  <circle cx="60" cy="30" r="10" fill="#0a1025" stroke="#6054e6" stroke-width="1.5"/>
+  <circle cx="60" cy="30" r="5" fill="#6054e6" opacity="0.8"/>
+  
+  <circle cx="90" cy="30" r="10" fill="#0a1025" stroke="#08b2e3" stroke-width="1.5"/>
+  <circle cx="90" cy="30" r="5" fill="#08b2e3" opacity="0.8"/>
+  
+  <!-- Current Mode Display -->
+  <text x="150" y="34" font-family="Monaco, monospace" font-size="12" fill="#72c8f0">HARMONIC SYNTHESIS • TOKEN FLOW: 370/s • DEPTH: L3 • COHERENCE: 94.7%</text>
+  
+  <!-- Gesture Trace Indicator -->
+  <path d="M1120,180 C1130,160 1140,170 1150,160" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.6" stroke-dasharray="2,2"/>
+  <text x="1130" y="190" font-family="Monaco, monospace" font-size="8" fill="#72c8f0">GESTURE TRACE</text>
+  
+  <!-- Keyboard Shortcut Tips -->
+  <text x="600" y="580" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">SPACE+DRAG: HARMONIC SELECT • TAB: CYCLE NODE • ALT+WHEEL: DIMENSION SHIFT</text>
+  <text x="600" y="595" font-family="Monaco, monospace" font-size="8" fill="#72c8f0" text-anchor="middle">SHIFT+H: TOGGLE HARMONICS • CTRL+F: FREQUENCY FILTER • ESC: RESET VIEW</text>
+</svg>

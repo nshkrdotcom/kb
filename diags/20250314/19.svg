@@ -1,0 +1,366 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Dark background to mimic pro applications -->
+  <rect width="1200" height="800" fill="#1a1a1a"/>
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="1200" height="40" fill="#2d2d2d"/>
+  <text x="20" y="25" font-family="Arial" font-size="16" fill="#e0e0e0" font-weight="bold">ContextNexus Graph</text>
+  
+  <rect x="200" y="5" width="800" height="30" rx="5" fill="#3d3d3d"/>
+  <text x="215" y="25" font-family="Arial" font-size="14" fill="#e0e0e0">Project: Machine Learning System Architecture</text>
+  
+  <!-- View Controls -->
+  <rect x="800" y="5" width="90" height="30" rx="15" fill="#0084ff"/>
+  <text x="845" y="25" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Graph</text>
+  
+  <rect x="900" y="5" width="90" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="945" y="25" font-family="Arial" font-size="14" fill="#aaa" text-anchor="middle">Timeline</text>
+  
+  <rect x="1000" y="5" width="90" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="1045" y="25" font-family="Arial" font-size="14" fill="#aaa" text-anchor="middle">Matrix</text>
+  
+  <rect x="1100" y="5" width="80" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="1140" y="25" font-family="Arial" font-size="14" fill="#aaa" text-anchor="middle">Export</text>
+  
+  <!-- Navigation Controls -->
+  <rect x="0" y="40" width="1200" height="40" fill="#2d2d2d"/>
+  
+  <!-- Zoom Controls -->
+  <circle cx="30" cy="60" r="15" fill="#3d3d3d" stroke="#555" stroke-width="1"/>
+  <text x="30" y="65" font-family="Arial" font-size="14" fill="#e0e0e0" text-anchor="middle">−</text>
+  
+  <circle cx="70" cy="60" r="15" fill="#3d3d3d" stroke="#555" stroke-width="1"/>
+  <text x="70" y="65" font-family="Arial" font-size="14" fill="#e0e0e0" text-anchor="middle">+</text>
+  
+  <!-- Layout Controls -->
+  <circle cx="120" cy="60" r="15" fill="#3d3d3d" stroke="#555" stroke-width="1"/>
+  <text x="120" y="65" font-family="Arial" font-size="14" fill="#e0e0e0" text-anchor="middle">⟳</text>
+  
+  <rect x="150" y="50" width="80" height="20" rx="5" fill="#3d3d3d"/>
+  <text x="190" y="65" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Auto-Layout</text>
+  
+  <rect x="240" y="50" width="80" height="20" rx="5" fill="#0084ff"/>
+  <text x="280" y="65" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Force Direct</text>
+  
+  <rect x="330" y="50" width="80" height="20" rx="5" fill="#3d3d3d"/>
+  <text x="370" y="65" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Hierarchical</text>
+  
+  <rect x="420" y="50" width="80" height="20" rx="5" fill="#3d3d3d"/>
+  <text x="460" y="65" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Radial</text>
+  
+  <!-- Search and Filter -->
+  <rect x="730" y="50" width="180" height="20" rx="5" fill="white"/>
+  <text x="745" y="65" font-family="Arial" font-size="12" fill="#666">Search knowledge graph...</text>
+  
+  <rect x="920" y="50" width="120" height="20" rx="5" fill="#3d3d3d"/>
+  <text x="940" y="65" font-family="Arial" font-size="12" fill="#e0e0e0">Filter: </text>
+  <text x="980" y="65" font-family="Arial" font-size="12" fill="#0084ff">All Types</text>
+  
+  <rect x="1050" y="50" width="120" height="20" rx="5" fill="#0084ff"/>
+  <text x="1110" y="65" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Apply Selection</text>
+  
+  <!-- Left Panel - Knowledge Structure -->
+  <rect x="0" y="80" width="200" height="720" fill="#2a2a2a"/>
+  
+  <!-- README Section Header -->
+  <rect x="0" y="80" width="200" height="40" fill="#333"/>
+  <text x="20" y="105" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Core Knowledge</text>
+  
+  <!-- README Content -->
+  <rect x="10" y="130" width="180" height="140" rx="5" fill="#0066cc"/>
+  <text x="20" y="150" font-family="Arial" font-size="14" fill="white" font-weight="bold">ML System Architecture</text>
+  <text x="20" y="170" font-family="Arial" font-size="12" fill="#e0e8ff">Core system design for machine learning pipeline development.</text>
+  
+  <text x="20" y="200" font-family="Arial" font-size="12" fill="white">Key Nodes:</text>
+  <text x="30" y="220" font-family="Arial" font-size="12" fill="#e0e8ff">• Data Processing</text>
+  <text x="30" y="240" font-family="Arial" font-size="12" fill="#e0e8ff">• Model Training</text>
+  <text x="30" y="260" font-family="Arial" font-size="12" fill="#e0e8ff">• Deployment</text>
+  
+  <!-- Graph Components -->
+  <rect x="0" y="280" width="200" height="40" fill="#333"/>
+  <text x="20" y="305" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Graph Components</text>
+  
+  <!-- Component List -->
+  <rect x="10" y="330" width="180" height="40" rx="5" fill="#0084ff"/>
+  <text x="20" y="355" font-family="Arial" font-size="12" fill="white" font-weight="bold">Data Processing</text>
+  
+  <rect x="10" y="380" width="180" height="40" rx="5" fill="#444"/>
+  <text x="20" y="405" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Model Training</text>
+  
+  <rect x="10" y="430" width="180" height="40" rx="5" fill="#444"/>
+  <text x="20" y="455" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Deployment</text>
+  
+  <rect x="10" y="480" width="180" height="40" rx="5" fill="#444"/>
+  <text x="20" y="505" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Evaluation Metrics</text>
+  
+  <rect x="10" y="530" width="180" height="40" rx="5" fill="#444"/>
+  <text x="20" y="555" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Data Sources</text>
+  
+  <!-- Dimensionality Controls -->
+  <rect x="0" y="600" width="200" height="40" fill="#333"/>
+  <text x="20" y="625" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Dimensionality</text>
+  
+  <!-- Sliders for dimensionality control -->
+  <text x="20" y="655" font-family="Arial" font-size="12" fill="#e0e0e0">Complexity:</text>
+  <rect x="90" y="645" width="90" height="10" rx="5" fill="#3d3d3d"/>
+  <rect x="90" y="645" width="60" height="10" rx="5" fill="#0084ff"/>
+  <circle cx="150" cy="650" r="7" fill="white" stroke="#0084ff" stroke-width="2"/>
+  
+  <text x="20" y="685" font-family="Arial" font-size="12" fill="#e0e0e0">Detail Level:</text>
+  <rect x="90" y="675" width="90" height="10" rx="5" fill="#3d3d3d"/>
+  <rect x="90" y="675" width="75" height="10" rx="5" fill="#0084ff"/>
+  <circle cx="165" cy="680" r="7" fill="white" stroke="#0084ff" stroke-width="2"/>
+  
+  <text x="20" y="715" font-family="Arial" font-size="12" fill="#e0e0e0">Clustering:</text>
+  <rect x="90" y="705" width="90" height="10" rx="5" fill="#3d3d3d"/>
+  <rect x="90" y="705" width="40" height="10" rx="5" fill="#0084ff"/>
+  <circle cx="130" cy="710" r="7" fill="white" stroke="#0084ff" stroke-width="2"/>
+  
+  <!-- Keyboard Shortcuts -->
+  <rect x="0" y="740" width="200" height="60" fill="#333"/>
+  <text x="20" y="760" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Keyboard Shortcuts</text>
+  <text x="20" y="780" font-family="Arial" font-size="10" fill="#aaa">Space: Expand/Collapse Node</text>
+  <text x="20" y="795" font-family="Arial" font-size="10" fill="#aaa">Ctrl+Click: Multi-Select</text>
+  
+  <!-- Main Graph Area -->
+  <rect x="200" y="80" width="1000" height="400" fill="#1e1e1e"/>
+  
+  <!-- Knowledge Graph Visualization -->
+  <!-- Core (README) Node -->
+  <circle cx="250" cy="250" r="30" fill="#0066cc" stroke="#0084ff" stroke-width="2"/>
+  <text x="250" y="255" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Core</text>
+  
+  <!-- Level 1 Branches -->
+  <!-- Data Processing Branch -->
+  <circle cx="350" cy="150" r="25" fill="#0084ff" stroke="#29a3ff" stroke-width="2"/>
+  <text x="350" y="155" font-family="Arial" font-size="11" fill="white" text-anchor="middle">Data</text>
+  <line x1="275" y1="235" x2="330" y2="165" stroke="#0084ff" stroke-width="2"/>
+  
+  <!-- Model Training Branch -->
+  <circle cx="350" cy="250" r="25" fill="#666" stroke="#888" stroke-width="2"/>
+  <text x="350" y="255" font-family="Arial" font-size="11" fill="white" text-anchor="middle">Model</text>
+  <line x1="280" y1="250" x2="325" y2="250" stroke="#888" stroke-width="2"/>
+  
+  <!-- Deployment Branch -->
+  <circle cx="350" cy="350" r="25" fill="#666" stroke="#888" stroke-width="2"/>
+  <text x="350" y="355" font-family="Arial" font-size="11" fill="white" text-anchor="middle">Deploy</text>
+  <line x1="275" y1="265" x2="330" y2="335" stroke="#888" stroke-width="2"/>
+  
+  <!-- Level 2 Data Processing Sub-branches -->
+  <circle cx="450" cy="100" r="20" fill="#29a3ff" stroke="#5ebaff" stroke-width="2"/>
+  <text x="450" y="105" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Clean</text>
+  <line x1="370" y1="135" x2="435" y2="110" stroke="#29a3ff" stroke-width="2"/>
+  
+  <circle cx="450" cy="150" r="20" fill="#29a3ff" stroke="#5ebaff" stroke-width="2"/>
+  <text x="450" y="155" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Transform</text>
+  <line x1="375" y1="150" x2="430" y2="150" stroke="#29a3ff" stroke-width="2"/>
+  
+  <circle cx="450" cy="200" r="20" fill="#29a3ff" stroke="#5ebaff" stroke-width="2"/>
+  <text x="450" y="205" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Feature</text>
+  <line x1="370" y1="165" x2="435" y2="190" stroke="#29a3ff" stroke-width="2"/>
+  
+  <!-- Level 3 Data Cleaning Sub-branches -->
+  <circle cx="550" cy="70" r="18" fill="#5ebaff" stroke="#8ed1ff" stroke-width="2"/>
+  <text x="550" y="75" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Missing</text>
+  <line x1="465" y1="90" x2="535" y2="75" stroke="#5ebaff" stroke-width="2"/>
+  
+  <circle cx="550" cy="120" r="18" fill="#5ebaff" stroke="#8ed1ff" stroke-width="2"/>
+  <text x="550" y="125" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Outliers</text>
+  <line x1="470" y1="105" x2="535" y2="120" stroke="#5ebaff" stroke-width="2"/>
+  
+  <!-- Level 4 Missing Data Techniques -->
+  <circle cx="640" cy="50" r="15" fill="#8ed1ff" stroke="#bde5ff" stroke-width="2"/>
+  <text x="640" y="53" font-family="Arial" font-size="8" fill="#333" text-anchor="middle">Impute</text>
+  <line x1="565" y1="65" x2="625" y2="55" stroke="#8ed1ff" stroke-width="2"/>
+  
+  <circle cx="640" cy="90" r="15" fill="#8ed1ff" stroke="#bde5ff" stroke-width="2"/>
+  <text x="640" y="93" font-family="Arial" font-size="8" fill="#333" text-anchor="middle">Remove</text>
+  <line x1="565" y1="75" x2="625" y2="90" stroke="#8ed1ff" stroke-width="2"/>
+  
+  <!-- Level 4 Outlier Detection Techniques -->
+  <circle cx="640" cy="130" r="15" fill="#8ed1ff" stroke="#bde5ff" stroke-width="2"/>
+  <text x="640" y="133" font-family="Arial" font-size="8" fill="#333" text-anchor="middle">Z-Score</text>
+  <line x1="565" y1="120" x2="625" y2="130" stroke="#8ed1ff" stroke-width="2"/>
+  
+  <circle cx="640" cy="170" r="15" fill="#8ed1ff" stroke="#bde5ff" stroke-width="2"/>
+  <text x="640" y="173" font-family="Arial" font-size="8" fill="#333" text-anchor="middle">IQR</text>
+  <line x1="565" y1="125" x2="625" y2="170" stroke="#8ed1ff" stroke-width="2"/>
+  
+  <!-- Level 5 Deep Branches -->
+  <circle cx="720" cy="50" r="12" fill="#bde5ff" stroke="#e5f5ff" stroke-width="2"/>
+  <text x="720" y="53" font-family="Arial" font-size="7" fill="#333" text-anchor="middle">Mean</text>
+  <line x1="655" y1="50" x2="708" y2="50" stroke="#bde5ff" stroke-width="2"/>
+  
+  <circle cx="720" cy="85" r="12" fill="#bde5ff" stroke="#e5f5ff" stroke-width="2"/>
+  <text x="720" y="88" font-family="Arial" font-size="7" fill="#333" text-anchor="middle">Median</text>
+  <line x1="655" y1="55" x2="710" y2="80" stroke="#bde5ff" stroke-width="2"/>
+  
+  <circle cx="760" cy="50" r="12" fill="#bde5ff" stroke="#e5f5ff" stroke-width="2"/>
+  <text x="760" y="53" font-family="Arial" font-size="7" fill="#333" text-anchor="middle">KNN</text>
+  <line x1="732" y1="50" x2="748" y2="50" stroke="#bde5ff" stroke-width="2"/>
+  
+  <!-- More Branches -->
+  <circle cx="550" cy="170" r="18" fill="#5ebaff" stroke="#8ed1ff" stroke-width="2"/>
+  <text x="550" y="175" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Norm</text>
+  <line x1="470" y1="155" x2="535" y2="170" stroke="#5ebaff" stroke-width="2"/>
+  
+  <circle cx="550" cy="220" r="18" fill="#5ebaff" stroke="#8ed1ff" stroke-width="2"/>
+  <text x="550" y="225" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Encode</text>
+  <line x1="470" y1="175" x2="535" y2="215" stroke="#5ebaff" stroke-width="2"/>
+  
+  <!-- Level 3 Feature Engineering -->
+  <circle cx="550" cy="270" r="18" fill="#5ebaff" stroke="#8ed1ff" stroke-width="2"/>
+  <text x="550" y="275" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Creation</text>
+  <line x1="465" y1="210" x2="535" y2="265" stroke="#5ebaff" stroke-width="2"/>
+  
+  <circle cx="550" cy="320" r="18" fill="#5ebaff" stroke="#8ed1ff" stroke-width="2"/>
+  <text x="550" y="325" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Selection</text>
+  <line x1="465" y1="215" x2="535" y2="315" stroke="#5ebaff" stroke-width="2"/>
+  
+  <!-- Cross Links Between Branches (DAG Structure) -->
+  <line x1="550" y1="335" x2="640" y2="170" stroke="#444" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="550" y1="235" x2="640" y2="90" stroke="#444" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Active Selection -->
+  <rect x="620" y="40" width="150" height="80" rx="5" fill="none" stroke="#0084ff" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Branch Merge Point -->
+  <circle cx="800" cy="150" r="15" fill="#0066cc" stroke="#0084ff" stroke-width="2"/>
+  <text x="800" y="155" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Merge</text>
+  <line x1="765" y1="55" x2="790" y2="140" stroke="#bde5ff" stroke-width="1"/>
+  <line x1="640" y1="180" x2="785" y2="155" stroke="#8ed1ff" stroke-width="1"/>
+  
+  <!-- Later Branches -->
+  <circle cx="880" cy="150" r="18" fill="#29a3ff" stroke="#5ebaff" stroke-width="2"/>
+  <text x="880" y="155" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Pipeline</text>
+  <line x1="815" y1="150" x2="862" y2="150" stroke="#0084ff" stroke-width="2"/>
+  
+  <circle cx="960" cy="120" r="15" fill="#5ebaff" stroke="#8ed1ff" stroke-width="2"/>
+  <text x="960" y="125" font-family="Arial" font-size="8" fill="white" text-anchor="middle">Training</text>
+  <line x1="895" y1="145" x2="945" y2="125" stroke="#29a3ff" stroke-width="1"/>
+  
+  <circle cx="960" cy="180" r="15" fill="#5ebaff" stroke="#8ed1ff" stroke-width="2"/>
+  <text x="960" y="185" font-family="Arial" font-size="8" fill="white" text-anchor="middle">Eval</text>
+  <line x1="895" y1="155" x2="945" y2="175" stroke="#29a3ff" stroke-width="1"/>
+  
+  <!-- Context Panel (Bottom Area) -->
+  <rect x="200" y="480" width="1000" height="320" fill="#242424"/>
+  
+  <!-- Content Header -->
+  <rect x="200" y="480" width="1000" height="40" fill="#333"/>
+  <text x="220" y="505" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Node Inspector: Data Cleaning - Missing Values</text>
+  
+  <!-- Tabs -->
+  <rect x="550" y="485" width="100" height="30" rx="5" fill="#0066cc"/>
+  <text x="600" y="505" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Content</text>
+  
+  <rect x="660" y="485" width="100" height="30" rx="5" fill="#3d3d3d"/>
+  <text x="710" y="505" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">Relations</text>
+  
+  <rect x="770" y="485" width="100" height="30" rx="5" fill="#3d3d3d"/>
+  <text x="820" y="505" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">History</text>
+  
+  <!-- Selected Node Content -->
+  <rect x="220" y="540" width="640" height="240" rx="5" fill="#1e1e1e"/>
+  
+  <!-- Content Title -->
+  <text x="240" y="560" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Missing Value Imputation Techniques</text>
+  
+  <!-- Content Description -->
+  <rect x="240" y="570" width="600" height="80" rx="3" fill="#2a2a2a"/>
+  <text x="250" y="590" font-family="Arial" font-size="12" fill="#e0e0e0">Techniques for handling missing data in the preprocessing pipeline including statistical</text>
+  <text x="250" y="610" font-family="Arial" font-size="12" fill="#e0e0e0">imputation methods (mean, median, mode), predictive modeling approaches (KNN, regression),</text>
+  <text x="250" y="630" font-family="Arial" font-size="12" fill="#e0e0e0">and specialized algorithms for different data types and patterns of missingness.</text>
+  
+  <!-- Code Example -->
+  <rect x="240" y="660" width="600" height="100" rx="3" fill="#2a2a2a"/>
+  <text x="250" y="680" font-family="Consolas, monospace" font-size="12" fill="#aed581">from sklearn.impute import SimpleImputer</text>
+  <text x="250" y="700" font-family="Consolas, monospace" font-size="12" fill="#e0e0e0">imputer = SimpleImputer(strategy='mean')</text>
+  <text x="250" y="720" font-family="Consolas, monospace" font-size="12" fill="#e0e0e0">X_imputed = imputer.fit_transform(X)</text>
+  <text x="250" y="740" font-family="Consolas, monospace" font-size="12" fill="#9e9e9e"># This replaces missing values with mean of each column</text>
+  
+  <!-- Node Metadata -->
+  <rect x="880" y="540" width="300" height="240" rx="5" fill="#1e1e1e"/>
+  
+  <!-- Metadata Title -->
+  <text x="900" y="560" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Node Metadata</text>
+  
+  <!-- Metadata Content -->
+  <text x="900" y="590" font-family="Arial" font-size="12" fill="#aaa">Path:</text>
+  <text x="940" y="590" font-family="Arial" font-size="12" fill="#e0e0e0">Core → Data → Clean → Missing → Impute</text>
+  
+  <text x="900" y="620" font-family="Arial" font-size="12" fill="#aaa">Created:</text>
+  <text x="960" y="620" font-family="Arial" font-size="12" fill="#e0e0e0">2025-02-14</text>
+  
+  <text x="900" y="650" font-family="Arial" font-size="12" fill="#aaa">Modified:</text>
+  <text x="960" y="650" font-family="Arial" font-size="12" fill="#e0e0e0">2025-03-10</text>
+  
+  <text x="900" y="680" font-family="Arial" font-size="12" fill="#aaa">Token Count:</text>
+  <text x="980" y="680" font-family="Arial" font-size="12" fill="#e0e0e0">245 tokens</text>
+  
+  <text x="900" y="710" font-family="Arial" font-size="12" fill="#aaa">Dependencies:</text>
+  <text x="900" y="730" font-family="Arial" font-size="12" fill="#e0e0e0">• Data Cleaning Workflow</text>
+  <text x="900" y="750" font-family="Arial" font-size="12" fill="#e0e0e0">• Feature Engineering Pipeline</text>
+  
+  <!-- Action Buttons -->
+  <rect x="900" y="770" width="120" height="30" rx="15" fill="#0084ff"/>
+  <text x="960" y="790" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Add to Context</text>
+  
+  <rect x="1030" y="770" width="120" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="1090" y="790" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Branch From Here</text>
+  
+  <!-- Context Selection Info -->
+  <rect x="740" y="150" width="220" height="120" rx="5" fill="#2d2d2d" opacity="0.9"/>
+  <text x="760" y="170" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Selection Info</text>
+  
+  <text x="760" y="195" font-family="Arial" font-size="11" fill="#aaa">Sub-graph:</text>
+  <text x="760" y="215" font-family="Arial" font-size="11" fill="#e0e0e0">Missing Data Handling</text>
+  
+  <text x="760" y="240" font-family="Arial" font-size="11" fill="#aaa">Nodes:</text>
+  <text x="810" y="240" font-family="Arial" font-size="11" fill="#e0e0e0">3 selected (2 connected)</text>
+  
+  <text x="760" y="265" font-family="Arial" font-size="11" fill="#aaa">Actions:</text>
+  <rect x="810" y="255" width="60" height="20" rx="3" fill="#0084ff"/>
+  <text x="840" y="270" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Select</text>
+  
+  <rect x="880" y="255" width="60" height="20" rx="3" fill="#444"/>
+  <text x="910" y="270" font-family="Arial" font-size="10" fill="#e0e0e0" text-anchor="middle">Isolate</text>
+  
+  <!-- Mini-map (Bottom right corner) -->
+  <rect x="1020" y="330" width="160" height="120" rx="5" fill="#2a2a2a" opacity="0.8"/>
+  <text x="1100" y="345" font-family="Arial" font-size="10" fill="#e0e0e0" text-anchor="middle">Navigator</text>
+  
+  <!-- Mini-map Content (simplified version of the main graph) -->
+  <circle cx="1045" cy="380" r="5" fill="#0066cc"/>
+  <circle cx="1065" cy="370" r="4" fill="#0084ff"/>
+  <circle cx="1085" cy="380" r="4" fill="#666"/>
+  <circle cx="1105" cy="390" r="4" fill="#666"/>
+  <circle cx="1085" cy="365" r="3" fill="#29a3ff"/>
+  <circle cx="1095" cy="370" r="3" fill="#29a3ff"/>
+  <circle cx="1105" cy="365" r="3" fill="#29a3ff"/>
+  <circle cx="1115" cy="370" r="2" fill="#5ebaff"/>
+  <circle cx="1125" cy="375" r="2" fill="#5ebaff"/>
+  <circle cx="1135" cy="370" r="2" fill="#5ebaff"/>
+  
+  <!-- Viewport indicator -->
+  <rect x="1050" y="360" width="70" height="40" fill="none" stroke="#0084ff" stroke-width="1"/>
+  
+  <!-- Token Stats -->
+  <rect x="1020" y="220" width="160" height="100" rx="5" fill="#2a2a2a" opacity="0.8"/>
+  <text x="1100" y="235" font-family="Arial" font-size="10" fill="#e0e0e0" text-anchor="middle">Context Tokens</text>
+  
+  <!-- Token Usage Bar -->
+  <rect x="1040" y="250" width="120" height="15" rx="7.5" fill="#333"/>
+  <rect x="1040" y="250" width="84" height="15" rx="7.5" fill="#0084ff"/>
+  <text x="1100" y="262" font-family="Arial" font-size="10" fill="white" text-anchor="middle">7,048 / 10,000</text>
+  
+  <!-- Token Distribution -->
+  <rect x="1040" y="275" width="30" height="30" rx="5" fill="#0066cc"/>
+  <text x="1055" y="295" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Core</text>
+  
+  <rect x="1075" y="275" width="30" height="30" rx="5" fill="#29a3ff"/>
+  <text x="1090" y="295" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Data</text>
+  
+  <rect x="1110" y="275" width="30" height="30" rx="5" fill="#5ebaff"/>
+  <text x="1125" y="295" font-family="Arial" font-size="9" fill="white" text-anchor="middle">Other</text>
+</svg>

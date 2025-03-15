@@ -1,0 +1,446 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Dark background for pro application look -->
+  <rect width="1200" height="800" fill="#1a1a1a"/>
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="1200" height="40" fill="#2d2d2d"/>
+  <text x="20" y="25" font-family="Arial" font-size="16" fill="#e0e0e0" font-weight="bold">ContextNexus Mixer</text>
+  
+  <rect x="200" y="5" width="700" height="30" rx="5" fill="#3d3d3d"/>
+  <text x="215" y="25" font-family="Arial" font-size="14" fill="#e0e0e0">Project: Knowledge-Based Recommendation System</text>
+  
+  <!-- View Controls -->
+  <rect x="730" y="5" width="90" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="775" y="25" font-family="Arial" font-size="14" fill="#aaa" text-anchor="middle">Timeline</text>
+  
+  <rect x="830" y="5" width="90" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="875" y="25" font-family="Arial" font-size="14" fill="#aaa" text-anchor="middle">Graph</text>
+  
+  <rect x="930" y="5" width="90" height="30" rx="15" fill="#0084ff"/>
+  <text x="975" y="25" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Mixer</text>
+  
+  <rect x="1030" y="5" width="90" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="1075" y="25" font-family="Arial" font-size="14" fill="#aaa" text-anchor="middle">Preview</text>
+  
+  <rect x="1130" y="5" width="60" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="1160" y="25" font-family="Arial" font-size="14" fill="#aaa" text-anchor="middle">❑</text>
+  
+  <!-- Navigation Controls -->
+  <rect x="0" y="40" width="1200" height="40" fill="#2d2d2d"/>
+  
+  <!-- Component Type Filters -->
+  <rect x="20" y="45" width="100" height="30" rx="15" fill="#0084ff"/>
+  <text x="70" y="65" font-family="Arial" font-size="12" fill="white" text-anchor="middle">All Components</text>
+  
+  <rect x="130" y="45" width="100" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="180" y="65" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">Text Data</text>
+  
+  <rect x="240" y="45" width="100" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="290" y="65" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">Code</text>
+  
+  <rect x="350" y="45" width="100" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="400" y="65" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">Concepts</text>
+  
+  <rect x="460" y="45" width="100" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="510" y="65" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">Examples</text>
+  
+  <!-- Context Actions -->
+  <rect x="620" y="45" width="100" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="670" y="65" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Optimize</text>
+  
+  <rect x="730" y="45" width="160" height="30" rx="15" fill="#3d3d3d"/>
+  <text x="780" y="65" font-family="Arial" font-size="12" fill="#e0e0e0">Order By: </text>
+  <text x="850" y="65" font-family="Arial" font-size="12" fill="#0084ff">Relevance</text>
+  
+  <!-- Token Display -->
+  <rect x="950" y="45" width="240" height="30" rx="15" fill="#333"/>
+  <rect x="955" y="50" width="160" height="20" rx="10" fill="#444"/>
+  <rect x="955" y="50" width="112" height="20" rx="10" fill="#0066cc"/>
+  <text x="1025" y="65" font-family="Arial" font-size="12" fill="white">7,120 / 10,000 tokens</text>
+  <text x="1140" y="65" font-family="Arial" font-size="12" fill="#0084ff">71.2%</text>
+  
+  <!-- Left Panel - Component Library -->
+  <rect x="0" y="80" width="240" height="720" fill="#2a2a2a"/>
+  
+  <!-- Component Library Header -->
+  <rect x="0" y="80" width="240" height="40" fill="#333"/>
+  <text x="20" y="105" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Component Library</text>
+  
+  <!-- Search Box -->
+  <rect x="20" y="130" width="200" height="30" rx="5" fill="#444"/>
+  <text x="40" y="150" font-family="Arial" font-size="12" fill="#aaa">Search components...</text>
+  
+  <!-- Component Categories -->
+  <rect x="0" y="170" width="240" height="30" fill="#333"/>
+  <text x="20" y="190" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Core Concepts</text>
+  
+  <!-- Component List -->
+  <rect x="10" y="210" width="220" height="60" rx="5" fill="#3d3d3d"/>
+  <text x="20" y="230" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Recommendation Algorithms</text>
+  <text x="20" y="250" font-family="Arial" font-size="10" fill="#aaa">Collaborative filtering, content-based, hybrid...</text>
+  <text x="210" y="230" font-family="Arial" font-size="10" fill="#0084ff" text-anchor="end">850 tokens</text>
+  
+  <rect x="10" y="280" width="220" height="60" rx="5" fill="#3d3d3d"/>
+  <text x="20" y="300" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Knowledge Graph Construction</text>
+  <text x="20" y="320" font-family="Arial" font-size="10" fill="#aaa">Entity extraction, relationship mapping...</text>
+  <text x="210" y="300" font-family="Arial" font-size="10" fill="#0084ff" text-anchor="end">750 tokens</text>
+  
+  <rect x="10" y="350" width="220" height="60" rx="5" fill="#0066cc"/>
+  <text x="20" y="370" font-family="Arial" font-size="12" fill="white" font-weight="bold">User Preference Modeling</text>
+  <text x="20" y="390" font-family="Arial" font-size="10" fill="#e0e8ff">Explicit and implicit feedback systems...</text>
+  <text x="210" y="370" font-family="Arial" font-size="10" fill="white" text-anchor="end">620 tokens</text>
+  
+  <!-- Second Category -->
+  <rect x="0" y="420" width="240" height="30" fill="#333"/>
+  <text x="20" y="440" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Implementation Examples</text>
+  
+  <rect x="10" y="460" width="220" height="60" rx="5" fill="#3d3d3d"/>
+  <text x="20" y="480" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Collaborative Filter Code</text>
+  <text x="20" y="500" font-family="Arial" font-size="10" fill="#aaa">Python implementation with PyTorch...</text>
+  <text x="210" y="480" font-family="Arial" font-size="10" fill="#0084ff" text-anchor="end">480 tokens</text>
+  
+  <rect x="10" y="530" width="220" height="60" rx="5" fill="#0066cc"/>
+  <text x="20" y="550" font-family="Arial" font-size="12" fill="white" font-weight="bold">Preference Extraction Pipeline</text>
+  <text x="20" y="570" font-family="Arial" font-size="10" fill="#e0e8ff">Feature extraction from user behavior data...</text>
+  <text x="210" y="550" font-family="Arial" font-size="10" fill="white" text-anchor="end">545 tokens</text>
+  
+  <!-- Third Category -->
+  <rect x="0" y="600" width="240" height="30" fill="#333"/>
+  <text x="20" y="620" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Data Schemas</text>
+  
+  <rect x="10" y="640" width="220" height="60" rx="5" fill="#3d3d3d"/>
+  <text x="20" y="660" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">User-Item Interaction Schema</text>
+  <text x="20" y="680" font-family="Arial" font-size="10" fill="#aaa">Database model for storing interactions...</text>
+  <text x="210" y="660" font-family="Arial" font-size="10" fill="#0084ff" text-anchor="end">390 tokens</text>
+  
+  <rect x="10" y="710" width="220" height="60" rx="5" fill="#3d3d3d"/>
+  <text x="20" y="730" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Content Metadata Structure</text>
+  <text x="20" y="750" font-family="Arial" font-size="10" fill="#aaa">JSON schema for item features...</text>
+  <text x="210" y="730" font-family="Arial" font-size="10" fill="#0084ff" text-anchor="end">410 tokens</text>
+  
+  <!-- Main Mixer Area - Channel Strips like in Audio Mixer -->
+  <rect x="240" y="80" width="960" height="720" fill="#1e1e1e"/>
+  
+  <!-- Channel Strips Area -->
+  <rect x="240" y="80" width="960" height="50" fill="#333"/>
+  <text x="260" y="110" font-family="Arial" font-size="14" fill="#e0e0e0" font-weight="bold">Context Component Mixer</text>
+  <text x="1130" y="110" font-family="Arial" font-size="14" fill="#0084ff" text-anchor="end">7 Components Selected</text>
+  
+  <!-- View Options -->
+  <rect x="600" y="90" width="80" height="30" rx="5" fill="#0084ff"/>
+  <text x="640" y="110" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Channels</text>
+  
+  <rect x="690" y="90" width="80" height="30" rx="5" fill="#333"/>
+  <text x="730" y="110" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">Blocks</text>
+  
+  <rect x="780" y="90" width="80" height="30" rx="5" fill="#333"/>
+  <text x="820" y="110" font-family="Arial" font-size="12" fill="#aaa" text-anchor="middle">Matrix</text>
+  
+  <!-- Channel Strips -->
+  <!-- Channel 1 -->
+  <rect x="250" y="140" width="120" height="650" fill="#2a2a2a"/>
+  
+  <!-- Channel Header -->
+  <rect x="250" y="140" width="120" height="40" fill="#0066cc"/>
+  <text x="310" y="165" font-family="Arial" font-size="12" fill="white" font-weight="bold" text-anchor="middle">User Preference</text>
+  
+  <!-- Component Visual -->
+  <rect x="260" y="190" width="100" height="100" rx="5" fill="#29a3ff"/>
+  <text x="310" y="245" font-family="Arial" font-size="30" fill="white" text-anchor="middle">U</text>
+  
+  <!-- Status Indicators -->
+  <rect x="270" y="300" width="80" height="20" rx="10" fill="#333"/>
+  <text x="310" y="315" font-family="Arial" font-size="10" fill="#0084ff" text-anchor="middle">Core Component</text>
+  
+  <!-- Relevance Slider -->
+  <text x="270" y="345" font-family="Arial" font-size="10" fill="#aaa">Relevance:</text>
+  <rect x="270" y="355" width="80" height="10" rx="5" fill="#333"/>
+  <rect x="270" y="355" width="68" height="10" rx="5" fill="#0084ff"/>
+  <circle cx="338" cy="360" r="7" fill="white" stroke="#0084ff" stroke-width="2"/>
+  <text x="310" y="375" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">85%</text>
+  
+  <!-- Token Allocation Slider -->
+  <text x="270" y="395" font-family="Arial" font-size="10" fill="#aaa">Tokens:</text>
+  <rect x="270" y="405" width="80" height="10" rx="5" fill="#333"/>
+  <rect x="270" y="405" width="56" height="10" rx="5" fill="#0084ff"/>
+  <circle cx="326" cy="410" r="7" fill="white" stroke="#0084ff" stroke-width="2"/>
+  <text x="310" y="425" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">620 / 800</text>
+  
+  <!-- Emphasis Controls -->
+  <text x="270" y="445" font-family="Arial" font-size="10" fill="#aaa">Emphasis:</text>
+  <rect x="270" y="455" width="25" height="25" rx="3" fill="#444"/>
+  <text x="283" y="472" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">-</text>
+  
+  <rect x="297" y="455" width="25" height="25" rx="3" fill="#0084ff"/>
+  <text x="310" y="472" font-family="Arial" font-size="12" fill="white" text-anchor="middle">1</text>
+  
+  <rect x="325" y="455" width="25" height="25" rx="3" fill="#444"/>
+  <text x="338" y="472" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">+</text>
+  
+  <!-- Component Relationships -->
+  <text x="270" y="505" font-family="Arial" font-size="10" fill="#aaa">Links:</text>
+  <rect x="270" y="515" width="80" height="20" rx="3" fill="#444"/>
+  <text x="310" y="530" font-family="Arial" font-size="10" fill="#e0e0e0" text-anchor="middle">Extraction</text>
+  
+  <rect x="270" y="540" width="80" height="20" rx="3" fill="#444"/>
+  <text x="310" y="555" font-family="Arial" font-size="10" fill="#e0e0e0" text-anchor="middle">Algorithms</text>
+  
+  <!-- Section Selector -->
+  <text x="270" y="585" font-family="Arial" font-size="10" fill="#aaa">Sections:</text>
+  <rect x="270" y="595" width="80" height="20" rx="3" fill="#0084ff"/>
+  <text x="310" y="610" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Overview</text>
+  
+  <rect x="270" y="620" width="80" height="20" rx="3" fill="#0084ff"/>
+  <text x="310" y="635" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Methods</text>
+  
+  <rect x="270" y="645" width="80" height="20" rx="3" fill="#444"/>
+  <text x="310" y="660" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">Examples</text>
+  
+  <!-- Channel Controls -->
+  <rect x="270" y="680" width="80" height="25" rx="5" fill="#333"/>
+  <text x="310" y="697" font-family="Arial" font-size="12" fill="#0084ff" text-anchor="middle">Edit</text>
+  
+  <rect x="270" y="710" width="80" height="25" rx="5" fill="#a32f2f"/>
+  <text x="310" y="727" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Remove</text>
+  
+  <rect x="270" y="740" width="80" height="25" rx="5" fill="#444"/>
+  <text x="310" y="757" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Duplicate</text>
+  
+  <!-- Channel 2 -->
+  <rect x="380" y="140" width="120" height="650" fill="#2a2a2a"/>
+  
+  <!-- Channel Header -->
+  <rect x="380" y="140" width="120" height="40" fill="#0066cc"/>
+  <text x="440" y="165" font-family="Arial" font-size="12" fill="white" font-weight="bold" text-anchor="middle">Extraction</text>
+  
+  <!-- Component Visual -->
+  <rect x="390" y="190" width="100" height="100" rx="5" fill="#29a3ff"/>
+  <text x="440" y="245" font-family="Arial" font-size="30" fill="white" text-anchor="middle">E</text>
+  
+  <!-- Status Indicators -->
+  <rect x="400" y="300" width="80" height="20" rx="10" fill="#333"/>
+  <text x="440" y="315" font-family="Arial" font-size="10" fill="#0084ff" text-anchor="middle">Implementation</text>
+  
+  <!-- Relevance Slider -->
+  <text x="400" y="345" font-family="Arial" font-size="10" fill="#aaa">Relevance:</text>
+  <rect x="400" y="355" width="80" height="10" rx="5" fill="#333"/>
+  <rect x="400" y="355" width="60" height="10" rx="5" fill="#0084ff"/>
+  <circle cx="460" cy="360" r="7" fill="white" stroke="#0084ff" stroke-width="2"/>
+  <text x="440" y="375" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">75%</text>
+  
+  <!-- Token Allocation Slider -->
+  <text x="400" y="395" font-family="Arial" font-size="10" fill="#aaa">Tokens:</text>
+  <rect x="400" y="405" width="80" height="10" rx="5" fill="#333"/>
+  <rect x="400" y="405" width="48" height="10" rx="5" fill="#0084ff"/>
+  <circle cx="448" cy="410" r="7" fill="white" stroke="#0084ff" stroke-width="2"/>
+  <text x="440" y="425" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">545 / 700</text>
+  
+  <!-- Emphasis Controls -->
+  <text x="400" y="445" font-family="Arial" font-size="10" fill="#aaa">Emphasis:</text>
+  <rect x="400" y="455" width="25" height="25" rx="3" fill="#444"/>
+  <text x="413" y="472" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">-</text>
+  
+  <rect x="427" y="455" width="25" height="25" rx="3" fill="#0084ff"/>
+  <text x="440" y="472" font-family="Arial" font-size="12" fill="white" text-anchor="middle">1</text>
+  
+  <rect x="455" y="455" width="25" height="25" rx="3" fill="#444"/>
+  <text x="468" y="472" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">+</text>
+  
+  <!-- Component Relationships -->
+  <text x="400" y="505" font-family="Arial" font-size="10" fill="#aaa">Links:</text>
+  <rect x="400" y="515" width="80" height="20" rx="3" fill="#444"/>
+  <text x="440" y="530" font-family="Arial" font-size="10" fill="#e0e0e0" text-anchor="middle">Preference</text>
+  
+  <rect x="400" y="540" width="80" height="20" rx="3" fill="#444"/>
+  <text x="440" y="555" font-family="Arial" font-size="10" fill="#e0e0e0" text-anchor="middle">Schema</text>
+  
+  <!-- Section Selector -->
+  <text x="400" y="585" font-family="Arial" font-size="10" fill="#aaa">Sections:</text>
+  <rect x="400" y="595" width="80" height="20" rx="3" fill="#444"/>
+  <text x="440" y="610" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">Architecture</text>
+  
+  <rect x="400" y="620" width="80" height="20" rx="3" fill="#0084ff"/>
+  <text x="440" y="635" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Code</text>
+  
+  <rect x="400" y="645" width="80" height="20" rx="3" fill="#0084ff"/>
+  <text x="440" y="660" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Pipeline</text>
+  
+  <!-- Channel Controls -->
+  <rect x="400" y="680" width="80" height="25" rx="5" fill="#333"/>
+  <text x="440" y="697" font-family="Arial" font-size="12" fill="#0084ff" text-anchor="middle">Edit</text>
+  
+  <rect x="400" y="710" width="80" height="25" rx="5" fill="#a32f2f"/>
+  <text x="440" y="727" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Remove</text>
+  
+  <rect x="400" y="740" width="80" height="25" rx="5" fill="#444"/>
+  <text x="440" y="757" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Duplicate</text>
+  
+  <!-- Channel 3 -->
+  <rect x="510" y="140" width="120" height="650" fill="#2a2a2a"/>
+  
+  <!-- Channel Header -->
+  <rect x="510" y="140" width="120" height="40" fill="#666"/>
+  <text x="570" y="165" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold" text-anchor="middle">Algorithms</text>
+  
+  <!-- Component Visual -->
+  <rect x="520" y="190" width="100" height="100" rx="5" fill="#666"/>
+  <text x="570" y="245" font-family="Arial" font-size="30" fill="#e0e0e0" text-anchor="middle">A</text>
+  
+  <!-- Status Indicators -->
+  <rect x="530" y="300" width="80" height="20" rx="10" fill="#333"/>
+  <text x="570" y="315" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">Inactive</text>
+  
+  <!-- Channel 4 -->
+  <rect x="640" y="140" width="120" height="650" fill="#2a2a2a"/>
+  
+  <!-- Channel Header -->
+  <rect x="640" y="140" width="120" height="40" fill="#0066cc"/>
+  <text x="700" y="165" font-family="Arial" font-size="12" fill="white" font-weight="bold" text-anchor="middle">User Schema</text>
+  
+  <!-- Component Visual -->
+  <rect x="650" y="190" width="100" height="100" rx="5" fill="#29a3ff"/>
+  <text x="700" y="245" font-family="Arial" font-size="30" fill="white" text-anchor="middle">S</text>
+  
+  <!-- Status Indicators -->
+  <rect x="660" y="300" width="80" height="20" rx="10" fill="#333"/>
+  <text x="700" y="315" font-family="Arial" font-size="10" fill="#0084ff" text-anchor="middle">Data Model</text>
+  
+  <!-- Relevance Slider -->
+  <text x="660" y="345" font-family="Arial" font-size="10" fill="#aaa">Relevance:</text>
+  <rect x="660" y="355" width="80" height="10" rx="5" fill="#333"/>
+  <rect x="660" y="355" width="48" height="10" rx="5" fill="#0084ff"/>
+  <circle cx="708" cy="360" r="7" fill="white" stroke="#0084ff" stroke-width="2"/>
+  <text x="700" y="375" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">60%</text>
+  
+  <!-- Token Allocation Slider -->
+  <text x="660" y="395" font-family="Arial" font-size="10" fill="#aaa">Tokens:</text>
+  <rect x="660" y="405" width="80" height="10" rx="5" fill="#333"/>
+  <rect x="660" y="405" width="32" height="10" rx="5" fill="#0084ff"/>
+  <circle cx="692" cy="410" r="7" fill="white" stroke="#0084ff" stroke-width="2"/>
+  <text x="700" y="425" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">390 / 600</text>
+  
+  <!-- Emphasis Controls -->
+  <text x="660" y="445" font-family="Arial" font-size="10" fill="#aaa">Emphasis:</text>
+  <rect x="660" y="455" width="25" height="25" rx="3" fill="#0084ff"/>
+  <text x="673" y="472" font-family="Arial" font-size="12" fill="white" text-anchor="middle">-</text>
+  
+  <rect x="687" y="455" width="25" height="25" rx="3" fill="#444"/>
+  <text x="700" y="472" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">0</text>
+  
+  <rect x="715" y="455" width="25" height="25" rx="3" fill="#444"/>
+  <text x="728" y="472" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">+</text>
+  
+  <!-- Component Relationships -->
+  <text x="660" y="505" font-family="Arial" font-size="10" fill="#aaa">Links:</text>
+  <rect x="660" y="515" width="80" height="20" rx="3" fill="#444"/>
+  <text x="700" y="530" font-family="Arial" font-size="10" fill="#e0e0e0" text-anchor="middle">Extraction</text>
+  
+  <rect x="660" y="540" width="80" height="20" rx="3" fill="#444"/>
+  <text x="700" y="555" font-family="Arial" font-size="10" fill="#e0e0e0" text-anchor="middle">Content</text>
+  
+  <!-- Section Selector -->
+  <text x="660" y="585" font-family="Arial" font-size="10" fill="#aaa">Sections:</text>
+  <rect x="660" y="595" width="80" height="20" rx="3" fill="#0084ff"/>
+  <text x="700" y="610" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Structure</text>
+  
+  <rect x="660" y="620" width="80" height="20" rx="3" fill="#444"/>
+  <text x="700" y="635" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">Examples</text>
+  
+  <rect x="660" y="645" width="80" height="20" rx="3" fill="#444"/>
+  <text x="700" y="660" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">Queries</text>
+  
+  <!-- Channel Controls -->
+  <rect x="660" y="680" width="80" height="25" rx="5" fill="#333"/>
+  <text x="700" y="697" font-family="Arial" font-size="12" fill="#0084ff" text-anchor="middle">Edit</text>
+  
+  <rect x="660" y="710" width="80" height="25" rx="5" fill="#a32f2f"/>
+  <text x="700" y="727" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Remove</text>
+  
+  <rect x="660" y="740" width="80" height="25" rx="5" fill="#444"/>
+  <text x="700" y="757" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Duplicate</text>
+  
+  <!-- More Channels -->
+  <rect x="770" y="140" width="120" height="650" fill="#2a2a2a"/>
+  <rect x="770" y="140" width="120" height="40" fill="#0066cc"/>
+  <text x="830" y="165" font-family="Arial" font-size="12" fill="white" font-weight="bold" text-anchor="middle">Content Schema</text>
+  
+  <rect x="900" y="140" width="120" height="650" fill="#2a2a2a"/>
+  <rect x="900" y="140" width="120" height="40" fill="#0066cc"/>
+  <text x="960" y="165" font-family="Arial" font-size="12" fill="white" font-weight="bold" text-anchor="middle">Visualization</text>
+  
+  <rect x="1030" y="140" width="120" height="650" fill="#2a2a2a"/>
+  <rect x="1030" y="140" width="120" height="40" fill="#0066cc"/>
+  <text x="1090" y="165" font-family="Arial" font-size="12" fill="white" font-weight="bold" text-anchor="middle">Evaluation</text>
+  
+  <!-- Add Channel Button -->
+  <rect x="1160" y="140" width="40" height="650" fill="#333"/>
+  <rect x="1170" y="380" width="20" height="20" rx="3" fill="#444"/>
+  <text x="1180" y="395" font-family="Arial" font-size="16" fill="#e0e0e0" text-anchor="middle">+</text>
+  <text x="1180" y="420" font-family="Arial" font-size="10" fill="#aaa" text-anchor="middle">Add</text>
+  
+  <!-- Master Controls -->
+  <rect x="240" y="700" width="360" height="60" rx="5" fill="#0084ff" opacity="0.3"/>
+  <text x="260" y="720" font-family="Arial" font-size="12" fill="#0084ff" font-weight="bold">Global Controls</text>
+  
+  <text x="260" y="740" font-family="Arial" font-size="10" fill="#0084ff">Auto-optimize: Balance components based on relevance</text>
+  <rect x="520" y="725" width="60" height="25" rx="12.5" fill="#0084ff"/>
+  <circle cx="542" cy="737" r="8" fill="white"/>
+  
+  <!-- Token Analysis Box -->
+  <rect x="800" y="530" width="340" height="200" rx="5" fill="#2d2d2d"/>
+  <text x="820" y="550" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Context Distribution Analysis</text>
+  
+  <!-- Token Donut Chart -->
+  <circle cx="900" cy="625" r="60" fill="#2d2d2d" stroke="#333" stroke-width="2"/>
+  <path d="M 900 625 L 900 565 A 60 60 0 0 1 942 595 Z" fill="#0066cc"/>
+  <path d="M 900 625 L 942 595 A 60 60 0 0 1 930 655 Z" fill="#29a3ff"/>
+  <path d="M 900 625 L 930 655 A 60 60 0 0 1 850 645 Z" fill="#5ebaff"/>
+  <path d="M 900 625 L 850 645 A 60 60 0 0 1 870 575 Z" fill="#90cdf4"/>
+  <path d="M 900 625 L 870 575 A 60 60 0 0 1 900 565 Z" fill="#bae6fd"/>
+  
+  <!-- Legend -->
+  <rect x="980" y="575" width="12" height="12" rx="2" fill="#0066cc"/>
+  <text x="1000" y="585" font-family="Arial" font-size="10" fill="#e0e0e0">User Models (26%)</text>
+  
+  <rect x="980" y="595" width="12" height="12" rx="2" fill="#29a3ff"/>
+  <text x="1000" y="605" font-family="Arial" font-size="10" fill="#e0e0e0">Data Processing (24%)</text>
+  
+  <rect x="980" y="615" width="12" height="12" rx="2" fill="#5ebaff"/>
+  <text x="1000" y="625" font-family="Arial" font-size="10" fill="#e0e0e0">Schemas (20%)</text>
+  
+  <rect x="980" y="635" width="12" height="12" rx="2" fill="#90cdf4"/>
+  <text x="1000" y="645" font-family="Arial" font-size="10" fill="#e0e0e0">Visualization (17%)</text>
+  
+  <rect x="980" y="655" width="12" height="12" rx="2" fill="#bae6fd"/>
+  <text x="1000" y="665" font-family="Arial" font-size="10" fill="#e0e0e0">Evaluation (13%)</text>
+  
+  <!-- Token Stats -->
+  <text x="820" y="580" font-family="Arial" font-size="10" fill="#aaa">Current Usage: 7,120 tokens</text>
+  <text x="820" y="600" font-family="Arial" font-size="10" fill="#aaa">Estimated Cost: $0.0142</text>
+  <text x="820" y="620" font-family="Arial" font-size="10" fill="#aaa">Redundancy: 15% (optimizable)</text>
+  <text x="820" y="640" font-family="Arial" font-size="10" fill="#0084ff">Context Coherence: High</text>
+  
+  <rect x="820" y="655" width="130" height="25" rx="5" fill="#0084ff"/>
+  <text x="885" y="673" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Auto-Optimize</text>
+  
+  <rect x="820" y="685" width="130" height="25" rx="5" fill="#333"/>
+  <text x="885" y="703" font-family="Arial" font-size="12" fill="#e0e0e0" text-anchor="middle">Reset All</text>
+  
+  <!-- Keyboard Shortcuts Panel -->
+  <rect x="800" y="400" width="340" height="120" rx="5" fill="#2d2d2d"/>
+  <text x="820" y="420" font-family="Arial" font-size="12" fill="#e0e0e0" font-weight="bold">Keyboard Shortcuts</text>
+  
+  <text x="820" y="445" font-family="Arial" font-size="10" fill="#aaa">Space: Solo Selected Channel</text>
+  <text x="820" y="465" font-family="Arial" font-size="10" fill="#aaa">Ctrl+↑/↓: Adjust Relevance</text>
+  <text x="820" y="485" font-family="Arial" font-size="10" fill="#aaa">Shift+Click: Multi-Select Channels</text>
+  <text x="820" y="505" font-family="Arial" font-size="10" fill="#aaa">Alt+O: Auto-Optimize Tokens</text>
+  
+  <text x="1020" y="445" font-family="Arial" font-size="10" fill="#aaa">Ctrl+1-9: Select Channel</text>
+  <text x="1020" y="465" font-family="Arial" font-size="10" fill="#aaa">F: Find Component</text>
+  <text x="1020" y="485" font-family="Arial" font-size="10" fill="#aaa">S: Save Current Mix</text>
+  <text x="1020" y="505" font-family="Arial" font-size="10" fill="#aaa">P: Preview Context</text>
+  
+  <!-- Preview Button -->
+  <rect x="950" y="685" width="190" height="45" rx="5" fill="#0066cc"/>
+  <text x="1045" y="713" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Preview Context ▶</text>
+</svg>
