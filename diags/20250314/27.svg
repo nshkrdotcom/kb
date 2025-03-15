@@ -1,0 +1,385 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    
+    <!-- Neuron glow filters -->
+    <filter id="neuronGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="activeNeuronGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="highlightGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Pulse animations -->
+    <radialGradient id="pulseGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Connection gradient -->
+    <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    
+    <!-- Neuron gradient -->
+    <radialGradient id="neuronGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#c4b5fd" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </radialGradient>
+    
+    <!-- Active neuron gradient -->
+    <radialGradient id="activeNeuronGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#e9d5ff" />
+      <stop offset="100%" stop-color="#d8b4fe" />
+    </radialGradient>
+    
+    <!-- Gesture area gradient -->
+    <radialGradient id="gestureAreaGradient" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#4c1d95" stop-opacity="0.1" />
+      <stop offset="70%" stop-color="#4c1d95" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Composition area gradient -->
+    <linearGradient id="compositionGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    
+    <!-- Pattern indicators gradient -->
+    <linearGradient id="patternGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="100%" stop-color="#5b21b6" />
+    </linearGradient>
+    
+    <!-- Neural path animation -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1200" height="800" fill="url(#bgGradient)" />
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="50" fill="url(#headerGradient)" />
+  <text x="20" y="30" font-family="Inter, sans-serif" font-size="18" fill="#f8fafc" font-weight="bold">Neural Symphony Conductor</text>
+  <text x="1180" y="30" font-family="Inter, sans-serif" font-size="14" fill="#f8fafc" text-anchor="end">Active Knowledge Patterns: 3</text>
+  
+  <!-- Main neural network container -->
+  <rect x="20" y="70" width="800" height="500" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  
+  <!-- Gesture area circle -->
+  <circle cx="400" cy="320" r="220" fill="url(#gestureAreaGradient)" stroke="#4c1d95" stroke-width="1" stroke-dasharray="4,4" />
+  <text x="400" y="120" font-family="Inter, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Gesture Area</text>
+  
+  <!-- Neural network nodes (neurons) -->
+  
+  <!-- Central active node (N1) -->
+  <g id="centralNode">
+    <circle cx="400" cy="270" r="25" fill="url(#activeNeuronGradient)" stroke="#a855f7" stroke-width="2" filter="url(#activeNeuronGlow)" />
+    <text x="400" cy="270" dy="5" font-family="Inter, sans-serif" font-size="10" fill="#0f172a" text-anchor="middle" font-weight="bold">N1</text>
+    <text x="400" cy="270" dy="20" font-family="Inter, sans-serif" font-size="8" fill="#0f172a" text-anchor="middle">Core Doc</text>
+  </g>
+  
+  <!-- Connected nodes (first level) -->
+  <g id="firstLevelNodes">
+    <!-- N2 -->
+    <circle cx="300" cy="200" r="18" fill="url(#neuronGradient)" stroke="#a855f7" stroke-width="1.5" filter="url(#neuronGlow)" />
+    <text x="300" cy="200" dy="4" font-family="Inter, sans-serif" font-size="9" fill="#f8fafc" text-anchor="middle" font-weight="bold">N2</text>
+    <text x="300" cy="200" dy="16" font-family="Inter, sans-serif" font-size="7" fill="#f8fafc" text-anchor="middle">Fact A</text>
+    
+    <!-- N3 -->
+    <circle cx="320" cy="350" r="18" fill="url(#neuronGradient)" stroke="#a855f7" stroke-width="1.5" filter="url(#neuronGlow)" />
+    <text x="320" cy="350" dy="4" font-family="Inter, sans-serif" font-size="9" fill="#f8fafc" text-anchor="middle" font-weight="bold">N3</text>
+    <text x="320" cy="350" dy="16" font-family="Inter, sans-serif" font-size="7" fill="#f8fafc" text-anchor="middle">Fact B</text>
+    
+    <!-- N4 -->
+    <circle cx="460" cy="180" r="20" fill="url(#activeNeuronGradient)" stroke="#a855f7" stroke-width="1.5" filter="url(#neuronGlow)" />
+    <text x="460" cy="180" dy="4" font-family="Inter, sans-serif" font-size="9" fill="#0f172a" text-anchor="middle" font-weight="bold">N4</text>
+    <text x="460" cy="180" dy="16" font-family="Inter, sans-serif" font-size="7" fill="#0f172a" text-anchor="middle">Report</text>
+    
+    <!-- N5 -->
+    <circle cx="500" cy="320" r="18" fill="url(#neuronGradient)" stroke="#a855f7" stroke-width="1.5" filter="url(#neuronGlow)" />
+    <text x="500" cy="320" dy="4" font-family="Inter, sans-serif" font-size="9" fill="#f8fafc" text-anchor="middle" font-weight="bold">N5</text>
+    <text x="500" cy="320" dy="16" font-family="Inter, sans-serif" font-size="7" fill="#f8fafc" text-anchor="middle">Code</text>
+  </g>
+  
+  <!-- Second level nodes -->
+  <g id="secondLevelNodes">
+    <!-- N6 -->
+    <circle cx="560" cy="120" r="15" fill="url(#neuronGradient)" stroke="#a855f7" stroke-width="1" filter="url(#neuronGlow)" />
+    <text x="560" cy="120" dy="3" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle" font-weight="bold">N6</text>
+    <text x="560" cy="120" dy="14" font-family="Inter, sans-serif" font-size="6" fill="#f8fafc" text-anchor="middle">KB1</text>
+    
+    <!-- N7 -->
+    <circle cx="580" cy="220" r="15" fill="url(#neuronGradient)" stroke="#a855f7" stroke-width="1" filter="url(#neuronGlow)" />
+    <text x="580" cy="220" dy="3" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle" font-weight="bold">N7</text>
+    <text x="580" cy="220" dy="14" font-family="Inter, sans-serif" font-size="6" fill="#f8fafc" text-anchor="middle">KB2</text>
+    
+    <!-- N8 -->
+    <circle cx="620" cy="300" r="15" fill="url(#neuronGradient)" stroke="#a855f7" stroke-width="1" filter="url(#neuronGlow)" />
+    <text x="620" cy="300" dy="3" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle" font-weight="bold">N8</text>
+    <text x="620" cy="300" dy="14" font-family="Inter, sans-serif" font-size="6" fill="#f8fafc" text-anchor="middle">Ref1</text>
+    
+    <!-- N9 -->
+    <circle cx="210" cy="230" r="15" fill="url(#neuronGradient)" stroke="#a855f7" stroke-width="1" filter="url(#neuronGlow)" />
+    <text x="210" cy="230" dy="3" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle" font-weight="bold">N9</text>
+    <text x="210" cy="230" dy="14" font-family="Inter, sans-serif" font-size="6" fill="#f8fafc" text-anchor="middle">Fact C</text>
+    
+    <!-- N10 -->
+    <circle cx="240" cy="320" r="15" fill="url(#neuronGradient)" stroke="#a855f7" stroke-width="1" filter="url(#neuronGlow)" />
+    <text x="240" cy="320" dy="3" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle" font-weight="bold">N10</text>
+    <text x="240" cy="320" dy="14" font-family="Inter, sans-serif" font-size="6" fill="#f8fafc" text-anchor="middle">Image</text>
+  </g>
+  
+  <!-- Neural connections (with varying strengths) -->
+  <!-- First level connections -->
+  <line x1="400" y1="270" x2="300" y2="200" stroke="url(#connectionGradient)" stroke-width="3" stroke-opacity="0.8" />
+  <line x1="400" y1="270" x2="320" y2="350" stroke="url(#connectionGradient)" stroke-width="3" stroke-opacity="0.8" />
+  <line x1="400" y1="270" x2="460" y2="180" stroke="url(#connectionGradient)" stroke-width="4" stroke-opacity="0.9" />
+  <line x1="400" y1="270" x2="500" y2="320" stroke="url(#connectionGradient)" stroke-width="3" stroke-opacity="0.8" />
+  
+  <!-- Second level connections -->
+  <line x1="460" y1="180" x2="560" y2="120" stroke="url(#connectionGradient)" stroke-width="2" stroke-opacity="0.7" />
+  <line x1="460" y1="180" x2="580" y2="220" stroke="url(#connectionGradient)" stroke-width="2" stroke-opacity="0.7" />
+  <line x1="500" y1="320" x2="620" y2="300" stroke="url(#connectionGradient)" stroke-width="2" stroke-opacity="0.7" />
+  <line x1="300" y1="200" x2="210" y2="230" stroke="url(#connectionGradient)" stroke-width="2" stroke-opacity="0.7" />
+  <line x1="320" y1="350" x2="240" y2="320" stroke="url(#connectionGradient)" stroke-width="2" stroke-opacity="0.7" />
+  
+  <!-- Cross connections with oscillation patterns -->
+  <line x1="300" y1="200" x2="460" y2="180" stroke="url(#connectionGradient)" stroke-width="2" stroke-opacity="0.7" stroke-dasharray="5,3" />
+  <line x1="460" y1="180" x2="500" y2="320" stroke="url(#connectionGradient)" stroke-width="2" stroke-opacity="0.7" stroke-dasharray="5,3" />
+  <line x1="320" y1="350" x2="500" y2="320" stroke="url(#connectionGradient)" stroke-width="2" stroke-opacity="0.7" stroke-dasharray="5,3" />
+  
+  <!-- Neural pulses (animated in the real interface) -->
+  <circle cx="420" cy="235" r="5" fill="url(#pulseGradient)" opacity="0.7" />
+  <circle cx="360" cy="230" r="4" fill="url(#pulseGradient)" opacity="0.5" />
+  <circle cx="440" cy="290" r="6" fill="url(#pulseGradient)" opacity="0.8" />
+  
+  <!-- Gesture indicator (hand) -->
+  <g id="gestureHand" filter="url(#glow)">
+    <path d="M380,380 C385,375 395,370 400,360 C405,350 410,355 414,358 C418,361 425,375 430,380" fill="none" stroke="#f8fafc" stroke-width="1.5" stroke-opacity="0.7" />
+    <circle cx="380" cy="380" r="4" fill="#f8fafc" fill-opacity="0.7" />
+    <circle cx="430" cy="380" r="4" fill="#f8fafc" fill-opacity="0.7" />
+  </g>
+  
+  <!-- Right panel: Composition area -->
+  <rect x="840" y="70" width="340" height="500" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="1010" y="95" font-family="Inter, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="middle" font-weight="bold">Active Composition</text>
+  
+  <!-- Active neural patterns -->
+  <g id="pattern1">
+    <rect x="860" y="120" width="300" height="80" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="880" y="140" font-family="Inter, sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">Pattern C1</text>
+    <text x="880" y="160" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">Core knowledge + key supporting facts</text>
+    <rect x="860" y="180" width="210" height="10" rx="5" fill="url(#patternGradient)" />
+  </g>
+  
+  <g id="pattern2">
+    <rect x="860" y="220" width="300" height="80" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="880" y="240" font-family="Inter, sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">Pattern C2</text>
+    <text x="880" y="260" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">Research reports with code examples</text>
+    <rect x="860" y="280" width="250" height="10" rx="5" fill="url(#patternGradient)" />
+  </g>
+  
+  <g id="pattern3">
+    <rect x="860" y="320" width="300" height="80" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="880" y="340" font-family="Inter, sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">Pattern C4</text>
+    <text x="880" y="360" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">Statistical insights with visualizations</text>
+    <rect x="860" y="380" width="170" height="10" rx="5" fill="url(#patternGradient)" />
+  </g>
+  
+  <!-- Final composition output -->
+  <rect x="860" y="420" width="300" height="130" rx="8" fill="url(#compositionGradient)" stroke="#334155" stroke-width="1" />
+  <text x="1010" y="440" font-family="Inter, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle" font-weight="bold">Final Neural Pattern</text>
+  <rect x="880" y="460" width="260" height="70" rx="5" fill="#0f172a" stroke="#6366f1" stroke-width="1" />
+  <text x="890" y="480" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">Harmonic blend of core document (N1)</text>
+  <text x="890" y="500" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">with research report (N4) and supporting</text>
+  <text x="890" y="520" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">evidence from knowledge base entries.</text>
+  
+  <!-- Bottom panel: Controls and tools -->
+  <rect x="20" y="590" width="1160" height="190" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="40" y="620" font-family="Inter, sans-serif" font-size="16" fill="#e2e8f0" font-weight="bold">Neural Conducting Controls</text>
+  
+  <!-- Gesture explanations -->
+  <g id="gestureExplanations">
+    <rect x="40" y="640" width="200" height="120" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="50" y="660" font-family="Inter, sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">Gesture Reference</text>
+    
+    <text x="50" y="685" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">• Flick: Increase connectivity</text>
+    <text x="50" y="705" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">• Circular motion: Group neurons</text>
+    <text x="50" y="725" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">• Pinch: Sever connections</text>
+    <text x="50" y="745" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">• Tap: Activate/deactivate neuron</text>
+  </g>
+  
+  <!-- Synchrony controls -->
+  <g id="synchronyControls">
+    <rect x="260" y="640" width="200" height="120" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="270" y="660" font-family="Inter, sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">Synchrony Settings</text>
+    
+    <text x="270" y="685" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">Threshold:</text>
+    <rect x="340" y="675" width="100" height="12" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <rect x="340" y="675" width="70" height="12" rx="6" fill="#4c1d95" />
+    
+    <text x="270" y="710" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">Oscillation Rate:</text>
+    <rect x="370" y="700" width="70" height="12" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <rect x="370" y="700" width="50" height="12" rx="6" fill="#4c1d95" />
+    
+    <text x="270" y="735" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">Decay:</text>
+    <rect x="320" y="725" width="100" height="12" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <rect x="320" y="725" width="30" height="12" rx="6" fill="#4c1d95" />
+  </g>
+  
+  <!-- Pattern Library -->
+  <g id="patternLibrary">
+    <rect x="480" y="640" width="320" height="120" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="500" y="660" font-family="Inter, sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">Neural Pattern Library</text>
+    
+    <rect x="500" y="670" width="280" height="80" rx="3" fill="#1e293b" />
+    
+    <!-- Pattern indicators (thumbnails) -->
+    <rect x="510" y="680" width="60" height="25" rx="3" fill="#4c1d95" stroke="#a855f7" stroke-width="1" />
+    <text x="540" y="695" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle">Research</text>
+    
+    <rect x="580" y="680" width="60" height="25" rx="3" fill="#6d28d9" stroke="#a855f7" stroke-width="1" />
+    <text x="610" y="695" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle">Core Facts</text>
+    
+    <rect x="650" y="680" width="60" height="25" rx="3" fill="#7c3aed" stroke="#a855f7" stroke-width="1" />
+    <text x="680" y="695" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle">KB Links</text>
+    
+    <rect x="720" y="680" width="60" height="25" rx="3" fill="#8b5cf6" stroke="#a855f7" stroke-width="1" />
+    <text x="750" y="695" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle">Code</text>
+    
+    <rect x="510" y="715" width="60" height="25" rx="3" fill="#a855f7" stroke="#a855f7" stroke-width="1" />
+    <text x="540" y="730" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle">Images</text>
+    
+    <rect x="580" y="715" width="60" height="25" rx="3" fill="#d8b4fe" stroke="#a855f7" stroke-width="1" />
+    <text x="610" y="730" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle">Citations</text>
+    
+    <rect x="650" y="715" width="60" height="25" rx="3" fill="#c4b5fd" stroke="#a855f7" stroke-width="1" />
+    <text x="680" y="730" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle">Timeline</text>
+    
+    <rect x="720" y="715" width="60" height="25" rx="3" fill="#4f46e5" stroke="#a855f7" stroke-width="1" />
+    <text x="750" y="730" font-family="Inter, sans-serif" font-size="8" fill="#f8fafc" text-anchor="middle">+ Custom</text>
+  </g>
+  
+  <!-- Symphony controls -->
+  <g id="symphonyControls">
+    <rect x="820" y="640" width="340" height="120" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="840" y="660" font-family="Inter, sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">Symphony Controls</text>
+    
+    <!-- Play/pause/track controls -->
+    <circle cx="860" cy="690" r="15" fill="#4c1d95" stroke="#a855f7" stroke-width="1" />
+    <path d="M855,683 L855,697 L870,690 Z" fill="#f8fafc" />
+    
+    <circle cx="900" cy="690" r="15" fill="#1e293b" stroke="#a855f7" stroke-width="1" />
+    <rect x="895" y="685" width="10" height="10" fill="#f8fafc" />
+    
+    <circle cx="940" cy="690" r="15" fill="#1e293b" stroke="#a855f7" stroke-width="1" />
+    <text x="940" cy="690" dy="5" font-family="Inter, sans-serif" font-size="16" fill="#f8fafc" text-anchor="middle">⏹</text>
+    
+    <!-- Visualization indicators -->
+    <rect x="840" y="720" width="300" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <rect x="840" y="720" width="180" height="30" rx="15" fill="url(#patternGradient)" />
+    <text x="990" y="740" font-family="Inter, sans-serif" font-size="10" fill="#f8fafc" text-anchor="middle">Neural Harmony: 78%</text>
+  </g>
+  
+  <!-- Current user mode indicator -->
+  <rect x="1050" y="5" width="140" height="40" rx="20" fill="#4c1d95" filter="url(#glow)" />
+  <text x="1120" y="30" font-family="Inter, sans-serif" font-size="14" fill="#f8fafc" text-anchor="middle" font-weight="bold">CONDUCTOR MODE</text>
+  
+  <!-- Neural pulse animations -->
+  <circle cx="440" cy="225" r="4" fill="#a855f7" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="r" values="2;5;2" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="380" cy="310" r="4" fill="#a855f7" opacity="0.6">
+    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.5s" repeatCount="indefinite" />
+    <animate attributeName="r" values="2;4;2" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="470" cy="250" r="5" fill="#a855f7" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="r" values="3;6;3" dur="4s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Active connection pulses -->
+  <circle cx="430" cy="225" r="3" fill="#f8fafc" opacity="0.7">
+    <animate attributeName="cx" values="400;460;460" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="270;180;180" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.9;0.4;0" dur="2s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="350" cy="235" r="3" fill="#f8fafc" opacity="0.7">
+    <animate attributeName="cx" values="400;300;300" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="270;200;200" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.9;0.4;0" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Gesture trail effects -->
+  <path d="M380,380 Q400,350 420,370" stroke="#a855f7" stroke-width="2" fill="none" opacity="0.4">
+    <animate attributeName="opacity" values="0.6;0;0" dur="1.5s" repeatCount="indefinite" />
+  </path>
+  
+  <!-- Keyboard shortcuts -->
+  <rect x="20" y="770" width="1160" height="20" fill="none" />
+  <text x="600" y="785" font-family="Inter, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">SHORTCUTS: [Space] Play/Pause • [S] Save Pattern • [Tab] Cycle Focus • [C] Clear Selection • [G] Group Selected • [Shift+Click] Multi-Select</text>
+  
+  <!-- Help tooltip (example of dynamic interface element) -->
+  <g id="helpTooltip">
+    <rect x="500" y="130" width="200" height="60" rx="5" fill="#1e293b" stroke="#6366f1" stroke-width="1" opacity="0.9" />
+    <text x="510" y="150" font-family="Inter, sans-serif" font-size="11" fill="#f8fafc">Flick gesture detected</text>
+    <text x="510" y="170" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">Increasing connection strength</text>
+    <text x="510" y="185" font-family="Inter, sans-serif" font-size="10" fill="#94a3b8">between nodes N4 and N6</text>
+  </g>
+  
+  <!-- Mode buttons -->
+  <rect x="60" y="10" width="90" height="30" rx="15" fill="#4c1d95" opacity="0.5" />
+  <text x="105" y="30" font-family="Inter, sans-serif" font-size="12" fill="#f8fafc" text-anchor="middle">Explore</text>
+  
+  <rect x="160" y="10" width="90" height="30" rx="15" fill="#4c1d95" opacity="0.5" />
+  <text x="205" y="30" font-family="Inter, sans-serif" font-size="12" fill="#f8fafc" text-anchor="middle">Compose</text>
+  
+  <rect x="260" y="10" width="90" height="30" rx="15" fill="#4c1d95" opacity="1" />
+  <text x="305" y="30" font-family="Inter, sans-serif" font-size="12" fill="#f8fafc" text-anchor="middle">Conduct</text>
+  
+  <rect x="360" y="10" width="90" height="30" rx="15" fill="#4c1d95" opacity="0.5" />
+  <text x="405" y="30" font-family="Inter, sans-serif" font-size="12" fill="#f8fafc" text-anchor="middle">Analyze</text>
+  
+  <!-- Harmonization indicators -->
+  <rect x="40" y="530" width="760" height="40" rx="5" fill="#0f172a" />
+  <text x="60" y="555" font-family="Inter, sans-serif" font-size="12" fill="#94a3b8">Neural harmony:</text>
+  
+  <rect x="170" y="545" width="300" height="10" rx="5" fill="#1e293b" />
+  <rect x="170" y="545" width="210" height="10" rx="5" fill="url(#patternGradient)">
+    <animate attributeName="width" values="210;230;210" dur="5s" repeatCount="indefinite" />
+  </rect>
+  
+  <text x="500" y="555" font-family="Inter, sans-serif" font-size="12" fill="#94a3b8">Synchronization:</text>
+  
+  <rect x="610" y="545" width="150" height="10" rx="5" fill="#1e293b" />
+  <rect x="610" y="545" width="120" height="10" rx="5" fill="url(#patternGradient)">
+    <animate attributeName="width" values="120;130;120" dur="3s" repeatCount="indefinite" />
+  </rect>
+  </svg>

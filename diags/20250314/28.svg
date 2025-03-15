@@ -1,0 +1,656 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- Definitions for gradients, patterns and filters -->
+  <defs>
+    <!-- Main background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#052e16" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+    
+    <!-- Soil gradients -->
+    <linearGradient id="soilGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#422006" />
+      <stop offset="100%" stop-color="#292524" />
+    </linearGradient>
+    
+    <linearGradient id="richSoilGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7c2d12" />
+      <stop offset="100%" stop-color="#422006" />
+    </linearGradient>
+    
+    <linearGradient id="poorSoilGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#44403c" />
+      <stop offset="100%" stop-color="#292524" />
+    </linearGradient>
+    
+    <!-- Plant gradients -->
+    <linearGradient id="stemGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#65a30d" />
+      <stop offset="100%" stop-color="#4d7c0f" />
+    </linearGradient>
+    
+    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#84cc16" />
+      <stop offset="100%" stop-color="#65a30d" />
+    </linearGradient>
+    
+    <linearGradient id="flowerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef9c3" />
+      <stop offset="100%" stop-color="#facc15" />
+    </linearGradient>
+    
+    <linearGradient id="rootGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a16207" />
+      <stop offset="100%" stop-color="#854d0e" />
+    </linearGradient>
+    
+    <!-- Document/fact plants -->
+    <linearGradient id="documentStemGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    
+    <linearGradient id="documentLeafGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    
+    <linearGradient id="documentFlowerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+    
+    <!-- Code plants -->
+    <linearGradient id="codeStemGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7e22ce" />
+      <stop offset="100%" stop-color="#6b21a8" />
+    </linearGradient>
+    
+    <linearGradient id="codeLeafGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+    
+    <linearGradient id="codeFlowerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8b4fe" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    
+    <!-- User content plants -->
+    <linearGradient id="userStemGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+    
+    <linearGradient id="userLeafGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    
+    <linearGradient id="userFlowerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fdba74" />
+    </linearGradient>
+    
+    <!-- Media plants -->
+    <linearGradient id="mediaStemGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#be185d" />
+      <stop offset="100%" stop-color="#9d174d" />
+    </linearGradient>
+    
+    <linearGradient id="mediaLeafGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#db2777" />
+    </linearGradient>
+    
+    <linearGradient id="mediaFlowerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbcfe8" />
+      <stop offset="100%" stop-color="#f9a8d4" />
+    </linearGradient>
+    
+    <!-- Panel gradients -->
+    <linearGradient id="panelGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#0f766e" stop-opacity="0.9" />
+    </linearGradient>
+    
+    <linearGradient id="toolPanelGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#115e59" />
+    </linearGradient>
+    
+    <linearGradient id="buttonGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    
+    <linearGradient id="activeButtonGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    
+    <!-- Weather effects -->
+    <filter id="blurFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+    
+    <!-- Plant glow -->
+    <filter id="plantGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Flourishing plant glow -->
+    <filter id="flourishingGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Button hover effect -->
+    <filter id="buttonHover" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Soil pattern -->
+    <pattern id="soilPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#422006" />
+      <circle cx="2" cy="2" r="1" fill="#292524" opacity="0.5" />
+      <circle cx="7" cy="8" r="1" fill="#292524" opacity="0.5" />
+    </pattern>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1200" height="800" fill="url(#bgGradient)" />
+  
+  <!-- Header bar -->
+  <rect x="0" y="0" width="1200" height="40" fill="#052e16" />
+  <text x="20" y="25" font-family="Inter, sans-serif" font-size="16" fill="#ecfdf5" font-weight="bold">Evolutionary Knowledge Garden</text>
+  
+  <!-- User info and global controls -->
+  <text x="1180" y="25" font-family="Inter, sans-serif" font-size="14" fill="#ecfdf5" text-anchor="end">Garden Health: 87%</text>
+  
+  <!-- Main garden view area -->
+  <rect x="60" y="50" width="880" height="560" rx="5" fill="#064e3b" stroke="#0d9488" stroke-width="1" />
+  
+  <!-- Garden beds -->
+  <!-- Concepts garden bed -->
+  <rect x="80" y="70" width="400" height="250" rx="10" fill="url(#richSoilGradient)" stroke="#facc15" stroke-width="1" stroke-dasharray="5,2" />
+  <text x="100" y="90" font-family="Inter, sans-serif" font-size="14" fill="#d9f99d" font-weight="bold">Core Concepts</text>
+  
+  <!-- Documents garden bed -->
+  <rect x="520" y="70" width="400" height="250" rx="10" fill="url(#soilGradient)" stroke="#3b82f6" stroke-width="1" stroke-dasharray="5,2" />
+  <text x="540" y="90" font-family="Inter, sans-serif" font-size="14" fill="#bfdbfe" font-weight="bold">Documents and Facts</text>
+  
+  <!-- Code garden bed -->
+  <rect x="80" y="340" width="400" height="250" rx="10" fill="url(#soilGradient)" stroke="#a855f7" stroke-width="1" stroke-dasharray="5,2" />
+  <text x="100" y="360" font-family="Inter, sans-serif" font-size="14" fill="#e9d5ff" font-weight="bold">Code and Implementations</text>
+  
+  <!-- User content garden bed -->
+  <rect x="520" y="340" width="400" height="250" rx="10" fill="url(#soilGradient)" stroke="#f97316" stroke-width="1" stroke-dasharray="5,2" />
+  <text x="540" y="360" font-family="Inter, sans-serif" font-size="14" fill="#ffedd5" font-weight="bold">User Notes and Insights</text>
+  
+  <!-- Plants in Core Concepts bed -->
+  <!-- Flourishing concept plant -->
+  <g filter="url(#flourishingGlow)">
+    <!-- Roots -->
+    <path d="M220,200 Q200,210 190,220 Q180,230 175,250" stroke="url(#rootGradient)" stroke-width="2" fill="none" />
+    <path d="M220,200 Q230,210 235,220 Q240,230 245,245" stroke="url(#rootGradient)" stroke-width="2" fill="none" />
+    <path d="M220,200 Q215,210 216,220 Q217,240 215,255" stroke="url(#rootGradient)" stroke-width="1.5" fill="none" />
+    
+    <!-- Stem -->
+    <path d="M220,200 L220,130" stroke="url(#stemGradient)" stroke-width="4" fill="none" />
+    
+    <!-- Leaves -->
+    <path d="M220,180 Q240,170 250,175 Q240,185 220,180" fill="url(#leafGradient)" />
+    <path d="M220,160 Q200,150 190,155 Q200,165 220,160" fill="url(#leafGradient)" />
+    <path d="M220,140 Q240,130 250,125 Q235,145 220,140" fill="url(#leafGradient)" />
+    
+    <!-- Flower/Fruit -->
+    <circle cx="220" cy="115" r="15" fill="url(#flowerGradient)" />
+    <circle cx="220" cy="115" r="7" fill="#fdba74" />
+  </g>
+  <text x="220" y="230" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Machine Learning</text>
+  <text x="220" y="245" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5" text-anchor="middle">Growth: 98%</text>
+  
+  <!-- Medium concept plant -->
+  <g>
+    <!-- Roots -->
+    <path d="M150,180 Q140,190 135,200 Q130,220 125,230" stroke="url(#rootGradient)" stroke-width="1.5" fill="none" />
+    <path d="M150,180 Q160,190 165,210" stroke="url(#rootGradient)" stroke-width="1.5" fill="none" />
+    
+    <!-- Stem -->
+    <path d="M150,180 L150,130" stroke="url(#stemGradient)" stroke-width="3" fill="none" />
+    
+    <!-- Leaves -->
+    <path d="M150,160 Q165,150 175,153 Q165,163 150,160" fill="url(#leafGradient)" />
+    <path d="M150,140 Q135,130 125,133 Q135,143 150,140" fill="url(#leafGradient)" />
+    
+    <!-- Flower (smaller) -->
+    <circle cx="150" cy="120" r="10" fill="url(#flowerGradient)" />
+    <circle cx="150" cy="120" r="4" fill="#fdba74" />
+  </g>
+  <text x="150" y="210" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Neural Networks</text>
+  <text x="150" y="225" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5" text-anchor="middle">Growth: 75%</text>
+  
+  <!-- New concept plant (small) -->
+  <g>
+    <!-- Small roots -->
+    <path d="M310,190 Q305,200 300,210" stroke="url(#rootGradient)" stroke-width="1" fill="none" />
+    
+    <!-- Stem -->
+    <path d="M310,190 L310,165" stroke="url(#stemGradient)" stroke-width="2" fill="none" />
+    
+    <!-- Small leaves -->
+    <path d="M310,175 Q320,170 325,172 Q315,177 310,175" fill="url(#leafGradient)" />
+    
+    <!-- Small bud -->
+    <circle cx="310" cy="160" r="5" fill="#86efac" />
+  </g>
+  <text x="310" y="210" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Large Language Models</text>
+  <text x="310" y="225" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5" text-anchor="middle">Growth: 30%</text>
+  
+  <!-- Plants in Documents and Facts bed -->
+  <!-- Document plant (mature) -->
+  <g filter="url(#plantGlow)">
+    <!-- Roots -->
+    <path d="M600,180 Q590,190 585,200 Q580,220 575,230" stroke="url(#rootGradient)" stroke-width="1.5" fill="none" />
+    <path d="M600,180 Q610,190 615,210" stroke="url(#rootGradient)" stroke-width="1.5" fill="none" />
+    
+    <!-- Stem -->
+    <path d="M600,180 L600,130" stroke="url(#documentStemGradient)" stroke-width="3" fill="none" />
+    
+    <!-- Leaves -->
+    <path d="M600,160 Q615,150 625,153 Q615,163 600,160" fill="url(#documentLeafGradient)" />
+    <path d="M600,140 Q585,130 575,133 Q585,143 600,140" fill="url(#documentLeafGradient)" />
+    
+    <!-- Flower -->
+    <circle cx="600" cy="120" r="10" fill="url(#documentFlowerGradient)" />
+    <circle cx="600" cy="120" r="4" fill="#93c5fd" />
+  </g>
+  <text x="600" y="210" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Research Paper</text>
+  <text x="600" y="225" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5" text-anchor="middle">Growth: 85%</text>
+  
+  <!-- Document plant (newer) -->
+  <g>
+    <!-- Small roots -->
+    <path d="M680,190 Q675,200 670,210" stroke="url(#rootGradient)" stroke-width="1" fill="none" />
+    
+    <!-- Stem -->
+    <path d="M680,190 L680,165" stroke="url(#documentStemGradient)" stroke-width="2" fill="none" />
+    
+    <!-- Small leaves -->
+    <path d="M680,175 Q690,170 695,172 Q685,177 680,175" fill="url(#documentLeafGradient)" />
+    
+    <!-- Small bud -->
+    <circle cx="680" cy="160" r="5" fill="#93c5fd" />
+  </g>
+  <text x="680" y="210" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Dataset Metadata</text>
+  <text x="680" y="225" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5" text-anchor="middle">Growth: 42%</text>
+  
+  <!-- Plants in Code bed -->
+  <!-- Code plant (mature) -->
+  <g filter="url(#plantGlow)">
+    <!-- Roots -->
+    <path d="M250,420 Q240,430 235,440 Q230,450 225,460" stroke="url(#rootGradient)" stroke-width="1.5" fill="none" />
+    <path d="M250,420 Q255,430 260,440 Q265,450 275,460" stroke="url(#rootGradient)" stroke-width="1.5" fill="none" />
+    
+    <!-- Stem -->
+    <path d="M250,420 L250,370" stroke="url(#codeStemGradient)" stroke-width="3" fill="none" />
+    
+    <!-- Leaves -->
+    <path d="M250,400 Q265,390 275,393 Q265,403 250,400" fill="url(#codeLeafGradient)" />
+    <path d="M250,380 Q235,370 225,373 Q235,383 250,380" fill="url(#codeLeafGradient)" />
+    
+    <!-- Flower -->
+    <circle cx="250" cy="360" r="10" fill="url(#codeFlowerGradient)" />
+    <circle cx="250" cy="360" r="4" fill="#c084fc" />
+  </g>
+  <text x="250" y="480" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Optimization Algorithm</text>
+  <text x="250" y="495" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5" text-anchor="middle">Growth: 80%</text>
+  
+  <!-- Code plant (newer) -->
+  <g>
+    <!-- Small roots -->
+    <path d="M330,430 Q325,440 320,450" stroke="url(#rootGradient)" stroke-width="1" fill="none" />
+    
+    <!-- Stem -->
+    <path d="M330,430 L330,405" stroke="url(#codeStemGradient)" stroke-width="2" fill="none" />
+    
+    <!-- Small leaves -->
+    <path d="M330,415 Q340,410 345,412 Q335,417 330,415" fill="url(#codeLeafGradient)" />
+    
+    <!-- Small bud -->
+    <circle cx="330" cy="400" r="5" fill="#d8b4fe" />
+  </g>
+  <text x="330" y="450" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Test Functions</text>
+  <text x="330" y="465" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5" text-anchor="middle">Growth: 35%</text>
+  
+  <!-- Plants in User Content bed -->
+  <!-- User content plant (mature) -->
+  <g filter="url(#plantGlow)">
+    <!-- Roots -->
+    <path d="M600,430 Q590,440 585,450 Q580,460 575,470" stroke="url(#rootGradient)" stroke-width="1.5" fill="none" />
+    <path d="M600,430 Q610,440 615,460" stroke="url(#rootGradient)" stroke-width="1.5" fill="none" />
+    
+    <!-- Stem -->
+    <path d="M600,430 L600,380" stroke="url(#userStemGradient)" stroke-width="3" fill="none" />
+    
+    <!-- Leaves -->
+    <path d="M600,410 Q615,400 625,403 Q615,413 600,410" fill="url(#userLeafGradient)" />
+    <path d="M600,390 Q585,380 575,383 Q585,393 600,390" fill="url(#userLeafGradient)" />
+    
+    <!-- Flower -->
+    <circle cx="600" cy="370" r="10" fill="url(#userFlowerGradient)" />
+    <circle cx="600" cy="370" r="4" fill="#fdba74" />
+  </g>
+  <text x="600" y="490" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Project Notes</text>
+  <text x="600" y="505" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5" text-anchor="middle">Growth: 72%</text>
+  
+  <!-- Connection lines (roots connecting between plants) -->
+  <!-- Concept to Document connection -->
+  <path d="M220,200 Q350,250 600,180" stroke="#a16207" stroke-width="1.5" stroke-dasharray="5,3" fill="none" />
+  <text x="410" y="240" font-family="Inter, sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Supports</text>
+  
+  <!-- Concept to Code connection -->
+  <path d="M220,200 Q235,310 250,420" stroke="#a16207" stroke-width="1.5" stroke-dasharray="5,3" fill="none" />
+  <text x="235" y="310" font-family="Inter, sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Implements</text>
+  
+  <!-- Code to User content connection -->
+  <path d="M250,420 Q425,430 600,430" stroke="#a16207" stroke-width="1.5" stroke-dasharray="5,3" fill="none" />
+  <text x="425" y="415" font-family="Inter, sans-serif" font-size="8" fill="#fdba74" text-anchor="middle">Explains</text>
+  
+  <!-- Active cross-pollination indicator -->
+  <path d="M150,180 Q410,285 680,190" stroke="#fef08a" stroke-width="2" stroke-dasharray="3,2" fill="none" />
+  <circle cx="410" cy="285" r="8" fill="#facc15" opacity="0.8" />
+  <text x="410" y="275" font-family="Inter, sans-serif" font-size="8" fill="#fef08a" text-anchor="middle">Cross-pollinating</text>
+  
+  <!-- Weather effects -->
+  <g opacity="0.3" filter="url(#blurFilter)">
+    <circle cx="200" cy="180" r="40" fill="#d9f99d" opacity="0.1" />
+    <circle cx="600" cy="200" r="50" fill="#bae6fd" opacity="0.1" />
+    <circle cx="350" cy="450" r="35" fill="#c084fc" opacity="0.1" />
+  </g>
+  
+  <!-- Environmental controls (top panel) -->
+  <rect x="60" y="620" width="880" height="40" rx="5" fill="url(#panelGradient)" stroke="#0d9488" stroke-width="1" />
+  
+  <!-- Season cycle (temporal controls) -->
+  <g>
+    <circle cx="140" cy="640" r="15" fill="#0f766e" stroke="#5eead4" stroke-width="1" />
+    <path d="M140,625 A15,15 0 0,1 155,640 L140,640 Z" fill="#10b981" />
+    <path d="M140,640 A15,15 0 0,1 125,625 L140,625 Z" fill="#6ee7b7" opacity="0.7" />
+    <path d="M140,655 A15,15 0 0,1 125,640 L140,640 Z" fill="#f59e0b" opacity="0.7" />
+    <path d="M140,640 A15,15 0 0,1 155,655 L140,655 Z" fill="#d97706" opacity="0.7" />
+    <text x="140" y="643" font-family="Inter, sans-serif" font-size="7" fill="#ecfdf5" text-anchor="middle">Spring</text>
+  </g>
+  <text x="140" y="665" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Season</text>
+  
+  <!-- Growth rate -->
+  <text x="210" y="635" font-family="Inter, sans-serif" font-size="12" fill="#ecfdf5">Growth Rate:</text>
+  <rect x="290" y="625" width="100" height="10" rx="5" fill="#0f766e" stroke="#5eead4" stroke-width="1" />
+  <rect x="290" y="625" width="70" height="10" rx="5" fill="#10b981" />
+  <circle cx="360" cy="630" r="6" fill="#ecfdf5" stroke="#047857" stroke-width="1" />
+  <text x="290" y="650" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5">Normal</text>
+  <text x="390" y="650" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5">Accelerated</text>
+  
+  <!-- Soil fertility -->
+  <text x="450" y="635" font-family="Inter, sans-serif" font-size="12" fill="#ecfdf5">Soil Fertility:</text>
+  <rect x="540" y="625" width="100" height="10" rx="5" fill="#0f766e" stroke="#5eead4" stroke-width="1" />
+  <rect x="540" y="625" width="85" height="10" rx="5" fill="#10b981" />
+  <circle cx="625" cy="630" r="6" fill="#ecfdf5" stroke="#047857" stroke-width="1" />
+  <text x="540" y="650" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5">Low</text>
+  <text x="640" y="650" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5">High</text>
+  
+  <!-- Water level -->
+  <text x="690" y="635" font-family="Inter, sans-serif" font-size="12" fill="#ecfdf5">Water Level:</text>
+  <rect x="780" y="625" width="100" height="10" rx="5" fill="#0f766e" stroke="#5eead4" stroke-width="1" />
+  <rect x="780" y="625" width="60" height="10" rx="5" fill="#10b981" />
+  <circle cx="840" cy="630" r="6" fill="#ecfdf5" stroke="#047857" stroke-width="1" />
+  <text x="780" y="650" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5">Dry</text>
+  <text x="880" y="650" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5">Moist</text>
+  
+  <!-- Gardening tools panel (left side) -->
+  <rect x="10" y="50" width="40" height="560" rx="5" fill="url(#toolPanelGradient)" stroke="#0d9488" stroke-width="1" />
+  
+  <!-- Water tool (active) -->
+  <rect x="15" y="60" width="30" height="40" rx="5" fill="url(#activeButtonGradient)" stroke="#5eead4" stroke-width="1" filter="url(#buttonHover)" />
+  <path d="M30,70 C35,75 40,85 30,90 C20,85 25,75 30,70" fill="#22d3ee" />
+  <path d="M30,90 L30,95" stroke="#22d3ee" stroke-width="1.5" />
+  
+  <!-- Pruning tool -->
+  <rect x="15" y="110" width="30" height="40" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <path d="M23,120 L35,140 M35,120 L23,140" stroke="#ecfdf5" stroke-width="1.5" />
+  <path d="M20,140 C20,135 25,135 25,140" fill="none" stroke="#ecfdf5" stroke-width="1.5" />
+  <path d="M40,140 C40,135 35,135 35,140" fill="none" stroke="#ecfdf5" stroke-width="1.5" />
+  
+  <!-- Fertilizer tool -->
+  <rect x="15" y="160" width="30" height="40" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <rect x="22" y="170" width="16" height="20" fill="#a16207" />
+  <path d="M25,170 L25,165 L35,165 L35,170" stroke="#a16207" stroke-width="1.5" fill="none" />
+  
+  <!-- Cross-pollination tool -->
+  <rect x="15" y="210" width="30" height="40" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <circle cx="25" cy="225" r="5" fill="#facc15" />
+  <circle cx="35" cy="235" r="5" fill="#facc15" />
+  <path d="M26,222 L34,232" stroke="#fef08a" stroke-width="1" />
+  
+  <!-- Transplanting tool -->
+  <rect x="15" y="260" width="30" height="40" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <path d="M30,270 L30,290 M25,275 L35,275" stroke="#ecfdf5" stroke-width="1.5" />
+  <path d="M25,280 C20,285 25,295 30,295 C35,295 40,285 35,280" fill="none" stroke="#ecfdf5" stroke-width="1.5" />
+  
+  <!-- Soil analysis tool -->
+  <rect x="15" y="310" width="30" height="40" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <circle cx="30" cy="325" r="10" fill="none" stroke="#ecfdf5" stroke-width="1.5" />
+  <path d="M27,322 L33,328 M33,322 L27,328" stroke="#ecfdf5" stroke-width="1.5" />
+  
+  <!-- Weather control tool -->
+  <rect x="15" y="360" width="30" height="40" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <circle cx="30" cy="375" r="8" fill="#0ea5e9" opacity="0.7" />
+  <path d="M25,370 L35,380 M35,370 L25,380" stroke="#ecfdf5" stroke-width="0.5" />
+  
+  <!-- Time-lapse tool -->
+  <rect x="15" y="410" width="30" height="40" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <path d="M30,420 L30,440 M25,425 L30,420 L35,425" stroke="#ecfdf5" stroke-width="1.5" />
+  <path d="M25,435 L30,440 L35,435" stroke="#ecfdf5" stroke-width="1.5" />
+  
+  <!-- Harvest tool -->
+  <rect x="15" y="460" width="30" height="40" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <path d="M25,470 C20,480 30,490 35,480" fill="none" stroke="#ecfdf5" stroke-width="1.5" />
+  <path d="M30,475 L34,473" stroke="#ecfdf5" stroke-width="1" />
+  
+  <!-- Seed library tool -->
+  <rect x="15" y="510" width="30" height="40" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <circle cx="25" cy="525" r="5" fill="#a3e635" />
+  <circle cx="35" cy="525" r="3" fill="#84cc16" />
+  <circle cx="30" cy="535" r="4" fill="#65a30d" />
+  
+  <!-- Right panel: Metrics and outputs -->
+  <rect x="950" y="50" width="240" height="330" rx="5" fill="url(#panelGradient)" stroke="#0d9488" stroke-width="1" />
+  <text x="970" y="70" font-family="Inter, sans-serif" font-size="14" fill="#ecfdf5" font-weight="bold">Growth Metrics</text>
+  
+  <!-- Garden Health Chart -->
+  <rect x="970" y="80" width="200" height="100" rx="5" fill="#065f46" stroke="#5eead4" stroke-width="1" />
+  
+  <!-- Chart elements -->
+  <text x="970" y="95" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5">Garden Health Over Time</text>
+  <line x1="980" y1="170" x2="1150" y2="170" stroke="#0d9488" stroke-width="1" />
+  <line x1="980" y1="100" x2="980" y2="170" stroke="#0d9488" stroke-width="1" />
+  
+  <!-- Chart data points -->
+  <polyline points="980,150 1000,145 1020,150 1040,135 1060,125 1080,130 1100,110 1120,105 1140,90" fill="none" stroke="#10b981" stroke-width="2" />
+  
+  <!-- Axis labels -->
+  <text x="975" y="110" font-family="Inter, sans-serif" font-size="8" fill="#ecfdf5">100%</text>
+  <text x="975" y="140" font-family="Inter, sans-serif" font-size="8" fill="#ecfdf5">50%</text>
+  <text x="975" y="170" font-family="Inter, sans-serif" font-size="8" fill="#ecfdf5">0%</text>
+  
+  <text x="980" y="180" font-family="Inter, sans-serif" font-size="8" fill="#ecfdf5">1d</text>
+  <text x="1040" y="180" font-family="Inter, sans-serif" font-size="8" fill="#ecfdf5">3d</text>
+  <text x="1100" y="180" font-family="Inter, sans-serif" font-size="8" fill="#ecfdf5">5d</text>
+  
+  <!-- Diversity Index -->
+  <rect x="970" y="190" width="200" height="70" rx="5" fill="#065f46" stroke="#5eead4" stroke-width="1" />
+  <text x="970" y="205" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5">Knowledge Diversity</text>
+  
+  <!-- Diversity metrics -->
+  <rect x="980" y="215" width="180" height="15" rx="7.5" fill="#0d9488" />
+  <rect x="980" y="215" width="144" height="15" rx="7.5" fill="#10b981" />
+  <text x="1075" y="227" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">80%</text>
+  
+  <text x="980" y="245" font-family="Inter, sans-serif" font-size="8" fill="#ecfdf5">Topic Breadth: High</text>
+  <text x="1100" y="245" font-family="Inter, sans-serif" font-size="8" fill="#ecfdf5">Depth: Medium</text>
+  
+  <!-- Top Yielding Plants -->
+  <rect x="970" y="270" width="200" height="100" rx="5" fill="#065f46" stroke="#5eead4" stroke-width="1" />
+  <text x="970" y="285" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5">Top Yielding Plants</text>
+  
+  <!-- Top plants list -->
+  <text x="980" y="305" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5">1. Machine Learning</text>
+  <rect x="1070" y="298" width="90" height="8" rx="4" fill="#0d9488" />
+  <rect x="1070" y="298" width="81" height="8" rx="4" fill="#10b981" />
+  
+  <text x="980" y="325" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5">2. Research Paper</text>
+  <rect x="1070" y="318" width="90" height="8" rx="4" fill="#0d9488" />
+  <rect x="1070" y="318" width="76" height="8" rx="4" fill="#10b981" />
+  
+  <text x="980" y="345" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5">3. Optimization Algorithm</text>
+  <rect x="1070" y="338" width="90" height="8" rx="4" fill="#0d9488" />
+  <rect x="1070" y="338" width="72" height="8" rx="4" fill="#10b981" />
+  
+  <!-- Seed Library Panel -->
+  <rect x="950" y="390" width="240" height="270" rx="5" fill="url(#panelGradient)" stroke="#0d9488" stroke-width="1" />
+  <text x="970" y="410" font-family="Inter, sans-serif" font-size="14" fill="#ecfdf5" font-weight="bold">Seed Library</text>
+  
+  <!-- Seed category tabs -->
+  <rect x="970" y="420" width="60" height="25" rx="5" fill="url(#activeButtonGradient)" stroke="#5eead4" stroke-width="1" />
+  <text x="1000" y="437" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">All</text>
+  
+  <rect x="1040" y="420" width="60" height="25" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <text x="1070" y="437" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Docs</text>
+  
+  <rect x="1110" y="420" width="60" height="25" rx="5" fill="url(#buttonGradient)" stroke="#5eead4" stroke-width="1" />
+  <text x="1140" y="437" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" text-anchor="middle">Code</text>
+  
+  <!-- Seed container -->
+  <rect x="970" y="455" width="200" height="195" rx="5" fill="#065f46" stroke="#5eead4" stroke-width="1" />
+  
+  <!-- Document seeds -->
+  <g>
+    <circle cx="995" cy="480" r="10" fill="#93c5fd" />
+    <text x="1020" y="483" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5">Technical Report</text>
+    <text x="1150" y="483" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5" text-anchor="end">Plant</text>
+  </g>
+  
+  <g>
+    <circle cx="995" cy="510" r="10" fill="#60a5fa" />
+    <text x="1020" y="513" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5">Dataset Description</text>
+    <text x="1150" y="513" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5" text-anchor="end">Plant</text>
+  </g>
+  
+  <!-- Concept seeds -->
+  <g>
+    <circle cx="995" cy="540" r="10" fill="#a3e635" />
+    <text x="1020" y="543" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5">New Algorithm</text>
+    <text x="1150" y="543" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5" text-anchor="end">Plant</text>
+  </g>
+  
+  <!-- Code seeds -->
+  <g>
+    <circle cx="995" cy="570" r="10" fill="#c084fc" />
+    <text x="1020" y="573" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5">Demo Implementation</text>
+    <text x="1150" y="573" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5" text-anchor="end">Plant</text>
+  </g>
+  
+  <!-- User content seeds -->
+  <g>
+    <circle cx="995" cy="600" r="10" fill="#fdba74" />
+    <text x="1020" y="603" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5">Personal Notes</text>
+    <text x="1150" y="603" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5" text-anchor="end">Plant</text>
+  </g>
+  
+  <!-- Media seeds -->
+  <g>
+    <circle cx="995" cy="630" r="10" fill="#f9a8d4" />
+    <text x="1020" y="633" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5">Visualization</text>
+    <text x="1150" y="633" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5" text-anchor="end">Plant</text>
+  </g>
+  
+  <!-- Harvest Basket (bottom panel) -->
+  <rect x="60" y="670" width="1130" height="120" rx="5" fill="url(#panelGradient)" stroke="#0d9488" stroke-width="1" />
+  <text x="80" y="690" font-family="Inter, sans-serif" font-size="14" fill="#ecfdf5" font-weight="bold">Harvest Basket</text>
+  
+  <!-- Harvested insights -->
+  <rect x="80" y="700" width="220" height="80" rx="5" fill="#065f46" stroke="#5eead4" stroke-width="1" />
+  <g>
+    <circle cx="100" cy="720" r="12" fill="url(#flowerGradient)" />
+    <circle cx="100" cy="720" r="5" fill="#fdba74" />
+  </g>
+  <text x="120" y="715" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" font-weight="bold">ML Performance Insight</text>
+  <text x="120" y="730" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5">The optimization algorithm shows 15% better</text>
+  <text x="120" y="742" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5">performance on large language model tasks.</text>
+  <text x="120" y="760" font-family="Inter, sans-serif" font-size="8" fill="#a7f3d0">Maturity: 95% • Sources: 3 • Cross-refs: 2</text>
+  
+  <rect x="310" y="700" width="220" height="80" rx="5" fill="#065f46" stroke="#5eead4" stroke-width="1" />
+  <g>
+    <circle cx="330" cy="720" r="12" fill="url(#documentFlowerGradient)" />
+    <circle cx="330" cy="720" r="5" fill="#93c5fd" />
+  </g>
+  <text x="350" y="715" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" font-weight="bold">Research Summary</text>
+  <text x="350" y="730" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5">Comprehensive overview of current LLM</text>
+  <text x="350" y="742" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5">approaches with benchmark results.</text>
+  <text x="350" y="760" font-family="Inter, sans-serif" font-size="8" fill="#a7f3d0">Maturity: 85% • Sources: 5 • Cross-refs: 4</text>
+  
+  <rect x="540" y="700" width="220" height="80" rx="5" fill="#065f46" stroke="#5eead4" stroke-width="1" />
+  <g>
+    <circle cx="560" cy="720" r="12" fill="url(#codeFlowerGradient)" />
+    <circle cx="560" cy="720" r="5" fill="#c084fc" />
+  </g>
+  <text x="580" y="715" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" font-weight="bold">Code Implementation</text>
+  <text x="580" y="730" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5">Refined optimization algorithm with</text>
+  <text x="580" y="742" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5">documentation and test cases.</text>
+  <text x="580" y="760" font-family="Inter, sans-serif" font-size="8" fill="#a7f3d0">Maturity: 80% • Sources: 2 • Cross-refs: 3</text>
+  
+  <rect x="770" y="700" width="220" height="80" rx="5" fill="#0f766e" stroke="#5eead4" stroke-width="1" opacity="0.7" />
+  <g opacity="0.7">
+    <circle cx="790" cy="720" r="12" fill="url(#flowerGradient)" opacity="0.7" />
+    <circle cx="790" cy="720" r="5" fill="#fdba74" opacity="0.7" />
+  </g>
+  <text x="810" y="715" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" font-weight="bold" opacity="0.7">Growing Insight</text>
+  <text x="810" y="730" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5" opacity="0.7">Connection between LLMs and traditional</text>
+  <text x="810" y="742" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5" opacity="0.7">optimization approaches...</text>
+  <text x="810" y="760" font-family="Inter, sans-serif" font-size="8" fill="#a7f3d0" opacity="0.7">Maturity: 45% • Sources: 2 • Cross-refs: 1</text>
+  
+  <rect x="1000" y="700" width="170" height="80" rx="5" fill="#059669" stroke="#5eead4" stroke-width="1" />
+  <text x="1085" y="730" font-family="Inter, sans-serif" font-size="14" fill="#ecfdf5" font-weight="bold" text-anchor="middle">Export</text>
+  <text x="1085" y="750" font-family="Inter, sans-serif" font-size="10" fill="#d1fae5" text-anchor="middle">Create knowledge bundle</text>
+  
+  <!-- Active tooltip (appears when hovering/interacting) -->
+  <g>
+    <rect x="450" y="140" width="180" height="60" rx="5" fill="#064e3b" stroke="#10b981" stroke-width="1" opacity="0.9" />
+    <text x="460" y="160" font-family="Inter, sans-serif" font-size="10" fill="#ecfdf5" font-weight="bold">Machine Learning</text>
+    <text x="460" y="175" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5">Growth: 98% • Age: 15 days</text>
+    <text x="460" y="190" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5">Connections: 5 • Knowledge yield: High</text>
+  </g>
+  
+  <!-- Active water tooltip -->
+  <g>
+    <rect x="150" y="430" width="140" height="40" rx="5" fill="#064e3b" stroke="#10b981" stroke-width="1" opacity="0.9" />
+    <text x="160" y="445" font-family="Inter, sans-serif" font-size="9" fill="#ecfdf5">Watering neural networks...</text>
+    <text x="160" y="460" font-family="Inter, sans-serif" font-size="8" fill="#d1fae5">Attention +15% • Growth +8%</text>
+  </g>
+  
+  <!-- Cursor/Interaction indicator -->
+  <circle cx="220" cy="200" r="10" fill="none" stroke="#5eead4" stroke-width="1.5" stroke-dasharray="2,2" />
+  <circle cx="220" cy="200" r="2" fill="#5eead4" />
+  
+  <!-- Water droplets animation (would be animated in real implementation) -->
+  <circle cx="220" cy="190" r="3" fill="#22d3ee" opacity="0.8" />
+  <circle cx="225" cy="185" r="2" fill="#22d3ee" opacity="0.6" />
+  <circle cx="215" cy="195" r="2" fill="#22d3ee" opacity="0.7" />
+  <circle cx="218" cy="180" r="1" fill="#22d3ee" opacity="0.5" />
+  
+  <!-- Keyboard shortcut guide -->
+  <text x="600" y="785" font-family="Inter, sans-serif" font-size="10" fill="#d1fae5" text-anchor="middle">SHORTCUTS: [W] Water • [P] Prune • [F] Fertilize • [X] Cross-pollinate • [S] Soil Analysis • [T] Time-lapse • [H] Harvest</text>
+  </svg>
