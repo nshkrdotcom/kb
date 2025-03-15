@@ -799,3 +799,63 @@ import {
 //     }
 //   }
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // src/services/context-service.ts
+
+// // ...existing imports ...
+// import { 
+//   Context, 
+//   ContentItem, 
+//   TokenUsage 
+// } from '../types/core'; // Import ContentItem
+// import { ContextRepository, ContentRepository } from '../repositories/interfaces';
+// import { OptimizedContext, SelectionOptions } from '../types/optimization'; // Import OptimizedContext
+
+// export class ContextService {
+//   constructor(
+//       private contextRepository: ContextRepository,
+//       private contentRepository: ContentRepository
+//   ) {}
+
+//   // ... other methods ...
+
+//   async getContextWithContent(
+//       contextId: string,
+//       options: SelectionOptions = {}
+//   ): Promise<{ context: Context; contentItems: ContentItem[]; tokenUsage: TokenUsage }> {
+//     logger.info('Getting context with content', { contextId });
+//     const context = await this.contextRepository.findById(contextId);
+//     if (!context) {
+//       throw new ApplicationError(`Context with ID ${contextId} not found`, 404);
+//     }
+//     const contextItems = await this.contextRepository.getContentItems(contextId, options);
+//     const contentItems: ContentItem[] = [];
+//     for (const item of contextItems) {
+//       const content = await this.contentRepository.findById(item.contentId);
+//       if (content) {
+//          contentItems.push(content);
+//       }
+//     }
+
+//       // Call a new method on the contextRepository for this.
+//     const tokenUsage = await this.contextRepository.getTokenUsage(contextId);
+    
+//     return {context, contentItems, tokenUsage};
+//   }
+// }
