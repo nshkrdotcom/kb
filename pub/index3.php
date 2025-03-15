@@ -143,6 +143,11 @@
       width: 100%;
       height: 100%;
       touch-action: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
   </style>
 </head>
@@ -378,6 +383,7 @@ const SpatialCanvas = ({ width, height }) => {
   const nexusCoreRef = useRef(null);
   
   useEffect(() => {
+
     // Load only external dependencies
     const loadExternalScripts = async () => {
       const externalScripts = [
@@ -404,9 +410,20 @@ const SpatialCanvas = ({ width, height }) => {
       
       // Initialize after external scripts are loaded
       if (canvasRef.current) {
+
+
+    
+    
+    
         // Create the core module system
         initializeNexusCore();
+        canvasRef.current.style.width = '100%';
+      canvasRef.current.style.height = '100%';
+      // width = '100%';
+      // height = '100%';
+
       }
+      
     };
     
     loadExternalScripts().catch(error => console.error('Error loading external scripts:', error));
@@ -430,7 +447,7 @@ const SpatialCanvas = ({ width, height }) => {
         this.config = nexusCore.config;
         
         // Camera positioning
-        this.cameraPosition = { x: 0, y: 0, z: 800  };
+        this.cameraPosition = { x: 400, y: 200, z: 800  };
         this.lookAtPoint = { x: 0, y: 0, z: 0 };
         
         // Detail level management
@@ -569,6 +586,25 @@ const SpatialCanvas = ({ width, height }) => {
         this.connections = [];
         this.selectedNodeId = null;
         this.highlightedNodeIds = new Set();
+      }
+
+      updateNodeSizes(scaleFactor) {
+        this.nodes.forEach(node => {
+          // Store original radius if not already stored
+          if (node.originalRadius === undefined) {
+            node.originalRadius = node.radius;
+          }
+          
+          // Scale the radius
+          node.radius = node.originalRadius * Math.sqrt(scaleFactor);
+          
+          // Update the visual representation
+          this.nexusCore.renderer.updateNodeObject(
+            node.id,
+            node.position,
+            { radius: node.radius, selected: node.selected, highlighted: node.highlighted }
+          );
+        });
       }
       
       setData(nodes, connections) {
@@ -783,14 +819,14 @@ const SpatialCanvas = ({ width, height }) => {
 
         // Physics simulation parameters
         this.simulationActive = true;
-        this.simulationDamping = 0.8;
-        this.gravitationalConstant = -50;
-        this.springConstant = 0.1;
-        this.repulsionConstant = 5000;
-        this.centeringForce = 0.03;
+  this.simulationDamping = 0.9;  // Increase from 0.8 to 0.9 to maintain movement
+  this.gravitationalConstant = -40;  // Reduced from -50
+  this.springConstant = 0.08;  // Reduced from 0.1
+  this.repulsionConstant = 4000;  // Reduced from 5000
+  this.centeringForce = 0.02;  // Reduced from 0.03
         
         // Timestep for simulation
-        this.timestep = 1.0;
+        this.timestep = 0.8;
         
         // Layout bounds
         this.layoutBounds = { width: 1000, height: 1000, depth: 500 };
@@ -1113,7 +1149,7 @@ updateDetailLevel(detailLevel) {
         
         this.renderer.setSize(this.config.width, this.config.height);
         this.renderer.setPixelRatio(window.devicePixelRatio);
-        this.renderer.setClearColor(0x1e1e1e, 1);
+        this.renderer.setClearColor(0x222233, 1);  // Slightly bluer dark background
         this.renderer.shadowMap.enabled = true;
         
         // Initialize post-processing if high detail
@@ -1129,8 +1165,8 @@ updateDetailLevel(detailLevel) {
       
       _initScene() {
         this.scene = new THREE.Scene();
-        this.scene.background = new THREE.Color(0x1e1e1e);
-        this.scene.fog = new THREE.FogExp2(0x1e1e1e, 0.0015);
+        this.scene.background = new THREE.Color(0x222233);  // Match renderer background
+        this.scene.fog = new THREE.FogExp2(0x222233, 0.001);  // Reduced fog density
       }
       
       _initCamera() {
@@ -1142,11 +1178,11 @@ updateDetailLevel(detailLevel) {
       
       _initLights() {
         // Ambient light for overall illumination
-        this.ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+        this.ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
         this.scene.add(this.ambientLight);
         
         // Main directional light with shadows
-        this.mainLight = new THREE.DirectionalLight(0xffffff, 0.6);
+        this.mainLight = new THREE.DirectionalLight(0xffffff, 0.8);
         this.mainLight.position.set(200, 200, 200);
         
         // Configure shadows based on detail level
@@ -1163,98 +1199,118 @@ updateDetailLevel(detailLevel) {
         }
         
         this.scene.add(this.mainLight);
-        
-        // Add some rim lighting for 3D definition
-        this.rimLight = new THREE.DirectionalLight(0x5ebaff, 0.3);
-        this.rimLight.position.set(-200, 100, -200);
-        this.scene.add(this.rimLight);
+  
+          // Add brighter rim light (from 0.3 to 0.5)
+  this.rimLight = new THREE.DirectionalLight(0x5ebaff, 0.5);
+  this.rimLight.position.set(-200, 100, -200);
+  this.scene.add(this.rimLight);
+  
+  // Add additional fill light from below for better visibility
+  this.fillLight = new THREE.DirectionalLight(0xffffff, 0.4);
+  this.fillLight.position.set(0, -200, 100);
+  this.scene.add(this.fillLight);
+
+
       }
       
       _initNodeMaterials() {
-        // Create a collection of materials for different node types
-        this.nodeMaterials = {
-          primary: new THREE.MeshPhongMaterial({
-            color: 0x0066cc,
-            specular: 0x111111,
-            shininess: 30
-          }),
-          secondary: new THREE.MeshPhongMaterial({
-            color: 0x0084ff,
-            specular: 0x111111,
-            shininess: 30
-          }),
-          tertiary: new THREE.MeshPhongMaterial({
-            color: 0x5ebaff,
-            specular: 0x111111,
-            shininess: 30
-          }),
-          quaternary: new THREE.MeshPhongMaterial({
-            color: 0x805ad5,
-            specular: 0x111111,
-            shininess: 30
-          }),
-          highlighted: new THREE.MeshPhongMaterial({
-            color: 0xffcc00,
-            specular: 0x555555,
-            shininess: 60,
-            emissive: 0xffcc00,
-            emissiveIntensity: 0.2
-          }),
-          selected: new THREE.MeshPhongMaterial({
-            color: 0xff3300,
-            specular: 0x555555,
-            shininess: 60,
-            emissive: 0xff3300,
-            emissiveIntensity: 0.3
-          })
-        };
-        
-        // Inner sphere materials for core concept appearance
-        this.innerMaterials = {
-          primary: new THREE.MeshPhongMaterial({
-            color: 0x1e293b,
-            specular: 0x222222,
-            shininess: 20
-          }),
-          selected: new THREE.MeshPhongMaterial({
-            color: 0x2d3748,
-            specular: 0x222222,
-            shininess: 20,
-            emissive: 0xff3300,
-            emissiveIntensity: 0.1
-          })
-        };
-      }
-      
-      _initEdgeMaterials() {
-        // Create materials for connection edges
-        this.edgeMaterials = {
-          primary: new THREE.LineBasicMaterial({
-            color: 0x0084ff,
-            linewidth: 2,
-            transparent: true,
-            opacity: 0.8
-          }),
-          secondary: new THREE.LineBasicMaterial({
-            color: 0x5ebaff,
-            linewidth: 1.5,
-            transparent: true,
-            opacity: 0.6
-          }),
-          tertiary: new THREE.LineBasicMaterial({
-            color: 0x805ad5,
-            linewidth: 1,
-            transparent: true,
-            opacity: 0.4
-          }),
-          highlighted: new THREE.LineBasicMaterial({
-            color: 0xffcc00,
-            linewidth: 3,
-            transparent: true,
-            opacity: 0.9
-          })
-        };
-      }
+  // Brighter materials for better visibility
+  this.nodeMaterials = {
+    primary: new THREE.MeshPhongMaterial({
+      color: 0x0088ff,  // Brighter blue
+      specular: 0x555555,  // More specular highlight
+      shininess: 60,  // Increased shininess
+      emissive: 0x0033aa,  // Add slight emissive glow
+      emissiveIntensity: 0.2
+    }),
+    secondary: new THREE.MeshPhongMaterial({
+      color: 0x22aaff,  // Brighter secondary blue
+      specular: 0x555555,
+      shininess: 60,
+      emissive: 0x0044bb,
+      emissiveIntensity: 0.2
+    }),
+    tertiary: new THREE.MeshPhongMaterial({
+      color: 0x7ecfff,  // Brighter tertiary blue
+      specular: 0x555555,
+      shininess: 60,
+      emissive: 0x0055cc,
+      emissiveIntensity: 0.15
+    }),
+    quaternary: new THREE.MeshPhongMaterial({
+      color: 0xa07cff,  // Brighter purple
+      specular: 0x555555,
+      shininess: 60,
+      emissive: 0x6633cc,
+      emissiveIntensity: 0.15
+    }),
+    highlighted: new THREE.MeshPhongMaterial({
+      color: 0xffdd00,  // Brighter highlight
+      specular: 0x777777,
+      shininess: 80,
+      emissive: 0xffcc00,
+      emissiveIntensity: 0.4  // Brighter emission
+    }),
+    selected: new THREE.MeshPhongMaterial({
+      color: 0xff5500,  // Brighter selection
+      specular: 0x777777,
+      shininess: 80,
+      emissive: 0xff3300,
+      emissiveIntensity: 0.5  // Brighter emission
+    })
+  };
+  
+  // Lighter inner materials
+  this.innerMaterials = {
+    primary: new THREE.MeshPhongMaterial({
+      color: 0x2d3e50,  // Lighter inner color
+      specular: 0x444444,
+      shininess: 40,
+      emissive: 0x112233,
+      emissiveIntensity: 0.1
+    }),
+    selected: new THREE.MeshPhongMaterial({
+      color: 0x3d4e60,  // Lighter selected inner color
+      specular: 0x444444,
+      shininess: 40,
+      emissive: 0xff4400,
+      emissiveIntensity: 0.2
+    })
+  };
+}
+
+// 4. BRIGHTER EDGE MATERIALS
+// In RenderEngine, update _initEdgeMaterials:
+
+_initEdgeMaterials() {
+  // Brighter and more visible connections
+  this.edgeMaterials = {
+    primary: new THREE.LineBasicMaterial({
+      color: 0x44aaff,  // Brighter primary connection
+      linewidth: 2,
+      transparent: true,
+      opacity: 0.9  // Increased opacity
+    }),
+    secondary: new THREE.LineBasicMaterial({
+      color: 0x88ccff,  // Brighter secondary connection
+      linewidth: 1.5,
+      transparent: true,
+      opacity: 0.8  // Increased opacity
+    }),
+    tertiary: new THREE.LineBasicMaterial({
+      color: 0xa088ff,  // Brighter tertiary connection
+      linewidth: 1,
+      transparent: true,
+      opacity: 0.7  // Increased opacity
+    }),
+    highlighted: new THREE.LineBasicMaterial({
+      color: 0xffdd00,  // Brighter highlighted connection
+      linewidth: 3,
+      transparent: true,
+      opacity: 1.0  // Full opacity
+    })
+  };
+}
       
       _initHelpers() {
         // Create a grid helper for spatial reference
@@ -1573,6 +1629,22 @@ updateDetailLevel(detailLevel) {
         
         // Update position
         nodeObject.group.position.set(position.x, position.y, position.z || 0);
+        
+        // Update node size if radius changed
+        if (properties.radius && nodeObject.outer.geometry.parameters.radius !== properties.radius) {
+          // Dispose old geometries
+          nodeObject.outer.geometry.dispose();
+          nodeObject.inner.geometry.dispose();
+          
+          // Create new geometries with updated radius
+          const segments = Math.max(16, Math.floor(this.currentDetailLevel * 8));
+          const newOuterGeometry = new THREE.SphereGeometry(properties.radius, segments, segments);
+          const newInnerGeometry = new THREE.SphereGeometry(properties.radius * 0.9, segments, segments);
+          
+          // Update meshes
+          nodeObject.outer.geometry = newOuterGeometry;
+          nodeObject.inner.geometry = newInnerGeometry;
+        }
         
         // Update label position if exists
         if (nodeObject.label) {
@@ -2104,6 +2176,9 @@ updateDetailLevel(detailLevel) {
           ...options
         };
         
+
+        this.scaleFactor = 1.0;
+
         // Calculate performance scaling factor based on mode
         this.performanceScaling = this._calculatePerformanceScaling();
         
@@ -2127,6 +2202,37 @@ updateDetailLevel(detailLevel) {
         // Setup performance monitoring
         this.perfMonitor = new PerformanceUtils(this);
       }
+
+      setScale(scale) {
+        // Limit scale to reasonable bounds (0.25 to 4.0)
+        this.scaleFactor = Math.max(0.25, Math.min(4.0, scale));
+        
+        // Update camera distance based on scale
+        const cameraPos = this.core.cameraPosition;
+        const lookAtPoint = this.core.lookAtPoint;
+        
+        // Calculate direction vector from lookAt to camera
+        const dirX = cameraPos.x - lookAtPoint.x;
+        const dirY = cameraPos.y - lookAtPoint.y;
+        const dirZ = cameraPos.z - lookAtPoint.z;
+        
+        // Scale the distance (inverse relationship - smaller scale = camera moves further away)
+        const distanceScale = 1 / this.scaleFactor;
+        
+        // Update camera position
+        cameraPos.x = lookAtPoint.x + dirX * distanceScale;
+        cameraPos.y = lookAtPoint.y + dirY * distanceScale;
+        cameraPos.z = lookAtPoint.z + dirZ * distanceScale;
+        
+        // Update node and edge sizes
+        if (this.graph) {
+          this.graph.updateNodeSizes(this.scaleFactor);
+        }
+        
+        // Dispatch event so UI can update
+        this.events.dispatch('scaleChanged', { scale: this.scaleFactor });
+      }
+
       
       _calculatePerformanceScaling() {
         const modes = {
@@ -2156,34 +2262,59 @@ updateDetailLevel(detailLevel) {
       }
       
       _startRenderLoop() {
-        const animate = () => {
-          // Add error handling around the animation frame
-          try {
-            if (this.perfMonitor) this.perfMonitor.beginFrame();
-            
-            if (this.physics) this.physics.update();
-            if (this.core) this.core.update();
-            if (this.renderer) this.renderer.render();
-            if (this.controls) this.controls.update();
-            
-            if (this.perfMonitor) this.perfMonitor.endFrame();
-            
-            // Adapt detail level if needed
-            if (this.config.adaptiveDetail) {
-              this._adaptDetailLevel();
-            }
-          } catch (error) {
-            console.error("Error in animation loop:", error);
-            // Optionally stop animation on error
-            // return;
-          }
-          
-          this.animationFrame = requestAnimationFrame(animate);
-        };
-        
-        this.animationFrame = requestAnimationFrame(animate);
+  // Define frame counter to ensure physics updates keep running
+  this._frameCount = 0;
+  
+  const animate = () => {
+    // Add error handling around the animation frame
+    try {
+      this._frameCount++;
+      
+      if (this.perfMonitor) this.perfMonitor.beginFrame();
+      
+      // Always update physics - don't limit by frame count
+      if (this.physics) this.physics.update();
+      
+      if (this.core) this.core.update();
+      if (this.renderer) this.renderer.render();
+      if (this.controls) this.controls.update();
+      
+      if (this.perfMonitor) this.perfMonitor.endFrame();
+      
+      // Adapt detail level if needed
+      if (this.config.adaptiveDetail) {
+        this._adaptDetailLevel();
       }
       
+      // Add small random forces occasionally to prevent stagnation
+      if (this._frameCount % 180 === 0) {
+        this._addRandomForces();
+      }
+    } catch (error) {
+      console.error("Error in animation loop:", error);
+    }
+    
+    this.animationFrame = requestAnimationFrame(animate);
+  };
+  
+  this.animationFrame = requestAnimationFrame(animate);
+}
+    
+
+// Add method to introduce small random forces to keep simulation lively
+_addRandomForces() {
+  if (!this.graph) return;
+  
+  const nodes = this.graph.getAllNodes();
+  nodes.forEach(node => {
+    // Add small random velocity
+    node.velocity.x += (Math.random() - 0.5) * 0.5;
+    node.velocity.y += (Math.random() - 0.5) * 0.5;
+    node.velocity.z += (Math.random() - 0.5) * 0.3;
+  });
+}
+
+
       _adaptDetailLevel() {
         if (!this.perfMonitor || !this.core) return; // Safety check
         
@@ -2240,6 +2371,8 @@ updateDetailLevel(detailLevel) {
         connections: SAMPLE_CONNECTIONS
       }
     });
+
+    window.nexusCoreRef = nexusCoreRef;
     
     // Make the navigation mode accessible globally
     window.setNavMode = (mode) => {
@@ -2291,6 +2424,7 @@ updateDetailLevel(detailLevel) {
       const [showShortcuts, setShowShortcuts] = useState(true);
       const [canvasWidth, setCanvasWidth] = useState(810);
       const [canvasHeight, setCanvasHeight] = useState(720);
+      const [scale, setScale] = useState(1.0); // Default scale is 1.0
       
       const mainContainerRef = useRef(null);
       
@@ -2301,6 +2435,12 @@ updateDetailLevel(detailLevel) {
           setCanvasHeight(mainContainerRef.current.offsetHeight);
         }
       }, [sidebarLeft, sidebarRight]);
+
+      useEffect(() => {
+        if (window.nexusCoreRef && window.nexusCoreRef.current) {
+          window.nexusCoreRef.current.setScale(scale);
+        }
+      }, [scale]);
       
       // Find selected node
       const selectedNode = SAMPLE_NODES.find(node => node.id === selectedNodeId) || SAMPLE_NODES[0];
@@ -2565,7 +2705,56 @@ updateDetailLevel(detailLevel) {
                   </button>
                 </div>
               )}
-              
+                            
+              {/* Scale Controls */}
+              <div className="absolute left-1/2 bottom-5 transform -translate-x-1/2 bg-[#333] bg-opacity-90 rounded-xl p-3 flex flex-col items-center">
+                <div className="text-xs mb-2 flex items-center">
+                  <Icon.ZoomOut className="mr-2" />
+                  <span className="mr-1">Scale:</span>
+                  <span className="text-[#0084ff]">{Math.round(scale * 100)}%</span>
+                  <Icon.ZoomIn className="ml-2" />
+                </div>
+                
+                <div className="flex items-center w-full">
+                  <input
+                    type="range"
+                    className="custom-range flex-1 mx-2"
+                    min="0.25" 
+                    max="4" 
+                    step="0.05"
+                    value={scale}
+                    onChange={(e) => setScale(parseFloat(e.target.value))}
+                  />
+                </div>
+                
+                <div className="flex space-x-2 mt-2">
+                  <button 
+                    className="bg-[#444] text-gray-200 rounded px-2 py-1 text-xs hover:bg-[#555]"
+                    onClick={() => setScale(0.5)}
+                  >
+                    Small
+                  </button>
+                  <button 
+                    className="bg-[#444] text-gray-200 rounded px-2 py-1 text-xs hover:bg-[#555]"
+                    onClick={() => setScale(1.0)}
+                  >
+                    Medium
+                  </button>
+                  <button 
+                    className="bg-[#444] text-gray-200 rounded px-2 py-1 text-xs hover:bg-[#555]"
+                    onClick={() => setScale(2.0)}
+                  >
+                    Large
+                  </button>
+                  <button 
+                    className="bg-[#444] text-gray-200 rounded px-2 py-1 text-xs hover:bg-[#555]"
+                    onClick={() => setScale(3.5)}
+                  >
+                    Huge
+                  </button>
+                </div>
+              </div>
+
               {/* Context Building Controls */}
               <div className="absolute right-[220px] bottom-[90px] w-[200px] bg-[#0066cc] bg-opacity-90 rounded-xl p-4">
                 <div className="font-bold text-sm mb-2">Context Building</div>
