@@ -1,0 +1,805 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%">
+  <!-- Definitions for reusable elements -->
+  <defs>
+    <!-- Quantum particle gradients -->
+    <radialGradient id="particleGradient1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#30F0F0" stop-opacity="1" />
+      <stop offset="50%" stop-color="#2080F0" stop-opacity="0.8" />
+      <stop offset="90%" stop-color="#1040C0" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0020A0" stop-opacity="0" />
+    </radialGradient>
+    
+    <radialGradient id="particleGradient2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#F030F0" stop-opacity="1" />
+      <stop offset="50%" stop-color="#C020C0" stop-opacity="0.8" />
+      <stop offset="90%" stop-color="#A010A0" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#800080" stop-opacity="0" />
+    </radialGradient>
+    
+    <radialGradient id="particleGradient3" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#F0F030" stop-opacity="1" />
+      <stop offset="50%" stop-color="#F0A020" stop-opacity="0.8" />
+      <stop offset="90%" stop-color="#D07010" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#A04000" stop-opacity="0" />
+    </radialGradient>
+    
+    <radialGradient id="particleGradient4" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#30F030" stop-opacity="1" />
+      <stop offset="50%" stop-color="#20C020" stop-opacity="0.8" />
+      <stop offset="90%" stop-color="#10A010" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#008000" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Probability field gradients -->
+    <radialGradient id="probabilityField1" cx="50%" cy="50%" r="70%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="rgba(64, 224, 208, 0.3)" />
+      <stop offset="50%" stop-color="rgba(64, 160, 224, 0.2)" />
+      <stop offset="100%" stop-color="rgba(64, 96, 224, 0)" />
+    </radialGradient>
+    
+    <radialGradient id="probabilityField2" cx="50%" cy="50%" r="70%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="rgba(224, 64, 208, 0.3)" />
+      <stop offset="50%" stop-color="rgba(192, 64, 160, 0.2)" />
+      <stop offset="100%" stop-color="rgba(160, 64, 128, 0)" />
+    </radialGradient>
+    
+    <radialGradient id="probabilityField3" cx="50%" cy="50%" r="70%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="rgba(224, 224, 64, 0.3)" />
+      <stop offset="50%" stop-color="rgba(224, 160, 64, 0.2)" />
+      <stop offset="100%" stop-color="rgba(224, 96, 64, 0)" />
+    </radialGradient>
+    
+    <!-- Wave function patterns -->
+    <linearGradient id="waveFunction1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#30F0F0" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#2080F0" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#30F0F0" stop-opacity="0.1" />
+    </linearGradient>
+    
+    <linearGradient id="waveFunction2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F030F0" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#C020C0" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#F030F0" stop-opacity="0.1" />
+    </linearGradient>
+    
+    <linearGradient id="waveFunction3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F0F030" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#F0A020" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#F0F030" stop-opacity="0.1" />
+    </linearGradient>
+    
+    <linearGradient id="waveFunction4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#30F030" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#20C020" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#30F030" stop-opacity="0.1" />
+    </linearGradient>
+    
+    <!-- Panel background gradients -->
+    <linearGradient id="panelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101018" />
+      <stop offset="100%" stop-color="#202030" />
+    </linearGradient>
+    
+    <linearGradient id="controlGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#303045" />
+      <stop offset="100%" stop-color="#252535" />
+    </linearGradient>
+    
+    <!-- Filters for glow effects -->
+    <filter id="particleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="activeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="fieldGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Patterns for quantum states -->
+    <pattern id="uncertaintyPattern" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <rect width="20" height="20" fill="none" />
+      <circle cx="10" cy="10" r="1" fill="white" opacity="0.3" />
+    </pattern>
+    
+    <pattern id="superpositionPattern" patternUnits="userSpaceOnUse" width="30" height="30">
+      <rect width="30" height="30" fill="none" />
+      <circle cx="15" cy="15" r="3" fill="white" opacity="0.2" />
+      <circle cx="15" cy="15" r="7" fill="none" stroke="white" stroke-width="0.5" opacity="0.2" />
+      <circle cx="15" cy="15" r="12" fill="none" stroke="white" stroke-width="0.5" opacity="0.1" />
+    </pattern>
+    
+    <!-- Masks for wave functions -->
+    <mask id="waveMask1">
+      <rect x="0" y="0" width="100%" height="100%" fill="white" opacity="0.8" />
+    </mask>
+    
+    <!-- Interference pattern generator -->
+    <filter id="interferencePattern">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="2" seed="1" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect x="0" y="0" width="1200" height="900" fill="#0A0A14" />
+  
+  <!-- Section panels -->
+  
+  <!-- 1. Uncertainty Dashboard (Top 5% of space) -->
+  <rect x="10" y="10" width="1180" height="45" rx="5" ry="5" fill="url(#panelGradient)" stroke="#3A3A4A" stroke-width="1" />
+  
+  <!-- 2. Quantum Particle Forge (Left 10% of space) -->
+  <rect x="10" y="65" width="120" height="630" rx="5" ry="5" fill="url(#panelGradient)" stroke="#3A3A4A" stroke-width="1" />
+  
+  <!-- 3. Collision Observatory (Right 15% of space) -->
+  <rect x="1020" y="65" width="170" height="630" rx="5" ry="5" fill="url(#panelGradient)" stroke="#3A3A4A" stroke-width="1" />
+  
+  <!-- 4. Probability Field Generator (Bottom 15% of space) -->
+  <rect x="10" y="705" width="1180" height="185" rx="5" ry="5" fill="url(#panelGradient)" stroke="#3A3A4A" stroke-width="1" />
+  
+  <!-- 5. Quantum Particle Chamber (Center 60% of space) -->
+  <rect x="140" y="65" width="870" height="630" rx="5" ry="5" fill="#0F0F1A" stroke="#3A3A4A" stroke-width="1" />
+  
+  <!-- Grid for Quantum Particle Chamber -->
+  <g opacity="0.2">
+    <path d="M140,95 L1010,95" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M140,155 L1010,155" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M140,215 L1010,215" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M140,275 L1010,275" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M140,335 L1010,335" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M140,395 L1010,395" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M140,455 L1010,455" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M140,515 L1010,515" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M140,575 L1010,575" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M140,635 L1010,635" stroke="#FFFFFF" stroke-width="0.5" />
+    
+    <path d="M170,65 L170,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M240,65 L240,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M310,65 L310,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M380,65 L380,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M450,65 L450,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M520,65 L520,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M590,65 L590,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M660,65 L660,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M730,65 L730,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M800,65 L800,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M870,65 L870,695" stroke="#FFFFFF" stroke-width="0.5" />
+    <path d="M940,65 L940,695" stroke="#FFFFFF" stroke-width="0.5" />
+  </g>
+  
+  <!-- Probability Fields in Particle Chamber -->
+  <g>
+    <!-- Field 1 - Scientific domain -->
+    <ellipse cx="400" cy="300" rx="200" ry="150" fill="url(#probabilityField1)" opacity="0.5" filter="url(#fieldGlow)" />
+    
+    <!-- Field 2 - Artistic domain -->
+    <ellipse cx="700" cy="400" rx="180" ry="140" fill="url(#probabilityField2)" opacity="0.5" filter="url(#fieldGlow)" />
+    
+    <!-- Field 3 - Philosophical domain -->
+    <ellipse cx="520" cy="500" rx="150" ry="120" fill="url(#probabilityField3)" opacity="0.5" filter="url(#fieldGlow)" />
+    
+    <!-- Intersection zones (collision areas) -->
+    <g opacity="0.8" filter="url(#interferencePattern)">
+      <!-- Scientific-Artistic intersection -->
+      <path d="M550,350 C580,330 610,320 630,330 S650,350 640,370 S610,390 570,380 S520,370 550,350" fill="white" opacity="0.3" />
+      
+      <!-- Scientific-Philosophical intersection -->
+      <path d="M470,400 C490,390 510,380 520,390 S530,410 520,420 S500,430 480,420 S450,410 470,400" fill="white" opacity="0.4" />
+      
+      <!-- Artistic-Philosophical intersection -->
+      <path d="M600,450 C620,440 640,430 650,440 S660,460 650,470 S630,480 610,470 S580,460 600,450" fill="white" opacity="0.3" />
+      
+      <!-- Triple intersection (high energy) -->
+      <path d="M530,380 C550,370 570,360 580,370 S590,390 580,400 S560,410 540,400 S510,390 530,380" fill="white" opacity="0.6" filter="url(#activeGlow)" />
+    </g>
+  </g>
+  
+  <!-- Quantum Particles -->
+  <g>
+    <!-- Particle Group 1 - Scientific concepts -->
+    <g transform="translate(320, 250)">
+      <!-- Particle core -->
+      <circle cx="0" cy="0" r="15" fill="url(#particleGradient1)" filter="url(#particleGlow)" />
+      
+      <!-- Orbital shells showing contexts -->
+      <circle cx="0" cy="0" r="25" fill="none" stroke="#30F0F0" stroke-width="0.5" opacity="0.6" />
+      <circle cx="0" cy="0" r="35" fill="none" stroke="#30F0F0" stroke-width="0.3" opacity="0.4" />
+      
+      <!-- Uncertainty halo -->
+      <circle cx="0" cy="0" r="20" fill="url(#uncertaintyPattern)" opacity="0.3" />
+      
+      <!-- Wave function representation -->
+      <path d="M-50,-5 C-40,15 -30,-15 -20,10 C-10,-10 0,15 10,-5 C20,10 30,-10 40,5 C50,-5" 
+            fill="none" stroke="url(#waveFunction1)" stroke-width="2" opacity="0.7" mask="url(#waveMask1)" />
+      
+      <!-- Particle label -->
+      <text x="0" y="-25" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Quantum Mechanics</text>
+    </g>
+    
+    <g transform="translate(360, 320)">
+      <circle cx="0" cy="0" r="12" fill="url(#particleGradient1)" filter="url(#particleGlow)" />
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#30F0F0" stroke-width="0.5" opacity="0.6" />
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#30F0F0" stroke-width="0.3" opacity="0.4" />
+      <circle cx="0" cy="0" r="16" fill="url(#uncertaintyPattern)" opacity="0.3" />
+      <text x="0" y="-18" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Relativity</text>
+    </g>
+    
+    <g transform="translate(420, 280)">
+      <circle cx="0" cy="0" r="10" fill="url(#particleGradient1)" filter="url(#particleGlow)" />
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#30F0F0" stroke-width="0.5" opacity="0.6" />
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#30F0F0" stroke-width="0.3" opacity="0.4" />
+      <circle cx="0" cy="0" r="14" fill="url(#uncertaintyPattern)" opacity="0.3" />
+      <text x="0" y="-16" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Neuroscience</text>
+    </g>
+    
+    <!-- Connection between scientific concepts -->
+    <g opacity="0.7">
+      <path d="M320,250 C340,265 350,280 360,320" fill="none" stroke="#30F0F0" stroke-width="1" stroke-dasharray="2,2" />
+      <path d="M360,320 C390,310 410,290 420,280" fill="none" stroke="#30F0F0" stroke-width="1" stroke-dasharray="2,2" />
+      <path d="M320,250 C350,255 390,270 420,280" fill="none" stroke="#30F0F0" stroke-width="1" stroke-dasharray="2,2" />
+    </g>
+    
+    <!-- Particle Group 2 - Artistic concepts -->
+    <g transform="translate(700, 360)">
+      <circle cx="0" cy="0" r="14" fill="url(#particleGradient2)" filter="url(#particleGlow)" />
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#F030F0" stroke-width="0.5" opacity="0.6" />
+      <circle cx="0" cy="0" r="32" fill="none" stroke="#F030F0" stroke-width="0.3" opacity="0.4" />
+      <circle cx="0" cy="0" r="19" fill="url(#uncertaintyPattern)" opacity="0.3" />
+      <path d="M-45,-5 C-35,20 -25,-20 -15,15 C-5,-15 5,20 15,-5 C25,15 35,-15 45,5" 
+            fill="none" stroke="url(#waveFunction2)" stroke-width="2" opacity="0.7" mask="url(#waveMask1)" />
+      <text x="0" y="-25" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Narrative Structure</text>
+    </g>
+    
+    <g transform="translate(740, 410)">
+      <circle cx="0" cy="0" r="11" fill="url(#particleGradient2)" filter="url(#particleGlow)" />
+      <circle cx="0" cy="0" r="19" fill="none" stroke="#F030F0" stroke-width="0.5" opacity="0.6" />
+      <circle cx="0" cy="0" r="25" fill="none" stroke="#F030F0" stroke-width="0.3" opacity="0.4" />
+      <circle cx="0" cy="0" r="15" fill="url(#uncertaintyPattern)" opacity="0.3" />
+      <text x="0" y="-16" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Character Perspective</text>
+    </g>
+    
+    <g transform="translate(660, 430)">
+      <circle cx="0" cy="0" r="10" fill="url(#particleGradient2)" filter="url(#particleGlow)" />
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#F030F0" stroke-width="0.5" opacity="0.6" />
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#F030F0" stroke-width="0.3" opacity="0.4" />
+      <circle cx="0" cy="0" r="14" fill="url(#uncertaintyPattern)" opacity="0.3" />
+      <text x="0" y="-16" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Metaphor</text>
+    </g>
+    
+    <!-- Connection between artistic concepts -->
+    <g opacity="0.7">
+      <path d="M700,360 C715,375 730,395 740,410" fill="none" stroke="#F030F0" stroke-width="1" stroke-dasharray="2,2" />
+      <path d="M740,410 C710,425 680,430 660,430" fill="none" stroke="#F030F0" stroke-width="1" stroke-dasharray="2,2" />
+      <path d="M700,360 C690,385 670,410 660,430" fill="none" stroke="#F030F0" stroke-width="1" stroke-dasharray="2,2" />
+    </g>
+    
+    <!-- Particle Group 3 - Philosophical concepts -->
+    <g transform="translate(520, 480)">
+      <circle cx="0" cy="0" r="16" fill="url(#particleGradient3)" filter="url(#particleGlow)" />
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#F0F030" stroke-width="0.5" opacity="0.6" />
+      <circle cx="0" cy="0" r="34" fill="none" stroke="#F0F030" stroke-width="0.3" opacity="0.4" />
+      <circle cx="0" cy="0" r="21" fill="url(#uncertaintyPattern)" opacity="0.3" />
+      <path d="M-40,-5 C-30,10 -20,-15 -10,5 C0,-10 10,15 20,-5 C30,10 40,-5" 
+            fill="none" stroke="url(#waveFunction3)" stroke-width="2" opacity="0.7" mask="url(#waveMask1)" />
+      <text x="0" y="-25" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Consciousness</text>
+    </g>
+    
+    <g transform="translate(570, 520)">
+      <circle cx="0" cy="0" r="12" fill="url(#particleGradient3)" filter="url(#particleGlow)" />
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#F0F030" stroke-width="0.5" opacity="0.6" />
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#F0F030" stroke-width="0.3" opacity="0.4" />
+      <circle cx="0" cy="0" r="16" fill="url(#uncertaintyPattern)" opacity="0.3" />
+      <text x="0" y="-16" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Dualism</text>
+    </g>
+    
+    <g transform="translate(480, 530)">
+      <circle cx="0" cy="0" r="10" fill="url(#particleGradient3)" filter="url(#particleGlow)" />
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#F0F030" stroke-width="0.5" opacity="0.6" />
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#F0F030" stroke-width="0.3" opacity="0.4" />
+      <circle cx="0" cy="0" r="14" fill="url(#uncertaintyPattern)" opacity="0.3" />
+      <text x="0" y="-16" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Emergence</text>
+    </g>
+    
+    <!-- Connection between philosophical concepts -->
+    <g opacity="0.7">
+      <path d="M520,480 C535,495 555,510 570,520" fill="none" stroke="#F0F030" stroke-width="1" stroke-dasharray="2,2" />
+      <path d="M570,520 C540,530 500,535 480,530" fill="none" stroke="#F0F030" stroke-width="1" stroke-dasharray="2,2" />
+      <path d="M520,480 C510,495 490,515 480,530" fill="none" stroke="#F0F030" stroke-width="1" stroke-dasharray="2,2" />
+    </g>
+    
+    <!-- Cross-domain entangled connections -->
+    <g opacity="0.6">
+      <!-- Quantum Mechanics - Consciousness (scientific to philosophical) -->
+      <path d="M320,250 C370,310 450,410 520,480" fill="none" stroke="#60A0F0" stroke-width="1.5" stroke-dasharray="5,3">
+        <animate attributeName="stroke-dashoffset" values="0;-16" dur="2s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Narrative Structure - Consciousness (artistic to philosophical) -->
+      <path d="M700,360 C650,400 580,450 520,480" fill="none" stroke="#C060F0" stroke-width="1.5" stroke-dasharray="5,3">
+        <animate attributeName="stroke-dashoffset" values="0;-16" dur="2s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- High probability insight emergence point -->
+    <g transform="translate(530, 380)">
+      <!-- Emerging insight particle -->
+      <circle cx="0" cy="0" r="18" fill="url(#particleGradient4)" opacity="0.9" filter="url(#activeGlow)">
+        <animate attributeName="opacity" values="0.7;0.9;0.7" dur="3s" repeatCount="indefinite" />
+      </circle>
+      
+      <!-- Superposition visualization -->
+      <circle cx="0" cy="0" r="24" fill="url(#superpositionPattern)" opacity="0.7" />
+      
+      <!-- Wave function collapse animation -->
+      <g opacity="0.8">
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#30F030" stroke-width="0.5">
+          <animate attributeName="r" values="30;20;30" dur="5s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.8;0.3;0.8" dur="5s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="0" cy="0" r="40" fill="none" stroke="#30F030" stroke-width="0.3">
+          <animate attributeName="r" values="40;30;40" dur="5s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.5;0.2;0.5" dur="5s" repeatCount="indefinite" />
+        </circle>
+      </g>
+      
+      <!-- Particle label -->
+      <text x="0" y="-25" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Quantum Consciousness</text>
+      <text x="0" y="-15" font-family="Arial" font-size="7" fill="#A0FFA0" text-anchor="middle" filter="url(#textGlow)">P(valid)=0.78</text>
+    </g>
+  </g>
+  
+  <!-- Probability Field Generator Controls (Bottom Panel) -->
+  <g transform="translate(20, 715)">
+    <!-- Panel header -->
+    <text x="580" y="20" font-family="Arial" font-size="14" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Probability Field Generator</text>
+    
+    <!-- Context field controls section -->
+    <g transform="translate(20, 35)">
+      <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" filter="url(#textGlow)">Field Type:</text>
+      
+      <!-- Field type selectors -->
+      <g transform="translate(0, 15)">
+        <rect x="0" y="0" width="80" height="20" rx="3" ry="3" fill="url(#controlGradient)" stroke="#3A3A4A" stroke-width="1" />
+        <text x="40" y="14" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Scientific</text>
+        
+        <rect x="90" y="0" width="80" height="20" rx="3" ry="3" fill="url(#controlGradient)" stroke="#3A3A4A" stroke-width="1" />
+        <text x="130" y="14" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Artistic</text>
+        
+        <rect x="180" y="0" width="80" height="20" rx="3" ry="3" fill="url(#controlGradient)" stroke="#3A3A4A" stroke-width="1" />
+        <text x="220" y="14" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Philosophical</text>
+        
+        <rect x="270" y="0" width="80" height="20" rx="3" ry="3" fill="url(#controlGradient)" stroke="#F0F030" stroke-width="2" />
+        <text x="310" y="14" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">Custom</text>
+      </g>
+      
+      <!-- Field strength controls -->
+      <g transform="translate(0, 45)">
+        <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" filter="url(#textGlow)">Field Strength:</text>
+        <rect x="0" y="10" width="350" height="10" rx="5" ry="5" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="0" y="10" width="220" height="10" rx="5" ry="5" fill="#60A0F0" stroke="none" />
+        <circle cx="220" cy="15" r="8" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+      </g>
+      
+      <!-- Coherence controls -->
+      <g transform="translate(0, 80)">
+        <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" filter="url(#textGlow)">Coherence:</text>
+        <rect x="0" y="10" width="350" height="10" rx="5" ry="5" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="0" y="10" width="280" height="10" rx="5" ry="5" fill="#60A0F0" stroke="none" />
+        <circle cx="280" cy="15" r="8" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+      </g>
+    </g>
+    
+    <!-- Preset context libraries -->
+    <g transform="translate(400, 35)">
+      <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" filter="url(#textGlow)">Context Library:</text>
+      
+      <!-- Domain thumbnails -->
+      <g transform="translate(0, 15)">
+        <rect x="0" y="0" width="50" height="50" rx="3" ry="3" fill="#202040" stroke="#3A3A4A" stroke-width="1" />
+        <circle cx="25" cy="25" r="15" fill="url(#particleGradient1)" opacity="0.7" />
+        <text x="25" y="55" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Scientific</text>
+        
+        <rect x="60" y="0" width="50" height="50" rx="3" ry="3" fill="#402040" stroke="#3A3A4A" stroke-width="1" />
+        <circle cx="85" cy="25" r="15" fill="url(#particleGradient2)" opacity="0.7" />
+        <text x="85" y="55" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Artistic</text>
+        
+        <rect x="120" y="0" width="50" height="50" rx="3" ry="3" fill="#404020" stroke="#3A3A4A" stroke-width="1" />
+        <circle cx="145" cy="25" r="15" fill="url(#particleGradient3)" opacity="0.7" />
+        <text x="145" y="55" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Philosophical</text>
+        
+        <rect x="180" y="0" width="50" height="50" rx="3" ry="3" fill="#204020" stroke="#3A3A4A" stroke-width="1" />
+        <circle cx="205" cy="25" r="15" fill="url(#particleGradient4)" opacity="0.7" />
+        <text x="205" y="55" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Historical</text>
+        
+        <rect x="240" y="0" width="50" height="50" rx="3" ry="3" fill="#404040" stroke="#3A3A4A" stroke-width="1" />
+        <text x="265" y="30" font-family="Arial" font-size="20" fill="#FFFFFF" text-anchor="middle">+</text>
+        <text x="265" y="55" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Custom</text>
+      </g>
+      
+      <!-- Uncertainty controls -->
+      <g transform="translate(0, 80)">
+        <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" filter="url(#textGlow)">Uncertainty Threshold:</text>
+        <rect x="0" y="10" width="290" height="10" rx="5" ry="5" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="0" y="10" width="180" height="10" rx="5" ry="5" fill="#C060F0" stroke="none" />
+        <circle cx="180" cy="15" r="8" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+      </g>
+    </g>
+    
+    <!-- Custom field creator -->
+    <g transform="translate(720, 35)">
+      <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" filter="url(#textGlow)">Field Parameters:</text>
+      
+      <!-- Parameter adjustment sliders -->
+      <g transform="translate(0, 15)">
+        <text x="0" y="0" font-family="Arial" font-size="8" fill="#FFFFFF">Amplitude:</text>
+        <rect x="70" y="-5" width="120" height="10" rx="5" ry="5" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="70" y="-5" width="90" height="10" rx="5" ry="5" fill="#F0A020" stroke="none" />
+        <circle cx="160" cy="0" r="6" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+        
+        <text x="0" y="20" font-family="Arial" font-size="8" fill="#FFFFFF">Frequency:</text>
+        <rect x="70" y="15" width="120" height="10" rx="5" ry="5" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="70" y="15" width="70" height="10" rx="5" ry="5" fill="#F0A020" stroke="none" />
+        <circle cx="140" cy="20" r="6" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+        
+        <text x="0" y="40" font-family="Arial" font-size="8" fill="#FFFFFF">Phase:</text>
+        <rect x="70" y="35" width="120" height="10" rx="5" ry="5" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="70" y="35" width="100" height="10" rx="5" ry="5" fill="#F0A020" stroke="none" />
+        <circle cx="170" cy="40" r="6" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+        
+        <text x="0" y="60" font-family="Arial" font-size="8" fill="#FFFFFF">Coherence:</text>
+        <rect x="70" y="55" width="120" height="10" rx="5" ry="5" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="70" y="55" width="85" height="10" rx="5" ry="5" fill="#F0A020" stroke="none" />
+        <circle cx="155" cy="60" r="6" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+      </g>
+      
+      <!-- Field visualization preview -->
+      <g transform="translate(220, 10)">
+        <rect x="0" y="0" width="80" height="60" rx="3" ry="3" fill="#151520" stroke="#3A3A4A" stroke-width="1" />
+        <ellipse cx="40" cy="30" rx="30" ry="20" fill="url(#probabilityField3)" opacity="0.7" />
+      </g>
+      
+      <!-- Action buttons -->
+      <g transform="translate(310, 10)">
+        <rect x="0" y="0" width="80" height="25" rx="3" ry="3" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+        <text x="40" y="17" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">Apply Field</text>
+        
+        <rect x="0" y="35" width="80" height="25" rx="3" ry="3" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+        <text x="40" y="52" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">Save Field</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Collision Observatory (Right Panel) -->
+  <g transform="translate(1030, 75)">
+    <!-- Panel header -->
+    <text x="75" y="15" font-family="Arial" font-size="12" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Collision Observatory</text>
+    
+    <!-- Insight detector -->
+    <g transform="translate(10, 30)">
+      <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" filter="url(#textGlow)">Insight Detection</text>
+      
+      <!-- Insight ranking list -->
+      <rect x="0" y="10" width="150" height="120" rx="3" ry="3" fill="#151520" stroke="#3A3A4A" stroke-width="1" />
+      
+      <g transform="translate(5, 25)">
+        <text x="0" y="0" font-family="Arial" font-size="8" fill="#30F030">1. Quantum Consciousness</text>
+        <text x="140" y="0" font-family="Arial" font-size="8" fill="#30F030" text-anchor="end">78%</text>
+        
+        <text x="0" y="20" font-family="Arial" font-size="8" fill="#FFFFFF">2. Neural Quantum States</text>
+        <text x="140" y="20" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="end">65%</text>
+        
+        <text x="0" y="40" font-family="Arial" font-size="8" fill="#FFFFFF">3. Narrative Superposition</text>
+        <text x="140" y="40" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="end">61%</text>
+        
+        <text x="0" y="60" font-family="Arial" font-size="8" fill="#FFFFFF">4. Observer Paradox</text>
+        <text x="140" y="60" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="end">57%</text>
+        
+        <text x="0" y="80" font-family="Arial" font-size="8" fill="#FFFFFF">5. Wave Function Collapse</text>
+        <text x="140" y="80" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="end">52%</text>
+      </g>
+    </g>
+    
+    <!-- Probability Analyzer -->
+    <g transform="translate(10, 170)">
+      <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" filter="url(#textGlow)">Probability Distribution</text>
+      
+      <!-- Distribution graph -->
+      <rect x="0" y="10" width="150" height="100" rx="3" ry="3" fill="#151520" stroke="#3A3A4A" stroke-width="1" />
+      
+      <!-- Graph elements -->
+      <g transform="translate(10, 20)">
+        <!-- Axes -->
+        <path d="M0,80 L130,80" stroke="#3A3A4A" stroke-width="1" />
+        <path d="M0,0 L0,80" stroke="#3A3A4A" stroke-width="1" />
+        
+        <!-- Distribution curve -->
+        <path d="M0,80 C10,75 20,60 30,40 C40,25 50,15 60,20 C70,25 80,40 90,70 C100,75 110,78 130,80" 
+              fill="none" stroke="#60A0F0" stroke-width="2" />
+        
+        <!-- Confidence interval -->
+        <path d="M30,40 L60,20 L90,70" fill="none" stroke="#F0F030" stroke-width="1" stroke-dasharray="3,2" />
+        
+        <!-- Threshold marker -->
+        <path d="M60,0 L60,80" stroke="#F030F0" stroke-width="1" stroke-dasharray="5,3" />
+        
+        <text x="60" y="95" font-family="Arial" font-size="7" fill="#FFFFFF" text-anchor="middle">Confidence Threshold</text>
+      </g>
+    </g>
+    
+    <!-- Measurement Tools -->
+    <g transform="translate(10, 290)">
+      <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" filter="url(#textGlow)">Measurement Tools</text>
+      
+      <rect x="0" y="10" width="150" height="100" rx="3" ry="3" fill="#151520" stroke="#3A3A4A" stroke-width="1" />
+      
+      <!-- Tool buttons -->
+      <g transform="translate(5, 20)">
+        <rect x="0" y="0" width="140" height="20" rx="3" ry="3" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+        <text x="70" y="14" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">State Inspector</text>
+        
+        <rect x="0" y="25" width="140" height="20" rx="3" ry="3" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+        <text x="70" y="39" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Relationship Analyzer</text>
+        
+        <rect x="0" y="50" width="140" height="20" rx="3" ry="3" fill="#405030" stroke="#5A6A4A" stroke-width="1" />
+        <text x="70" y="64" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Coherence Meter</text>
+        
+        <rect x="0" y="75" width="140" height="20" rx="3" ry="3" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+        <text x="70" y="89" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Compatibility Assessor</text>
+      </g>
+    </g>
+    
+    <!-- Analysis Results -->
+    <g transform="translate(10, 410)">
+      <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" filter="url(#textGlow)">Analysis Results</text>
+      
+      <rect x="0" y="10" width="150" height="100" rx="3" ry="3" fill="#151520" stroke="#3A3A4A" stroke-width="1" />
+      
+      <!-- Results text -->
+      <g transform="translate(5, 25)">
+        <text x="0" y="0" font-family="Arial" font-size="8" fill="#FFFFFF">Coherence: 0.78</text>
+        <rect x="0" y="5" width="140" height="5" rx="2" ry="2" fill="#252535" stroke="none" />
+        <rect x="0" y="5" width="109" height="5" rx="2" ry="2" fill="#30F030" stroke="none" />
+        
+        <text x="0" y="20" font-family="Arial" font-size="8" fill="#FFFFFF">Novelty: 0.84</text>
+        <rect x="0" y="25" width="140" height="5" rx="2" ry="2" fill="#252535" stroke="none" />
+        <rect x="0" y="25" width="118" height="5" rx="2" ry="2" fill="#F030F0" stroke="none" />
+        
+        <text x="0" y="40" font-family="Arial" font-size="8" fill="#FFFFFF">Stability: 0.62</text>
+        <rect x="0" y="45" width="140" height="5" rx="2" ry="2" fill="#252535" stroke="none" />
+        <rect x="0" y="45" width="87" height="5" rx="2" ry="2" fill="#F0F030" stroke="none" />
+        
+        <text x="0" y="60" font-family="Arial" font-size="8" fill="#FFFFFF">Utility: 0.71</text>
+        <rect x="0" y="65" width="140" height="5" rx="2" ry="2" fill="#252535" stroke="none" />
+        <rect x="0" y="65" width="99" height="5" rx="2" ry="2" fill="#30F0F0" stroke="none" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Quantum Particle Forge (Left Panel) -->
+  <g transform="translate(20, 75)">
+    <!-- Panel header -->
+    <text x="50" y="15" font-family="Arial" font-size="12" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Particle Forge</text>
+    
+    <!-- Particle constructor -->
+    <g transform="translate(10, 30)">
+      <text x="0" y="0" font-family="Arial" font-size="9" fill="#FFFFFF" filter="url(#textGlow)">Construct</text>
+      
+      <rect x="0" y="10" width="100" height="100" rx="3" ry="3" fill="#151520" stroke="#3A3A4A" stroke-width="1" />
+      
+      <!-- Sample particle being created -->
+      <g transform="translate(50, 60)">
+        <circle cx="0" cy="0" r="15" fill="url(#particleGradient4)" opacity="0.7" filter="url(#particleGlow)" />
+        <circle cx="0" cy="0" r="25" fill="none" stroke="#30F030" stroke-width="0.5" opacity="0.6" />
+        <circle cx="0" cy="0" r="35" fill="none" stroke="#30F030" stroke-width="0.3" opacity="0.4" />
+      </g>
+      
+      <!-- Property controls -->
+      <g transform="translate(5, 120)">
+        <text x="0" y="0" font-family="Arial" font-size="7" fill="#FFFFFF">Size:</text>
+        <rect x="30" y="-5" width="65" height="5" rx="2" ry="2" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="30" y="-5" width="40" height="5" rx="2" ry="2" fill="#30F030" stroke="none" />
+        <circle cx="70" cy="-2.5" r="4" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+        
+        <text x="0" y="15" font-family="Arial" font-size="7" fill="#FFFFFF">Uncertainty:</text>
+        <rect x="30" y="10" width="65" height="5" rx="2" ry="2" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="30" y="10" width="30" height="5" rx="2" ry="2" fill="#30F030" stroke="none" />
+        <circle cx="60" cy="12.5" r="4" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+      </g>
+    </g>
+    
+    <!-- Wave Function Editor -->
+    <g transform="translate(10, 170)">
+      <text x="0" y="0" font-family="Arial" font-size="9" fill="#FFFFFF" filter="url(#textGlow)">Wave Function</text>
+      
+      <rect x="0" y="10" width="100" height="70" rx="3" ry="3" fill="#151520" stroke="#3A3A4A" stroke-width="1" />
+      
+      <!-- Wave visualization -->
+      <g transform="translate(5, 20)">
+        <path d="M0,30 C5,15 15,10 20,20 C25,30 30,40 40,35 C50,30 55,15 60,10 C70,5 80,20 90,30" 
+              fill="none" stroke="#30F030" stroke-width="2" opacity="0.8" />
+      </g>
+      
+      <!-- Wave controls -->
+      <g transform="translate(5, 90)">
+        <text x="0" y="0" font-family="Arial" font-size="7" fill="#FFFFFF">Amplitude:</text>
+        <rect x="30" y="-5" width="65" height="5" rx="2" ry="2" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="30" y="-5" width="50" height="5" rx="2" ry="2" fill="#30F030" stroke="none" />
+        <circle cx="80" cy="-2.5" r="4" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+        
+        <text x="0" y="15" font-family="Arial" font-size="7" fill="#FFFFFF">Frequency:</text>
+        <rect x="30" y="10" width="65" height="5" rx="2" ry="2" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+        <rect x="30" y="10" width="35" height="5" rx="2" ry="2" fill="#30F030" stroke="none" />
+        <circle cx="65" cy="12.5" r="4" fill="#FFFFFF" stroke="#3A3A4A" stroke-width="1" />
+      </g>
+    </g>
+    
+    <!-- Particle Library -->
+    <g transform="translate(10, 270)">
+      <text x="0" y="0" font-family="Arial" font-size="9" fill="#FFFFFF" filter="url(#textGlow)">Library</text>
+      
+      <rect x="0" y="10" width="100" height="160" rx="3" ry="3" fill="#151520" stroke="#3A3A4A" stroke-width="1" />
+      
+      <!-- Library items -->
+      <g transform="translate(5, 20)">
+        <circle cx="10" cy="0" r="8" fill="url(#particleGradient1)" opacity="0.7" />
+        <text x="25" y="3" font-family="Arial" font-size="7" fill="#FFFFFF">Physics</text>
+        
+        <circle cx="10" cy="20" r="8" fill="url(#particleGradient1)" opacity="0.7" />
+        <text x="25" y="23" font-family="Arial" font-size="7" fill="#FFFFFF">Chemistry</text>
+        
+        <circle cx="10" cy="40" r="8" fill="url(#particleGradient2)" opacity="0.7" />
+        <text x="25" y="43" font-family="Arial" font-size="7" fill="#FFFFFF">Narrative</text>
+        
+        <circle cx="10" cy="60" r="8" fill="url(#particleGradient2)" opacity="0.7" />
+        <text x="25" y="63" font-family="Arial" font-size="7" fill="#FFFFFF">Metaphor</text>
+        
+        <circle cx="10" cy="80" r="8" fill="url(#particleGradient3)" opacity="0.7" />
+        <text x="25" y="83" font-family="Arial" font-size="7" fill="#FFFFFF">Mind</text>
+        
+        <circle cx="10" cy="100" r="8" fill="url(#particleGradient3)" opacity="0.7" />
+        <text x="25" y="103" font-family="Arial" font-size="7" fill="#FFFFFF">Reality</text>
+        
+        <circle cx="10" cy="120" r="8" fill="url(#particleGradient4)" opacity="0.7" />
+        <text x="25" y="123" font-family="Arial" font-size="7" fill="#FFFFFF">Emergence</text>
+        
+        <circle cx="10" cy="140" r="8" fill="url(#particleGradient4)" opacity="0.7" />
+        <text x="25" y="143" font-family="Arial" font-size="7" fill="#FFFFFF">Systems</text>
+      </g>
+    </g>
+    
+    <!-- Action buttons -->
+    <g transform="translate(10, 450)">
+      <rect x="0" y="0" width="100" height="25" rx="3" ry="3" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+      <text x="50" y="17" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">Create</text>
+      
+      <rect x="0" y="30" width="100" height="25" rx="3" ry="3" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+      <text x="50" y="47" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">Modify</text>
+      
+      <rect x="0" y="60" width="100" height="25" rx="3" ry="3" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+      <text x="50" y="77" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">Delete</text>
+    </g>
+  </g>
+  
+  <!-- Uncertainty Dashboard (Top Panel) -->
+  <g transform="translate(20, 15)">
+    <!-- Panel title -->
+    <text x="580" y="15" font-family="Arial" font-size="12" fill="#FFFFFF" text-anchor="middle" filter="url(#textGlow)">Quantum Context Collider</text>
+    
+    <!-- Confidence metrics -->
+    <g transform="translate(20, 5)">
+      <text x="0" y="0" font-family="Arial" font-size="8" fill="#FFFFFF">System Confidence:</text>
+      <rect x="110" y="-5" width="100" height="10" rx="5" ry="5" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+      <rect x="110" y="-5" width="75" height="10" rx="5" ry="5" fill="#60A0F0" stroke="none" />
+      <text x="220" y="0" font-family="Arial" font-size="8" fill="#FFFFFF">75%</text>
+    </g>
+    
+    <!-- Bias detectors -->
+    <g transform="translate(280, 5)">
+      <text x="0" y="0" font-family="Arial" font-size="8" fill="#FFFFFF">Confirmation Bias:</text>
+      <rect x="110" y="-5" width="100" height="10" rx="5" ry="5" fill="#252535" stroke="#3A3A4A" stroke-width="1" />
+      <rect x="110" y="-5" width="35" height="10" rx="5" ry="5" fill="#60F0A0" stroke="none" />
+      <text x="220" y="0" font-family="Arial" font-size="8" fill="#FFFFFF">35%</text>
+    </g>
+    
+    <!-- Alternative universe browser -->
+    <g transform="translate(540, 5)">
+      <text x="0" y="0" font-family="Arial" font-size="8" fill="#FFFFFF">Universe:</text>
+      <rect x="60" y="-5" width="120" height="10" rx="5" ry="5" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+      <text x="120" y="2" font-family="Arial" font-size="7" fill="#FFFFFF" text-anchor="middle">Primary Interpretation</text>
+      
+      <text x="210" y="0" font-family="Arial" font-size="8" fill="#FFFFFF">Alt:</text>
+      <text x="240" y="0" font-family="Arial" font-size="8" fill="#FFFFFF">3</text>
+      <rect x="250" y="-5" width="15" height="15" rx="2" ry="2" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+      <text x="258" y="3" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">▼</text>
+    </g>
+    
+    <!-- Reset controls -->
+    <g transform="translate(850, 5)">
+      <rect x="0" y="-5" width="70" height="20" rx="3" ry="3" fill="#504030" stroke="#6A5A4A" stroke-width="1" />
+      <text x="35" y="7" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Clear State</text>
+      
+      <rect x="80" y="-5" width="70" height="20" rx="3" ry="3" fill="#304050" stroke="#4A5A6A" stroke-width="1" />
+      <text x="115" y="7" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Reset Default</text>
+    </g>
+  </g>
+  
+  <!-- Active measurement tools on main view -->
+  <g transform="translate(140, 65)">
+    <!-- Coherence meter visualization (active tool) -->
+    <g transform="translate(390, 315)">
+      <circle cx="0" cy="0" r="50" fill="none" stroke="#30F030" stroke-width="1" stroke-dasharray="5,5" opacity="0.7">
+        <animate attributeName="r" values="50;55;50" dur="3s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#30F030" stroke-width="1" stroke-dasharray="3,3" opacity="0.5" />
+      
+      <line x1="-45" y1="0" x2="45" y2="0" stroke="#30F030" stroke-width="1" opacity="0.3" />
+      <line x1="0" y1="-45" x2="0" y2="45" stroke="#30F030" stroke-width="1" opacity="0.3" />
+      
+      <text x="0" y="-60" font-family="Arial" font-size="9" fill="#30F030" text-anchor="middle" filter="url(#textGlow)">Coherence: 0.78</text>
+    </g>
+    
+    <!-- Quantum measurement effect -->
+    <g transform="translate(530, 380)">
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#F0F030" stroke-width="2" opacity="0.5">
+        <animate attributeName="r" values="20;30;20" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#F0F030" stroke-width="1" opacity="0.7">
+        <animate attributeName="r" values="10;15;10" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.7;0.4;0.7" dur="2s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Interaction indicators -->
+  <g>
+    <!-- Selected particle highlight -->
+    <circle cx="530" cy="380" r="22" fill="none" stroke="#F0F030" stroke-width="2" opacity="0.8">
+      <animate attributeName="stroke-dashoffset" values="0;30" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dasharray" values="5,5" dur="2s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Hover state on a particle -->
+    <circle cx="320" cy="250" r="18" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.4" />
+    
+    <!-- Tool selection indicator -->
+    <rect x="20" y="365" width="100" height="25" rx="3" ry="3" fill="none" stroke="#30F030" stroke-width="2" opacity="0.7" />
+  </g>
+  
+  <!-- Animated elements -->
+  <g>
+    <!-- Probability wave pulse animation -->
+    <path d="M320,250 C370,310 450,410 520,480" fill="none" stroke="#60A0F0" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dashoffset" values="0;-200" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dasharray" values="5,15" dur="3s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Wave function collapse animation -->
+    <g transform="translate(530, 380)">
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#30F030" stroke-width="0.5" opacity="0">
+        <animate attributeName="r" values="40;20;10" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.6;0.3;0" dur="4s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Energy pulse at intersection zones -->
+    <circle cx="530" cy="380" r="5" fill="#FFFFFF" opacity="0">
+      <animate attributeName="r" values="5;15;5" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;0.6;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>
