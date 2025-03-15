@@ -1,5 +1,48 @@
+
 # kb
 AI Jam private
+# Setting Up an Ad Hoc Python Server
+
+To serve the files from the `./pub` directory using Python's built-in HTTP server, follow these steps:
+
+## Instructions
+
+1. Open a terminal or command prompt
+2. Navigate to the root directory (where the `pub` folder is located)
+3. Run one of the following commands based on your Python version:
+
+### Python 3 (Recommended)
+```bash
+python3 -m http.server --directory pub 8000
+```
+
+This will start a server on port 8000 serving files from the `./pub` directory.
+
+### Alternative Method
+If your Python version doesn't support the `--directory` option (Python < 3.7):
+```bash
+cd pub
+python3 -m http.server 8000
+```
+
+### Accessing the Site
+Open your web browser and navigate to:
+```
+http://localhost:8000
+```
+
+### Stopping the Server
+To stop the server, press `Ctrl+C` in the terminal where the server is running.
+
+
+
+
+
+
+
+
+
+
 
 
 ## 6. Required Packages
