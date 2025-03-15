@@ -666,42 +666,40 @@
                 
 
 
-
-
-  {/* Hierarchical Tree View */}
-  <div className="mb-4">
-    <div className="p-2 bg-blue-50 rounded flex items-center justify-between cursor-pointer hover:bg-blue-100">
-      <div className="flex items-center">
-        <span className="mr-2">📁</span>
-        <span className="font-medium">Project Alpha</span>
-      </div>
-      <span className="text-xs text-blue-600 bg-blue-100 px-1 rounded">90% rel</span>
+{/* Hierarchical Tree View */}
+<div className="mb-4 text-sm">
+  <div className="p-1 bg-gray-50 rounded flex items-center justify-between cursor-pointer hover:bg-gray-100">
+    <div className="flex items-center">
+      <span className="mr-1 text-xs">📁</span>
+      <span>Project Alpha</span>
     </div>
-    
-    <div className="pl-6 mt-1">
-      <div className="p-2 rounded flex items-center hover:bg-gray-100 cursor-pointer">
-        <span className="mr-2">📄</span>
-        <span>Requirements</span>
-      </div>
+    <span className="text-xs text-blue-600 bg-blue-50 px-1 rounded">90% rel</span>
+  </div>
       
-      <div className="p-2 bg-blue-50 rounded flex items-center hover:bg-blue-100 cursor-pointer">
-        <span className="mr-2">📄</span>
-        <span className="font-medium">Architecture</span>
+  <div className="pl-4 mt-0.5">
+    <div className="p-1 rounded flex items-center hover:bg-gray-100 cursor-pointer">
+      <span className="mr-1 text-xs">📄</span>
+      <span>Requirements</span>
+    </div>
+          
+    <div className="p-1 bg-gray-50 rounded flex items-center hover:bg-gray-100 cursor-pointer">
+      <span className="mr-1 text-xs">📄</span>
+      <span>Architecture</span>
+    </div>
+          
+    <div className="pl-4 mt-0.5">
+      <div className="p-1 bg-gray-100 rounded flex items-center hover:bg-gray-200 cursor-pointer">
+        <span className="mr-1 text-xs">🔍</span>
+        <span>Database Schema</span>
       </div>
-      
-      <div className="pl-6 mt-1">
-        <div className="p-2 bg-blue-100 rounded flex items-center hover:bg-blue-200 cursor-pointer">
-          <span className="mr-2">🔍</span>
-          <span className="font-medium">Database Schema</span>
-        </div>
-        
-        <div className="p-2 rounded flex items-center hover:bg-gray-100 cursor-pointer">
-          <span className="mr-2">📄</span>
-          <span>API Design</span>
-        </div>
+              
+      <div className="p-1 rounded flex items-center hover:bg-gray-100 cursor-pointer">
+        <span className="mr-1 text-xs">📄</span>
+        <span>API Design</span>
       </div>
     </div>
   </div>
+</div>
   
   <div className="mb-4">
     <div className="p-2 bg-gray-50 rounded flex items-center justify-between cursor-pointer hover:bg-gray-100">
